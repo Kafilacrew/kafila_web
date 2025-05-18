@@ -3,6 +3,7 @@ import React from 'react';
 import CraftingTravelExperiences from '../components/craftingtravelexperience';
 import BeliefSection from '../components/Beliefsection';
 import PassionateTeammates from '../components/teammates';
+import VideoBackground from '../components/VideoBackground';
 
 const AboutHero = () => {
     return (
@@ -34,6 +35,7 @@ const AboutHero = () => {
         {/* Other Sections */}
         <CraftingTravelExperiences/>
         <BeliefSection/> 
+        <VideoBackground/>
         <PassionateTeammates/>
       </>
     );
