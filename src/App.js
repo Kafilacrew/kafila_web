@@ -10,6 +10,10 @@ import Sandhanvalley from './pages/SandhanValley';
 import Ladakh from './pages/Ladakh';
 import Goa from './pages/goa';
 import FloatingContactButtons from './components/floatingcontact';
+import NanemachiTrek from './pages/nanemachi';
+import DevkundTrek from './pages/devkund';
+import AndharbanJungleTrek from './pages/andharban';
+import UpcomingAdventuresSection from './components/upcomingadventures';
 
 
 
@@ -25,6 +29,12 @@ function App() {
         <Route path="/sandhanvalley" element={< Sandhanvalley/>} /> 
         <Route path="/ladakh" element={< Ladakh/>} /> 
         <Route path="/goa" element={< Goa/>} /> 
+        <Route path="/nanemachi" element={< NanemachiTrek/>} /> 
+        <Route path="/devkund" element={< DevkundTrek/>} />
+        <Route path="/andharban" element={< AndharbanJungleTrek/>} />
+        <Route path="#upcomingadventures" element={< UpcomingAdventuresSection/>} />
+         
+
       </Routes>
       <FloatingContactButtons/>
       <Footer/>
