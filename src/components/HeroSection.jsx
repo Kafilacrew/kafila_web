@@ -1,17 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const HeroSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const images = [
+    "/api/placeholder/1920/1080",
+    "/api/placeholder/1920/1081", 
+    "/api/placeholder/1920/1082"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative w-full" style={{ minHeight: '100vh' }}>
-      {/* Background Image with Ken Burns effect */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center animate-[ken-burns_20s_infinite_alternate]"
-        style={{
-          backgroundImage: 'url("/api/placeholder/1920/1080")',
-          backgroundPosition: '50% 50%',
-          animation: 'kentBurns 20s ease-in-out infinite alternate'
-        }}
-      >
+      {/* Background Images with Ken Burns effect and slideshow */}
+      <div className="absolute inset-0">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              backgroundImage: `url("${image}")`,
+              backgroundPosition: '50% 50%',
+              animation: index === currentImageIndex ? 'kentBurns 20s ease-in-out infinite alternate' : 'none'
+            }}
+          />
+        ))}
+        
         {/* Overlay with fade in */}
         <div 
           className="absolute inset-0 animate-fade-in" 

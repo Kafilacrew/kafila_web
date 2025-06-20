@@ -37,7 +37,97 @@ const PassionateTeammates = () => {
         position: "Media & Outreach Head; Content Manager; Digital Content Creator",
         description: "Sagar's creativity captures the soul of every trek, bringing it to life through his visuals and storytelling. He has a magical way of portraying the spirit of Kafila, showing the world the beauty of our adventures and the strength of our community. His work resonates with all of us who have had the privilege to be part of this journey.",
         image: "/api/placeholder/400/300"
-      }
+      },
+      {
+    name: "Vaibhav Bhagat",
+    role: "Creative Lead: Graphics",
+    description: "Vaibhav's designs reflect the very essence of Kafila - adventurous, bold, and full of life. His creative brilliance helps bring our vision to life in the most vibrant and captivating ways, ensuring that everyone who sees his work feels the excitement and energy of the Kafila spirit.",
+    image: "/api/placeholder/400/300" // Replace with actual image path
+  },
+  {
+    name: "Om Vadam",
+    role: "Global Marketing Strategist",
+    description: "Om's passion for the outdoors and his strategic thinking have helped take Kafila to new heights. His ability to connect with people across the globe and share the Kafila experience is something we all admire. Through his efforts, Kafila has touched lives beyond borders, creating a global community of explorers.",
+    image: "/api/placeholder/400/300" // Replace with actual image path
+  },
+  {
+    name: "Viney Kapdekar",
+    role: "Business Development Executive",
+    description: "Viney's enthusiasm and forward-thinking approach have played a vital role in expanding Kafila's reach. His ability to build meaningful relationships and create opportunities for growth has allowed our community to flourish. We're lucky to have someone with his energy and vision on board.",
+    image: "/api/placeholder/400/300" // Replace with actual image path
+  },
+  {
+    name: "Prathamesh Joshi",
+    role: "Senior Trek Leader",
+    description: "Prathamesh is the kind of leader who leads by example. His strength and calm under pressure make him a natural guide for our trekkers. He brings an infectious positivity to every adventure and ensures that each trek is not just an exploration of nature, but of ourselves. His leadership makes Kafila's community stronger every day.",
+    image: "/api/placeholder/400/300" // Replace with actual image path
+  },
+  {
+    name: "Tushar Kumar Tailor",
+    role: "Senior Trek Leader; Manager of Strategic Alliances",
+    description: "Tushar's ability to form connections and alliances is unmatched. His leadership in the field and his knack for forging strategic relationships have been crucial to Kafila's growth. Tushar's contributions, both on and off the trails, have helped make Kafila a place where adventure meets opportunity.",
+    image: "/api/placeholder/400/300" // Replace with actual image path
+  },
+  {
+    name: "Kunj Bansal",
+    role: "Trek Leader; Global Operations Lead",
+    description: "Kunj's dedication to ensuring each trek is organized to perfection speaks volumes about his commitment to Kafila. His leadership on global operations has also helped Kafila expand, bringing the spirit of adventure to even more people around the world. Kunj's meticulous nature ensures that everyone can focus on the journey ahead.",
+    image: "/api/placeholder/400/300" // Replace with actual image path
+  },
+  {
+  name: "Rushish Jadhav",
+  role: "Senior Trek Leader",
+  description: "Rushish brings an incredible energy to every trek. His leadership is defined by empathy and patience, making him someone every trekker can rely on. He's always ready with a word of encouragement, and his presence on the trails ensures that each journey is not only exciting but also safe and enjoyable for all.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+},
+{
+  name: "Chaitrali Joshi",
+  role: "Senior Trek Leader",
+  description: "Chaitrali's calm and reassuring presence makes her a cherished leader on the trail. Her ability to lead with compassion and understanding creates an environment where trekkers can push their limits and feel supported every step of the way. She embodies the spirit of Kafila in every way.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+},
+{
+  name: "Dnyanashree Nagarkar",
+  role: "Trek Leader",
+  description: "Dnyaneshwari's vibrant energy and passion for trekking make her a standout leader at Kafila. She has a natural ability to connect with people, and her enthusiasm motivates everyone around her to keep going, even when the trail gets tough. Her leadership leaves a positive mark on everyone she meets.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+},
+{
+  name: "Shivam Gonkar",
+  role: "Senior Trek Leader",
+  description: "Shivam's leadership style is one of quiet strength and steady guidance. He's the kind of person who inspires trust and confidence, ensuring that trekkers feel safe while also encouraging them to embrace the adventure. His calm demeanor and experience make him a pillar of the Kafila community.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+},
+{
+  name: "Bhupesh Nandurkar",
+  role: "Trek Leader",
+  description: "Bhupesh's dedication to Kafila is evident in every trek he leads. His focus on making sure everyone is engaged, safe, and having fun is what makes him such a respected leader. His friendly nature and reliable leadership ensure that every trek under his guidance is a positive and rewarding experience.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+},
+{
+  name: "Siddharth Kombe",
+  role: "Content Creator",
+  description: "Siddharth's creativity brings the magic of Kafila to life. Through his lens, he captures moments that speak volumes about the bond shared by every trekker and the beauty of the adventures we embark on. His work not only tells the Kafila story but also inspires others to join our journey.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+},
+{
+  name: "Vaibhav Kalaskar",
+  role: "Trek Leader",
+  description: "Vaibhav's enthusiasm and love for trekking are contagious. His leadership on the trails is characterized by a deep understanding of what it means to be part of the Kafila community, always ensuring that everyone feels included and motivated to push their limits.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+},
+{
+  name: "Meghna Behera",
+  role: "Backend Operations",
+  description: "Meghna's behind-the-scenes work ensures that everything runs seamlessly at Kafila. Her organizational skills and dedication are critical in making sure the community can enjoy each trek without a hitch. She may work quietly, but her impact is felt in every successful adventure we embark on.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+},
+{
+  name: "Adarsh Deshmukh",
+  role: "CEO, Founder",
+  description: "Adarsh's vision and passion are the foundation of Kafila. His commitment to building a community of passionate adventurers is what drives Kafila forward. His leadership is the guiding light for all of us, and under his guidance, the Kafila family has grown into something truly special.",
+  image: "/api/placeholder/400/300" // Replace with actual image path
+}
     ];
   
     return (

@@ -105,7 +105,7 @@ const NanemachiTrek = () => {
                  data-id="price" 
                  style={isVisible.price ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-bold mb-3 md:mb-4 text-lg md:text-xl">Price:</h3>
-              <p className="text-gray-800 text-base md:text-lg mb-2">₹ 699/- (Ex. Pune)</p>
+              <p className="text-gray-800 text-base md:text-lg mb-2">₹ 1399/- (Ex. Pune)</p>
             </div>
             
             {/* Slots Column */}
