@@ -10,7 +10,8 @@ import Sandhanvalley from './pages/SandhanValley';
 import Ladakh from './pages/Ladakh';
 import Goa from './pages/goa';
 import FloatingContactButtons from './components/floatingcontact';
-
+import Hampi from './pages/hampi';
+import Contactus from './pages/Contactus';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Route path="/sandhanvalley" element={< Sandhanvalley/>} /> 
         <Route path="/ladakh" element={< Ladakh/>} /> 
         <Route path="/goa" element={< Goa/>} /> 
+        <Route path="/hamp" element ={<Hampi/>}/>
+        <Route path="/Contactus" element={<Contactus/>}/>
       </Routes>
       <FloatingContactButtons/>
       <Footer/>

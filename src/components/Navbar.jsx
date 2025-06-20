@@ -58,7 +58,7 @@ const Navbar = () => {
                   </svg>
                 </button>
               </div>
-              <a href="#" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
+              <a href="/Contactus" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
                 Contact Us
               </a>
             </div>
