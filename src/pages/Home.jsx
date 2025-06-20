@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import StatisticSection from '../components/stats';
 import UpcomingAdventuresSection from '../components/upcomingadventures';
 import BeliefSection from '../components/Beliefsection';
+import Mainimg from '../assets/Extras/Mountain Last.png'
 
 const Home = () => {
   return (
@@ -21,12 +22,12 @@ const Home = () => {
         <div className="w-full bg-white min-h-96 py-16 px-4">
           <div className="max-w-2xl mx-auto text-center">
             {/* Testimonials from travelers */}
-            <h2 className="text-4xl font-serif text-black mb-4">
+            {/* <h2 className="text-4xl font-serif text-black mb-4">
               Testimonials
             </h2>
             <p className="text-4xl font-serif text-black mb-12">
               from travelers
-            </p>
+            </p> */}
             
             {/* Ready to Embark section */}
             <h3 className="text-4xl font-serif text-black mb-2">
@@ -45,6 +46,16 @@ const Home = () => {
       </div>
       
       {/* Other sections will go here */}
+      {/* Natural Size Image Section */}
+<div className="w-full flex justify-center items-center py-12">
+  <img 
+    src={Mainimg} // or use imported path
+    alt="Adventure shot"
+    className="max-w-full h-auto"
+  />
+</div>
+
+  
       
     </div>
   );

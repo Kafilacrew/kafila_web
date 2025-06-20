@@ -334,7 +334,7 @@ const ContactUs = () => {
             <div className="flex justify-center items-center space-x-8">
               {/* Facebook */}
               <a
-                href="#"
+                href="https://www.facebook.com/kafila.kafila.923724"
                 className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
               >
                 <Facebook className="w-8 h-8" />
@@ -342,19 +342,19 @@ const ContactUs = () => {
 
               {/* Instagram */}
               <a
-                href="#"
+                href="https://www.instagram.com/kafiladventures/"
                 className="bg-gray-800 hover:bg-gray-900 text-white p-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
               >
                 <Instagram className="w-8 h-8" />
               </a>
 
               {/* YouTube */}
-              <a
+              {/* <a
                 href="#"
                 className="bg-red-600 hover:bg-red-700 text-white p-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
               >
                 <Youtube className="w-8 h-8" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

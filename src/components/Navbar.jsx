@@ -36,10 +36,10 @@ const Navbar = () => {
               <a href="/about" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
                 About
               </a>
-              <a href="#" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
+              {/* <a href="#" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
                 Gallery
-              </a>
-              <div className="relative">
+              </a> */}
+              {/* <div className="relative">
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className="text-black hover:text-gray-500 text-lg font-normal transition-colors flex items-center"
@@ -57,7 +57,7 @@ const Navbar = () => {
                     <path d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
-              </div>
+              </div> */}
               <a href="/Contactus" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
                 Contact Us
               </a>

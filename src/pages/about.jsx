@@ -4,6 +4,7 @@ import CraftingTravelExperiences from '../components/craftingtravelexperience';
 import BeliefSection from '../components/Beliefsection';
 import PassionateTeammates from '../components/teammates';
 import VideoBackground from '../components/VideoBackground';
+import Mainxyz from '../assets/Extras/About-main.jpg'
 
 const AboutHero = () => {
     return (
@@ -12,7 +13,7 @@ const AboutHero = () => {
         <section 
           className="relative h-screen w-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url("/api/placeholder/1920/1080")'
+            backgroundImage: `url("${Mainxyz}")`
           }}
         >
           {/* Overlay */}

@@ -3,6 +3,9 @@ import harishchandragad from '../assets/Harishchandragad.jpg';
 import RefundPolicy from '../components/RefundPolicy';
 import UpcomingAdventuresSection from '../components/upcomingadventures';
 import BookingForm from '../components/Bookingform';
+import Devkund1 from '../assets/Treks/Devkund/devkund-potrait.jpg';
+import Devkund2 from '../assets/Treks/Devkund/devkund-1.jpg';
+import Devkund3 from '../assets/Treks/Devkund/devkund-2.jpg';
 
 const DevkundTrek = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -86,7 +89,7 @@ const DevkundTrek = () => {
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            backgroundImage: `url(${harishchandragad})`,
+            backgroundImage: `url(${Devkund1})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundAttachment: 'fixed',
@@ -121,7 +124,7 @@ const DevkundTrek = () => {
                  data-id="schedule" 
                  style={isVisible.schedule ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Schedule:</h3>
-              <p className="text-gray-800 text-base md:text-lg">🕒 January 2025</p>
+              <p className="text-gray-800 text-base md:text-lg">🕒 June-July 2025</p>
             </div>
           </div>
           
@@ -448,7 +451,7 @@ const DevkundTrek = () => {
                 {/* Left column - single large image */}
                 <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4] md:aspect-[3.5/4] group">
                   <img 
-                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                    src={Devkund1} 
                     alt="Mountain landscape with river" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -458,14 +461,14 @@ const DevkundTrek = () => {
                 <div className="grid grid-rows-1 md:grid-rows-2 gap-4 md:gap-5">
                   <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9] group">
                     <img 
-                      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                      src={Devkund2} 
                       alt="Mountain landscape with trees" 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                   <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9] group">
                     <img 
-                      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                      src={Devkund3} 
                       alt="Mountain landscape with trees and river" 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />

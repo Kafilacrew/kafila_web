@@ -1,4 +1,7 @@
 import React from 'react';
+import Devkund from '../assets/Treks/Devkund/Devkund-main.jpg'
+import Andharban from '../assets/Treks/Andarbhan/Andarban-main.webp'
+import Nanemachi from '../assets/Treks/Nanemachi/Nanemachi-main.jpg'
 
 const UpcomingAdventuresSection = () => {
   const adventures = [
@@ -7,7 +10,7 @@ const UpcomingAdventuresSection = () => {
       title: "Nanemachi Waterfalls Trek",
       date: "June 2025",
       slots: "25 Slots Available",
-      image: "/api/placeholder/600/400",
+      image: Nanemachi,
       link: "/nanemachi"
     },
     {
@@ -15,7 +18,7 @@ const UpcomingAdventuresSection = () => {
       title: "Devkund Waterfalls",
       date: "June-July 2025",
       slots: "25 Slots Available",
-      image: "/api/placeholder/600/400",
+      image: Devkund,
       link: "/devkund"
      },
     {
@@ -23,7 +26,7 @@ const UpcomingAdventuresSection = () => {
       title: "Andharban Jungles",
       date: "June-July2025",
       slots: "25 Slots Available",
-      image: "/api/placeholder/600/400",
+      image: Andharban,
       link: "/andharban"
     }
     
@@ -60,18 +63,18 @@ const UpcomingAdventuresSection = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 gap-6 md:gap-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 w-full md:w-auto">
-            Upcoming Adventures
+            Monsoon Trails
           </h2>
           <div className="w-full md:w-auto md:text-right">
             <p className="text-sm sm:text-base text-gray-700 mb-4 max-w-2xl md:ml-auto">
               Indulge in our carefully crafted packages to immerse you in the most captivating and transformative travel adventures.
             </p>
-            <a 
+            {/* <a 
               href="/all-packages" 
               className="inline-block text-gray-800 border-b border-gray-800 pb-1 hover:border-gray-600 transition-colors duration-300 text-sm sm:text-base"
             >
               See All Packages
-            </a>
+            </a> */}
           </div>
         </div>
 

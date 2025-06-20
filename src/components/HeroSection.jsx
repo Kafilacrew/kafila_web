@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Mainimg from '../assets/Extras/MainPage.jpg'
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -28,7 +29,7 @@ const HeroSection = () => {
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
             style={{
-              backgroundImage: `url("${image}")`,
+              backgroundImage: `url("${Mainimg}")`,
               backgroundPosition: '50% 50%',
               animation: index === currentImageIndex ? 'kentBurns 20s ease-in-out infinite alternate' : 'none'
             }}
@@ -91,7 +92,7 @@ const HeroSection = () => {
                 </p>
                 
                 {/* Button - Bottom right with slide in from bottom */}
-                <button 
+                {/* <button 
                   className="group inline-flex items-center bg-transparent border-2 border-white text-white transition-all duration-300 hover:bg-white hover:text-black opacity-0 translate-y-[50px] animate-[slide-up-fade_0.8s_ease-out_1.2s_forwards]"
                   style={{ 
                     padding: 'clamp(0.625rem, 2vw, 0.75rem) clamp(1.5rem, 3vw, 2.5rem)',
@@ -117,7 +118,7 @@ const HeroSection = () => {
                   >
                     <path d="M9 5l7 7-7 7"></path>
                   </svg>
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

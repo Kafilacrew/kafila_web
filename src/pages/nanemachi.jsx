@@ -3,6 +3,10 @@ import harishchandragad from '../assets/Harishchandragad.jpg';
 import RefundPolicy from '../components/RefundPolicy';
 import UpcomingAdventuresSection from '../components/upcomingadventures';
 import BookingForm from '../components/Bookingform';
+import Nanemachi1 from '../assets/Treks/Nanemachi/Nanemachi-parallex.webp'
+import Nanemachi2 from '../assets/Treks/Nanemachi/Nanemachi-1.jpg'
+import Nanemachi3 from '../assets/Treks/Nanemachi/Nanemachi-2.avif'
+import Nanemachi4 from '../assets/Treks/Nanemachi/Nanemachi-3.avif'
 
 const NanemachiTrek = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -66,7 +70,7 @@ const NanemachiTrek = () => {
                    data-id="date" 
                    style={isVisible.date ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-600 text-lg md:text-xl lg:text-2xl">
-                  🗓️ June, 2025
+                  🗓️ June-July, 2025
                 </p>
               </div>
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
@@ -86,7 +90,7 @@ const NanemachiTrek = () => {
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            backgroundImage: `url(${harishchandragad})`,
+            backgroundImage: `url(${Nanemachi1})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundAttachment: 'fixed',
@@ -121,7 +125,7 @@ const NanemachiTrek = () => {
                  data-id="schedule" 
                  style={isVisible.schedule ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Schedule:</h3>
-              <p className="text-gray-800 text-base md:text-lg">🕒 June 2025</p>
+              <p className="text-gray-800 text-base md:text-lg">🕒 June-July 2025</p>
             </div>
           </div>
           
@@ -449,7 +453,7 @@ const NanemachiTrek = () => {
                 {/* Left column - single large image */}
                 <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4] md:aspect-[3.5/4] group">
                   <img 
-                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                    src={Nanemachi2} 
                     alt="Mountain landscape with river" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -459,14 +463,14 @@ const NanemachiTrek = () => {
                 <div className="grid grid-rows-1 md:grid-rows-2 gap-4 md:gap-5">
                   <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9] group">
                     <img 
-                      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                      src={Nanemachi3} 
                       alt="Mountain landscape with trees" 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                   <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9] group">
                     <img 
-                      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                      src={Nanemachi4} 
                       alt="Mountain landscape with trees and river" 
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />

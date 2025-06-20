@@ -14,13 +14,13 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-6">
-          <a href="#" className="text-white hover:text-gray-300">
+          <a href="https://www.facebook.com/kafila.kafila.923724" className="text-white hover:text-gray-300">
             <Facebook className="w-6 h-6" />
           </a>
-          <a href="#" className="text-white hover:text-gray-300">
+          <a href="https://api.whatsapp.com/send/?phone=%2B918855075626&text=Hello&type=phone_number&app_absent=0" className="text-white hover:text-gray-300">
             <MessageCircle className="w-6 h-6" />
           </a>
-          <a href="#" className="text-white hover:text-gray-300">
+          <a href="https://www.instagram.com/kafiladventures/" className="text-white hover:text-gray-300">
             <Instagram className="w-6 h-6" />
           </a>
         </div>

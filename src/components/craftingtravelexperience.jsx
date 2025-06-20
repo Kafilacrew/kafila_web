@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import group1 from '../assets/Extras/About-us-group.jpg'
 
 const CraftingTravelExperiences = () => {
   const [isInView, setIsInView] = useState(false);
@@ -44,7 +45,7 @@ const CraftingTravelExperiences = () => {
               }}
             >
               <img 
-                src="/api/placeholder/800/400" 
+                src={group1} 
                 alt="Mountain landscape with river"
                 className="w-full rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-500"
               />
