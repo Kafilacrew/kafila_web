@@ -4,7 +4,7 @@ import RefundPolicy from '../components/RefundPolicy';
 import UpcomingAdventuresSection from '../components/upcomingadventures';
 import BookingForm from '../components/Bookingform';
 
-const HarishchandragadTrek = () => {
+const NanemachiTrek = () => {
   const [scrollY, setScrollY] = useState(0);
   const [expandedDay, setExpandedDay] = useState(null);
   const [isVisible, setIsVisible] = useState({});
@@ -48,7 +48,7 @@ const HarishchandragadTrek = () => {
                   transform: `translateY(${scrollY * 0.1}px)`
                 }}
               >
-                Harishchandragad Trek
+                Nanemachi Trek
               </h1>
             </div>
             
@@ -59,14 +59,14 @@ const HarishchandragadTrek = () => {
                    style={isVisible.location ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-600 text-lg md:text-xl lg:text-2xl flex items-center">
                   <span className="mr-3">📍</span>
-                  Harishchandragad, Maharashtra
+                  Nanemachi, Maharashtra
                 </p>
               </div>
               <div className="mb-8 md:mb-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
                    data-id="date" 
                    style={isVisible.date ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-600 text-lg md:text-xl lg:text-2xl">
-                  🗓️ January, 2025
+                  🗓️ June, 2025
                 </p>
               </div>
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
@@ -105,8 +105,7 @@ const HarishchandragadTrek = () => {
                  data-id="price" 
                  style={isVisible.price ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-bold mb-3 md:mb-4 text-lg md:text-xl">Price:</h3>
-              <p className="text-gray-800 text-base md:text-lg mb-2">₹ 1299/- Non AC Travel (Ex. Pune)</p>
-              <p className="text-gray-800 text-base md:text-lg">₹ 1499/- AC Travel (Ex. Pune)</p>
+              <p className="text-gray-800 text-base md:text-lg mb-2">₹ 699/- (Ex. Pune)</p>
             </div>
             
             {/* Slots Column */}
@@ -114,7 +113,7 @@ const HarishchandragadTrek = () => {
                  data-id="slots" 
                  style={isVisible.slots ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Slots:</h3>
-              <p className="text-gray-800 text-base md:text-lg">👥 30 Explorers</p>
+              <p className="text-gray-800 text-base md:text-lg">👥 50 Explorers</p>
             </div>
             
             {/* Schedule Column */}
@@ -122,7 +121,7 @@ const HarishchandragadTrek = () => {
                  data-id="schedule" 
                  style={isVisible.schedule ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Schedule:</h3>
-              <p className="text-gray-800 text-base md:text-lg">🕒 January 2025</p>
+              <p className="text-gray-800 text-base md:text-lg">🕒 June 2025</p>
             </div>
           </div>
           
@@ -132,11 +131,10 @@ const HarishchandragadTrek = () => {
                style={isVisible.boarding ? {opacity: 1, transform: 'translateY(0)'} : {}}>
             <h3 className="text-gray-900 font-semibold mb-4 md:mb-6 text-lg md:text-xl">Boarding Points</h3>
             <div className="space-y-2 md:space-y-3">
-              <p className="text-gray-800 text-base md:text-lg">📍 Swargate(Opp. Laxminarayan Theatre)</p>
-              <p className="text-gray-800 text-base md:text-lg">📍 Good Luck Chowk</p>
-              <p className="text-gray-800 text-base md:text-lg">📍 Sancheti</p>
-              <p className="text-gray-800 text-base md:text-lg">📍 Khadki Railway Station</p>
-              <p className="text-gray-800 text-base md:text-lg">📍 Nashik Phata</p>
+              <p className="text-gray-800 text-base md:text-lg">📍 Swargate(Near Laxminarayan Theatre)</p>
+              <p className="text-gray-800 text-base md:text-lg">📍 Deccan Corner(Opp. to Vimlabai Garware College)</p>
+              <p className="text-gray-800 text-base md:text-lg">📍 Vanaz</p>
+              <p className="text-gray-800 text-base md:text-lg">📍 Waki Gavthan</p>
             </div>
           </div>
           
@@ -145,12 +143,12 @@ const HarishchandragadTrek = () => {
                data-id="history" 
                style={isVisible.history ? {opacity: 1, transform: 'translateY(0)'} : {}}>
             <p className="text-gray-700 mb-4 md:mb-6 text-base md:text-lg leading-relaxed">
-              Harishchandragad is a historical hill fort situated in Ahmednagar district of Maharashtra. The height of the fort is 1,424 meters. Harishchandragad is very popular place for trekking in Maharashtra and also one of the famous Bhandardara tourist places. The fort originally dates back to the 6th century during the rule of Kalachuri dynasty. The citadel was built during this era and various caves probably have been carved out in the 11th century AD. Sage Changdev used to meditate here in 14th century AD. Later the fort was under the control of Mughals and Marathas captured it in 1747 AD. Remnants of Microlithic human Inhabitants have been discovered here. The various Puranas like Matsyapurana, Agnipurana and Skandapurana have many references about Harishchandragad. Rohidas, Taramati and Harishchandra are the three peaks in Harishchandragad.
+              Nanemachi waterfall is located in Nanemachi village in Mahad in the Raigad district of the Konkan region. Located inside the dense Jungle of Raigad, this heavenly & spectacular 400ft high waterfall is regarded as the biggest waterfall in Raigad. The view around and the waterfall is really fascinating to our eyes and make us lost completely. A must do waterfall trek in the monsoon season.
             </p>
           </div>
           
           {/* Trek Details */}
-          <div className="mb-16 md:mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+          {/* <div className="mb-16 md:mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
                data-id="details" 
                style={isVisible.details ? {opacity: 1, transform: 'translateY(0)'} : {}}>
             <h3 className="text-gray-900 font-bold mb-4 md:mb-6 text-lg md:text-xl">Trek Details</h3>
@@ -161,7 +159,7 @@ const HarishchandragadTrek = () => {
               <p className="text-gray-700 text-base md:text-lg">- Duration: 1 Night, 1 Day</p>
               <p className="text-gray-700 text-base md:text-lg">- Best Season: November to February</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Includes Section */}
           <div className="mb-16 md:mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
@@ -223,47 +221,101 @@ const HarishchandragadTrek = () => {
             </div>
           </div>
 
-          {/* What to Carry Section */}
-          <div className="mb-24 md:mb-32 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
-               data-id="carry" 
-               style={isVisible.carry ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-            <h3 className="text-gray-900 font-bold mb-6 md:mb-8 text-xl md:text-2xl">What to Carry?</h3>
+          {/* What to Carry Section - Matching screenshot style */}
+          <div className="mb-24 md:mb-32">
+            <h3 className="text-gray-900 font-bold mb-6 md:mb-8 text-2xl md:text-3xl">What to Carry?</h3>
             <div className="space-y-4 md:space-y-5">
-              <p className="text-gray-900 text-lg md:text-xl flex items-center">
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
                 <span>Backpack [30-40L]</span>
               </p>
-              <p className="text-gray-900 text-lg md:text-xl flex items-center">
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Trekking Shoes[Good grip]</span>
+                <span>Thermal wear (inner layers)</span>
               </p>
-              <p className="text-gray-900 text-lg md:text-xl flex items-center">
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Full sleeves Trekking T-shirt</span>
+                <span>Fleece jackets and windcheaters</span>
               </p>
-              <p className="text-gray-900 text-lg md:text-xl flex items-center">
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Full Trekking Pants</span>
+                <span>Waterproof and insulated gloves</span>
               </p>
-              <p className="text-gray-900 text-lg md:text-xl flex items-center">
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Poncho/Raincoat</span>
+                <span>Woolen caps, mufflers, and socks</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Comfortable trekking shoes
+                </span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Valid ID proof</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Personal medicines</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Sunglasses with UV protection</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Sunscreen lotion (SPF 50+), lip balm, and moisturizer</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Reusable water bottles (to stay hydrated)</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Headlamp or flashlight with extra batteries</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Camera to capture memories</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Power banks and chargers</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Head torch or Simple hand held torch</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Snacks and energy bars</span>
               </p>
             </div>
           </div>
         </div>
       </div>
-
       <BookingForm/>
 
       {/* The Journey Section */}
@@ -297,7 +349,7 @@ const HarishchandragadTrek = () => {
                       <span className="mt-1">⏰</span>
                       <div>
                         <span className="font-semibold text-lg md:text-xl">10:00 pm:</span>
-                        <span className="ml-3 text-lg md:text-xl">Assemble at the designated pickup point in Pune and start the journey toward Morshi</span>
+                        <span className="ml-3 text-lg md:text-xl">Assemble at the designated pickup point in Pune and start the journey toward Waki Gavthan</span>
                       </div>
                     </div>
                   </div>
@@ -315,7 +367,7 @@ const HarishchandragadTrek = () => {
               >
                 <div className="flex items-center gap-4 md:gap-8">
                   <span className="text-xl md:text-3xl font-semibold text-gray-900">Day 2</span>
-                  <span className="text-lg md:text-2xl text-gray-800">Conquer Harishchandragad</span>
+                  <span className="text-lg md:text-2xl text-gray-800">Adventure Day</span>
                 </div>
               </button>
               
@@ -325,64 +377,57 @@ const HarishchandragadTrek = () => {
                     <div className="flex items-start gap-4">
                       <span className="mt-1">⏰</span>
                       <div>
-                        <span className="font-semibold text-lg md:text-xl">03:00 am:</span>
-                        <span className="ml-3 text-lg md:text-xl">Arrive at the base village, freshen up, and gear up for the trek</span>
+                        <span className="font-semibold text-lg md:text-xl">4:30 am:</span>
+                        <span className="ml-3 text-lg md:text-xl"> Reach the Base Village.</span>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <span className="mt-1">⏰</span>
                       <div>
-                        <span className="font-semibold text-lg md:text-xl">04:00 am:</span>
-                        <span className="ml-3 text-lg md:text-xl">Enjoy a hot breakfast to fuel your adventure.</span>
+                        <span className="font-semibold text-lg md:text-xl">06:00 am:</span>
+                        <span className="ml-3 text-lg md:text-xl"> Freshen up & Have Breakfast & start hiking on the trail after a short briefing session.</span>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <span className="mt-1">⏰</span>
                       <div>
-                        <span className="font-semibold text-lg md:text-xl">04:30 am:</span>
-                        <span className="ml-3 text-lg md:text-xl">Quick introduction session and safety briefing before the trek begins.</span>
+                        <span className="font-semibold text-lg md:text-xl">07:30 am:</span>
+                        <span className="ml-3 text-lg md:text-xl">Reach Nanemachi & embrace the views.</span>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <span className="mt-1">⏰</span>
                       <div>
-                        <span className="font-semibold text-lg md:text-xl">10:00 am:</span>
-                        <span className="ml-3 text-lg md:text-xl">Reach the summit and soak in the stunning sunrise and 360° views of the Sahyadri range. Snap some Insta-worthy photos!</span>
+                        <span className="font-semibold text-lg md:text-xl">09:00 am:</span>
+                        <span className="ml-3 text-lg md:text-xl">Leave for Saatsada Waterfall after a brief time at the waterfall</span>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <span className="mt-1">⏰</span>
                       <div>
-                        <span className="font-semibold text-lg md:text-xl">11:00 pm:</span>
-                        <span className="ml-3 text-lg md:text-xl">Begin the descent, navigating carefully through the rugged terrain.</span>
+                        <span className="font-semibold text-lg md:text-xl">11:00 am:</span>
+                        <span className="ml-3 text-lg md:text-xl">Reach Saatsada after a short hike.</span>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <span className="mt-1">⏰</span>
                       <div>
-                        <span className="font-semibold text-lg md:text-xl">04:00 pm:</span>
-                        <span className="ml-3 text-lg md:text-xl">Reach the base village and celebrate your achievement.</span>
+                        <span className="font-semibold text-lg md:text-xl">12:30 pm:</span>
+                        <span className="ml-3 text-lg md:text-xl">Return towards the base camp for lunch.</span>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <span className="mt-1">⏰</span>
                       <div>
-                        <span className="font-semibold text-lg md:text-xl">05:00 pm:</span>
-                        <span className="ml-3 text-lg md:text-xl">Relish a delicious lunch of authentic local cuisine.</span>
+                        <span className="font-semibold text-lg md:text-xl">02:30 pm:</span>
+                        <span className="ml-3 text-lg md:text-xl">Proceed towards Pune after resting for some time.</span>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <span className="mt-1">⏰</span>
                       <div>
-                        <span className="font-semibold text-lg md:text-xl">06:00 pm:</span>
-                        <span className="ml-3 text-lg md:text-xl">Start your return journey to Pune with hearts full of memories and triumph.</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-lg md:text-xl">11:00 pm:</span>
-                        <span className="ml-3 text-lg md:text-xl">REACH PUNE</span>
+                        <span className="font-semibold text-lg md:text-xl">08:30 pm:</span>
+                        <span className="ml-3 text-lg md:text-xl">Reach Pune.</span>
                       </div>
                     </div>
                     <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gray-50 rounded-lg">
@@ -460,4 +505,4 @@ const HarishchandragadTrek = () => {
   );
 };
 
-export default HarishchandragadTrek;
+export default NanemachiTrek;

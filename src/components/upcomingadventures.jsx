@@ -4,28 +4,30 @@ const UpcomingAdventuresSection = () => {
   const adventures = [
     {
       id: 1,
-      title: "Harishchandragad",
-      date: "January 2025",
+      title: "Nanemachi Waterfalls Trek",
+      date: "June 2025",
       slots: "25 Slots Available",
       image: "/api/placeholder/600/400",
-      link: "/harishchandragad"
+      link: "/nanemachi"
     },
     {
       id: 2,
-      title: "Kalsubai",
-      date: "10-11 January 2025",
+      title: "Devkund Waterfalls",
+      date: "June-July 2025",
       slots: "25 Slots Available",
       image: "/api/placeholder/600/400",
-      link: "/kalsubai"
-    },
+      link: "/devkund"
+     },
     {
       id: 3,
-      title: "Sandhan Valley",
-      date: "January 2025",
+      title: "Andharban Jungles",
+      date: "June-July2025",
       slots: "25 Slots Available",
       image: "/api/placeholder/600/400",
-      link: "/sandhanvalley"
-    },
+      link: "/andharban"
+    }
+    
+    /*,
     {
       id: 4,
       title: "Leh Ladakh",
@@ -49,7 +51,7 @@ const UpcomingAdventuresSection = () => {
       slots: "25 Slots Available",
       image: "/api/placeholder/600/400",
       link: "/hampi-badami"
-    }
+    }*/
   ];
 
   return (

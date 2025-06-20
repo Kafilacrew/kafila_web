@@ -44,7 +44,7 @@ const PassionateTeammates = () => {
       <section className="bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Header Section with gray background */}
-          <div className="bg-gray-100 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
+          <div className="bg-gray-100 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 mt-[60px]">
             <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8">
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-gray-900 max-w-2xl leading-tight">
                 Our passionate<br className="hidden sm:block" /> teammates

@@ -12,6 +12,11 @@ import Goa from './pages/goa';
 import FloatingContactButtons from './components/floatingcontact';
 import Hampi from './pages/hampi';
 import Contactus from './pages/Contactus';
+import NanemachiTrek from './pages/nanemachi';
+import DevkundTrek from './pages/devkund';
+import AndharbanJungleTrek from './pages/andharban';
+import UpcomingAdventuresSection from './components/upcomingadventures';
+
 
 
 function App() {
@@ -28,6 +33,12 @@ function App() {
         <Route path="/goa" element={< Goa/>} /> 
         <Route path="/hamp" element ={<Hampi/>}/>
         <Route path="/Contactus" element={<Contactus/>}/>
+        <Route path="/nanemachi" element={< NanemachiTrek/>} /> 
+        <Route path="/devkund" element={< DevkundTrek/>} />
+        <Route path="/andharban" element={< AndharbanJungleTrek/>} />
+        <Route path="#upcomingadventures" element={< UpcomingAdventuresSection/>} />
+         
+
       </Routes>
       <FloatingContactButtons/>
       <Footer/>

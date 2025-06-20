@@ -4,7 +4,7 @@ import RefundPolicy from '../components/RefundPolicy';
 import UpcomingAdventuresSection from '../components/upcomingadventures';
 import BookingForm from '../components/Bookingform';
 
-const HarishchandragadTrek = () => {
+const AndharbanJungleTrek = () => {
   const [scrollY, setScrollY] = useState(0);
   const [expandedDay, setExpandedDay] = useState(null);
   const [isVisible, setIsVisible] = useState({});
@@ -48,7 +48,7 @@ const HarishchandragadTrek = () => {
                   transform: `translateY(${scrollY * 0.1}px)`
                 }}
               >
-                Harishchandragad Trek
+               Andharban Jungle Trek
               </h1>
             </div>
             
@@ -59,7 +59,7 @@ const HarishchandragadTrek = () => {
                    style={isVisible.location ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-600 text-lg md:text-xl lg:text-2xl flex items-center">
                   <span className="mr-3">📍</span>
-                  Harishchandragad, Maharashtra
+                  Andharban, Maharashtra
                 </p>
               </div>
               <div className="mb-8 md:mb-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
@@ -460,4 +460,4 @@ const HarishchandragadTrek = () => {
   );
 };
 
-export default HarishchandragadTrek;
+export default AndharbanJungleTrek;
