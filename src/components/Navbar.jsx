@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center">
             <div className="flex items-center space-x-10">
               <a href="/" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
                 Home
@@ -65,10 +65,10 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-black hover:text-gray-500 focus:outline-none"
+              className="text-black hover:text-gray-500 focus:outline-none p-2"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
@@ -82,25 +82,25 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} z-40`}>
-          <div className="px-4 pt-16 pb-3 space-y-3">
+        <div className={`lg:hidden fixed top-0 left-0 h-full w-full sm:w-80 md:w-96 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} z-40`}>
+          <div className="px-6 pt-20 pb-6 space-y-4">
             <a 
               href="/" 
-              className="block text-black hover:text-gray-500 text-base font-normal py-2 transition-colors"
+              className="block text-black hover:text-gray-500 text-lg font-normal py-3 transition-colors border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </a>
             <a 
               href="/about" 
-              className="block text-black hover:text-gray-500 text-base font-normal py-2 transition-colors"
+              className="block text-black hover:text-gray-500 text-lg font-normal py-3 transition-colors border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </a>
             <a 
               href="/Contactus" 
-              className="block text-black hover:text-gray-500 text-base font-normal py-2 transition-colors"
+              className="block text-black hover:text-gray-500 text-lg font-normal py-3 transition-colors border-b border-gray-100"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Us
@@ -111,7 +111,7 @@ const Navbar = () => {
         {/* Overlay for mobile menu */}
         {isMobileMenuOpen && (
           <div 
-            className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+            className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
             onClick={() => setIsMobileMenuOpen(false)}
           ></div>
         )}

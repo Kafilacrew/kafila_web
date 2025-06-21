@@ -92,7 +92,7 @@ const DevkundTrek = () => {
             backgroundImage: `url(${Devkund1})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
-            backgroundAttachment: 'fixed',
+            backgroundAttachment: 'relative',
             transition: 'transform 0.1s ease-out'
           }}
         />
