@@ -483,7 +483,7 @@ const AndharbanJungleTrek = () => {
                 {/* Left column - single large image */}
                 <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4] md:aspect-[3.5/4] group">
                   <img 
-                    src={A1} 
+                    src={Apara} 
                     alt="Mountain landscape with river" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
