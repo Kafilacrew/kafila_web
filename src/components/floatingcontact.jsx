@@ -5,10 +5,10 @@ const FloatingContactButtons = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Phone number (update as needed)
-  const phoneNumber = '+1234567890';
+  const phoneNumber = '+918855075626';
   
   // WhatsApp number and default message (update as needed)
-  const whatsappNumber = '+1234567890';
+  const whatsappNumber = '+918855075626';
   const whatsappMessage = encodeURIComponent('Hello! I need assistance.');
 
   return (

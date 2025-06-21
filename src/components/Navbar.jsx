@@ -77,7 +77,7 @@ const Navbar = () => {
               <img 
                 src={kafilaLogo} 
                 alt="Kafila Adventures Logo" 
-                className="w-[20px] h-[25px] sm:w-[45px] sm:h-[56px] md:w-[60px] md:h-[75px] lg:w-[80px] lg:h-[100px] brightness-0"
+                className="w-[80px] h-[25px] sm:w-[45px] sm:h-[56px] md:w-[60px] md:h-[75px] lg:w-[80px] lg:h-[100px] brightness-0 ml-[15px] mt-[15px]"
                 style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
               />
             </div>
@@ -115,10 +115,10 @@ const Navbar = () => {
                 }}
               >
                 <svg 
-                  width="18" 
-                  height="18" 
+                  width="40" 
+                  height="40" 
                   fill="none" 
-                  viewBox="0 0 24 24" 
+                  viewBox="0 0 18 18" 
                   stroke="currentColor" 
                   strokeWidth="3"
                   style={{ display: 'block' }}
