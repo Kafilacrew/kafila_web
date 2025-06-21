@@ -15,7 +15,7 @@ const UpcomingAdventuresSection = () => {
     },
     {
       id: 2,
-      title: "Devkund Waterfalls",
+      title: "Devkund Waterfalls Trek",
       date: "June-July 2025",
       slots: "25 Slots Available",
       image: Devkund,
@@ -23,7 +23,7 @@ const UpcomingAdventuresSection = () => {
      },
     {
       id: 3,
-      title: "Andharban Jungles",
+      title: "Andharban Jungles Trek",
       date: "June-July2025",
       slots: "25 Slots Available",
       image: Andharban,
