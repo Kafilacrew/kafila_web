@@ -12,8 +12,19 @@ const AndharbanJungleTrek = () => {
   const [scrollY, setScrollY] = useState(0);
   const [expandedDay, setExpandedDay] = useState(null);
   const [isVisible, setIsVisible] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Detect mobile devices - tablets and phones only
+    const checkIfMobile = () => {
+      const isMobileDevice = window.innerWidth < 768 || 
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      setIsMobile(isMobileDevice);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
     const handleScroll = () => {
       setScrollY(window.scrollY);
       
@@ -30,9 +41,32 @@ const AndharbanJungleTrek = () => {
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isVisible]);
+    // For mobile: use optimized scroll handler
+    // For desktop: use regular scroll handler to preserve original behavior
+    if (isMobile) {
+      let ticking = false;
+      const handleScrollOptimized = () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            handleScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+      window.addEventListener('scroll', handleScrollOptimized, { passive: true });
+      return () => {
+        window.removeEventListener('scroll', handleScrollOptimized);
+        window.removeEventListener('resize', checkIfMobile);
+      };
+    } else {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', checkIfMobile);
+      };
+    }
+  }, [isVisible, isMobile]);
 
   // For true parallax effect, the image should move slower than scroll
   const parallaxOffset = scrollY * 0.3;
@@ -85,18 +119,35 @@ const AndharbanJungleTrek = () => {
         </div>
       </div>
 
-      {/* Parallax Image Section */}
+      {/* Parallax Image Section - Keep desktop effect, fix mobile */}
       <div className="relative h-[30vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{ 
-            backgroundImage: `url(${Apara})`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundAttachment: 'fixed',
-            transition: 'transform 0.1s ease-out'
-          }}
-        />
+        {isMobile ? (
+          // Mobile: Transform-based parallax
+          <div 
+            className="absolute inset-0 w-full h-[130%] -top-[15%]"
+            style={{ 
+              backgroundImage: `url(${Apara})`,
+              backgroundPosition: 'center center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              transform: `translate3d(0, ${parallaxOffset}px, 0)`,
+              willChange: 'transform',
+              backfaceVisibility: 'hidden'
+            }}
+          />
+        ) : (
+          // Desktop: Your exact original parallax effect
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{ 
+              backgroundImage: `url(${Apara})`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundAttachment: 'fixed',
+              transition: 'transform 0.1s ease-out'
+            }}
+          />
+        )}
       </div>
 
       {/* Additional Content Area */}
@@ -480,6 +531,39 @@ const AndharbanJungleTrek = () => {
 
         .animate-on-scroll {
           transition: all 0.5s ease-out;
+        }
+
+        /* Smooth scrolling for all devices */
+        html {
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        /* Enhanced mobile optimizations */
+        @media (max-width: 768px) {
+          /* Better touch targets */
+          button {
+            min-height: 44px;
+          }
+          
+          /* Improve text readability */
+          p, span, h1, h2, h3 {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+        }
+
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+          .animate-on-scroll,
+          .animate-scale-up {
+            animation: none;
+            transition: none;
+          }
+          
+          [style*="transform"] {
+            transform: none !important;
+          }
         }
       `}</style>
          <UpcomingAdventuresSection/>

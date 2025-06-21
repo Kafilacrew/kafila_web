@@ -74,7 +74,7 @@ const NanemachiTrek = () => {
   return (
     <div className="min-h-screen">
       {/* Header Section */}
-      <div className="relative bg-white py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20">
+      <div className="relative bg-white py-12 sm:py-8 md:py-12 lg:py-16 xl:py-20">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mt-12 sm:mt-16 lg:mt-20 xl:mt-24">
             {/* Left Column - Title */}
