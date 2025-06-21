@@ -82,8 +82,8 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'} mt-4 pb-4`}>
-          <div className="px-2 pt-2 pb-3 space-y-3">
+        <div className={`md:hidden fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} z-40`}>
+          <div className="px-4 pt-16 pb-3 space-y-3">
             <a 
               href="/" 
               className="block text-black hover:text-gray-500 text-base font-normal py-2 transition-colors"
@@ -99,33 +99,7 @@ const Navbar = () => {
               About
             </a>
             <a 
-              href="#" 
-              className="block text-black hover:text-gray-500 text-base font-normal py-2 transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Gallery
-            </a>
-            <button
-              onClick={() => {
-                setIsDropdownOpen(!isDropdownOpen);
-              }}
-              className="flex items-center text-black hover:text-gray-500 text-base font-normal py-2 transition-colors w-full"
-            >
-              Adventures
-              <svg 
-                className="ml-1 h-4 w-4" 
-                fill="none" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth="2" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <a 
-              href="#" 
+              href="/Contactus" 
               className="block text-black hover:text-gray-500 text-base font-normal py-2 transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -133,6 +107,14 @@ const Navbar = () => {
             </a>
           </div>
         </div>
+
+        {/* Overlay for mobile menu */}
+        {isMobileMenuOpen && (
+          <div 
+            className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
+            onClick={() => setIsMobileMenuOpen(false)}
+          ></div>
+        )}
       </div>
     </nav>
   );

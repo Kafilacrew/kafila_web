@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Mainimg from '../assets/Extras/MainPage.jpg'
+import herobg2 from '../assets/Extras/herobg2.jpg'
+import herobg3 from '../assets/Extras/herobg3.avif'
 
 const HeroSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
+  // Fixed: Properly structure the images array with actual image imports
   const images = [
-    "/api/placeholder/1920/1080",
-    "/api/placeholder/1920/1081", 
-    "/api/placeholder/1920/1082"
+    herobg2,
+    Mainimg,
+    herobg3
   ];
 
   useEffect(() => {
@@ -29,7 +32,7 @@ const HeroSection = () => {
               index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
             style={{
-              backgroundImage: `url("${Mainimg}")`,
+              backgroundImage: `url("${image}")`, // Fixed: Use the actual image variable
               backgroundPosition: '50% 50%',
               animation: index === currentImageIndex ? 'kentBurns 20s ease-in-out infinite alternate' : 'none'
             }}

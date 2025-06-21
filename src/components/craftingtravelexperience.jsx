@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import group1 from '../assets/Extras/About-us-group.jpg'
+import waterfront from '../assets/Extras/waterfronthouses.jpg' 
 
 const CraftingTravelExperiences = () => {
   const [isInView, setIsInView] = useState(false);
@@ -30,9 +31,9 @@ const CraftingTravelExperiences = () => {
       className="py-24 px-8 bg-white"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Images Section */}
-          <div className="space-y-4">
+          <div className="space-y-4 relative">
             {/* Top Image */}
             <div 
               className={`relative transition-all duration-700 ease-out ${
@@ -51,11 +52,11 @@ const CraftingTravelExperiences = () => {
               />
             </div>
             
-            {/* Bottom Image - Animated Translation */}
+            {/* Bottom Image - Reduced Translation */}
             <div 
               className={`relative transition-all duration-700 ease-out ${
                 isInView 
-                  ? 'opacity-100 translate-y-0 lg:translate-x-24' 
+                  ? 'opacity-100 translate-y-0 lg:translate-x-8' 
                   : 'opacity-0 translate-y-10 lg:translate-x-0'
               }`}
               style={{ 
@@ -63,9 +64,9 @@ const CraftingTravelExperiences = () => {
               }}
             >
               <img 
-                src="/api/placeholder/800/400" 
+                src={waterfront}
                 alt="Colorful waterfront houses in Copenhagen"
-                className="w-full rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-500"
+                className="w-6/5 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
@@ -86,7 +87,7 @@ const CraftingTravelExperiences = () => {
             </h2>
             
             <p 
-              className={`text-lg text-gray-700 leading-relaxed max-w-lg transition-all duration-700 ease-out ${
+              className={`text-lg text-gray-700 leading-relaxed transition-all duration-700 ease-out ${
                 isInView 
                   ? 'opacity-100 translate-x-0' 
                   : 'opacity-0 -translate-x-10'
