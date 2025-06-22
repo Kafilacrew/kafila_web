@@ -354,7 +354,7 @@ const AndharbanJungleTrek = () => {
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Sunscream</span>
+                <span>Sunscreen</span>
               </p>
             </div>
           </div>
