@@ -7,7 +7,7 @@ const UpcomingAdventuresSection = () => {
   const adventures = [
     {
       id: 1,
-      title: "Nanemachi Waterfalls Trek",
+      title: "Nanemachi Waterfall Trek",
       date: "June 2025",
       slots: "25 Slots Available",
       image: Nanemachi,
@@ -15,7 +15,7 @@ const UpcomingAdventuresSection = () => {
     },
     {
       id: 2,
-      title: "Devkund Waterfalls Trek",
+      title: "Devkund Waterfall Trek",
       date: "June-July 2025",
       slots: "25 Slots Available",
       image: Devkund,
@@ -23,7 +23,7 @@ const UpcomingAdventuresSection = () => {
      },
     {
       id: 3,
-      title: "Andharban Jungles Trek",
+      title: "Andharban Jungle Trek",
       date: "June-July2025",
       slots: "25 Slots Available",
       image: Andharban,

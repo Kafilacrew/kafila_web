@@ -6,7 +6,7 @@ import BookingForm from '../components/Bookingform';
 import Nanemachi1 from '../assets/Treks/Nanemachi/Nanemachi-parallex.webp'
 import Nanemachi2 from '../assets/Treks/Nanemachi/Nanemachi-1.jpg'
 import Nanemachi3 from '../assets/Treks/Nanemachi/Nanemachi-2.avif'
-import Nanemachi4 from '../assets/Treks/Nanemachi/Nanemachi-3.avif'
+import Nanemachi4 from '../assets/Treks/Nanemachi/Nanemachi-3.jpg'
 
 const NanemachiTrek = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -86,7 +86,7 @@ const NanemachiTrek = () => {
                   transform: `translateY(${scrollY * 0.1}px)`
                 }}
               >
-                Nanemachi Trek
+                Nanemachi Waterfall Trek
               </h1>
             </div>
             
@@ -264,39 +264,86 @@ const NanemachiTrek = () => {
           </div>
 
           {/* What to Carry Section - Clean left-aligned list */}
-          <div className="mb-16 sm:mb-20 md:mb-24 lg:mb-32">
-            <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 md:mb-10 text-xl sm:text-2xl md:text-3xl lg:text-4xl text-left">What to Carry?</h3>
-            <div className="grid grid-cols-1 gap-4 sm:gap-5 md:gap-6">
-              {[
-                "Backpack [30-40L]",
-                "Thermal wear (inner layers)",
-                "Fleece jackets and windcheaters",
-                "Waterproof and insulated gloves",
-                "Woolen caps, mufflers, and socks",
-                "Comfortable trekking shoes",
-                "Valid ID proof",
-                "Personal medicines",
-                "Sunglasses with UV protection",
-                "Sunscreen lotion (SPF 50+), lip balm, and moisturizer",
-                "Reusable water bottles (to stay hydrated)",
-                "Headlamp or flashlight with extra batteries",
-                "Camera to capture memories",
-                "Power banks and chargers",
-                "Head torch or Simple hand held torch",
-                "Snacks and energy bars"
-              ].map((item, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-start justify-start"
-                >
-                  <span className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-green-500 text-white flex items-center justify-center mr-3 sm:mr-4 md:mr-5 flex-shrink-0 mt-1 sm:mt-0">
-                    <span className="text-xs sm:text-sm md:text-base font-bold">✓</span>
-                  </span>
-                  <span className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-left">
-                    {item}
-                  </span>
-                </div>
-              ))}
+          <div className="mb-24 md:mb-32">
+            <h3 className="text-gray-900 font-bold mb-6 md:mb-8 text-2xl md:text-3xl">What to Carry?</h3>
+            <div className="space-y-4 md:space-y-5">
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Backpack [30-40L]</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Trekking Shoes [Good Grip]</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Full Sleeves Trekking T-Shirt</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Poncho/Raincoat</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Two Socks Pair</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Winter Wear
+                </span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Towel</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Chappal/Sandals</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Minimum 2-3L Water</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Dry Food Items</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Valid Govt. ID</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Sunglasses</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Cap/Hat</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Sunscream</span>
+              </p>
             </div>
           </div>
         </div>

@@ -289,82 +289,72 @@ const AndharbanJungleTrek = () => {
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Thermal wear (inner layers)</span>
+                <span>Trekking Shoes [Good Grip]</span>
               </p>
               <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Fleece jackets and windcheaters</span>
+                <span>Full Sleeves Trekking T-Shirt</span>
               </p>
               <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Waterproof and insulated gloves</span>
+                <span>Poncho/Raincoat</span>
               </p>
               <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Woolen caps, mufflers, and socks</span>
+                <span>Two Socks Pair</span>
               </p>
               <p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Comfortable trekking shoes
+                <span>Winter Wear
                 </span>
               </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Valid ID proof</span>
+                <span>Towel</span>
               </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Personal medicines</span>
+                <span>Chappal/Sandals</span>
               </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Sunglasses with UV protection</span>
+                <span>Minimum 2-3L Water</span>
               </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Sunscreen lotion (SPF 50+), lip balm, and moisturizer</span>
+                <span>Dry Food Items</span>
               </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Reusable water bottles (to stay hydrated)</span>
+                <span>Valid Govt. ID</span>
               </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Headlamp or flashlight with extra batteries</span>
+                <span>Sunglasses</span>
               </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Camera to capture memories</span>
+                <span>Cap/Hat</span>
               </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
                 <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                   <span className="text-lg font-bold">✓</span>
                 </span>
-                <span>Power banks and chargers</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Head torch or Simple hand held torch</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Snacks and energy bars</span>
+                <span>Sunscream</span>
               </p>
             </div>
           </div>
