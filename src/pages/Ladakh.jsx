@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 import para from '../assets/Treks/Ladakh/parallax.jpg';
 import A1 from '../assets/Treks/Ladakh/main-1.jpg';
 import A2 from '../assets/Treks/Ladakh/main-2.jpg';
@@ -105,22 +104,35 @@ const Ladakh = () => {
         </div>
       </div>
 
-      {/* Parallax Image Section */}
-      <div className="relative h-[50vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{ 
-            backgroundImage: `url(${para})`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundAttachment: 'fixed',
-            transition: 'transform 0.1s ease-out'
-          }}
-        >
-        
-        </div>
-        
-      
+      {/* Parallax Image Section - Keep desktop effect, fix mobile */}
+      <div className="relative h-[30vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
+        {isMobile ? (
+          // Mobile: Transform-based parallax
+          <div 
+            className="absolute inset-0 w-full h-[130%] -top-[15%]"
+            style={{ 
+              backgroundImage: `url(${para})`,
+              backgroundPosition: 'center center',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
+              transform: `translate3d(0, ${parallaxOffset}px, 0)`,
+              willChange: 'transform',
+              backfaceVisibility: 'hidden'
+            }}
+          />
+        ) : (
+          // Desktop: Your exact original parallax effect
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{ 
+              backgroundImage: `url(${para})`,
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+              backgroundAttachment: 'fixed',
+              transition: 'transform 0.1s ease-out'
+            }}
+          />
+        )}
       </div>
 
       {/* Additional Content Area */}
