@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import harishchandragad from '../assets/Harishchandragad.jpg';
+import para from '../assets/Treks/Ladakh/parallax.jpg';
+import A1 from '../assets/Treks/Ladakh/main-1.jpg';
+import A2 from '../assets/Treks/Ladakh/main-2.jpg';
+import A3 from '../assets/Treks/Ladakh/main-3.jpg';
 
 const Ladakh = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -40,7 +43,7 @@ const Ladakh = () => {
               </div>
               <div className="mb-8 md:mb-12">
                 <p className="text-gray-600 text-lg md:text-xl lg:text-2xl">
-                  🗓️ May, June, July
+                  🗓️ 25th-30th August 2025 <br/>24th-29th September
                 </p>
               </div>
               <div>
@@ -58,7 +61,7 @@ const Ladakh = () => {
         <div 
           className="absolute inset-0 w-full h-full"
           style={{ 
-            backgroundImage: `url(${harishchandragad})`,
+            backgroundImage: `url(${para})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundAttachment: 'fixed',
@@ -99,12 +102,7 @@ const Ladakh = () => {
             {/* Schedule Column */}
             <div>
               <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Schedule:</h3>
-              <p className="text-gray-800 text-base md:text-lg">🕒 ⏱︎ May June July<br/>
-16-21 May / 16-23 May<br/>
-24-29 May / 24-31 May<br/>
-10-15 June / 10- 17 June<br/>
-21-26 June / 21-28 June<br/>
-8-13 July / 8-15 July</p>
+              <p className="text-gray-800 text-base md:text-lg">🕒 25th-30th August 2025 <br/>24th-29th September</p>
             </div>
           </div>
           
@@ -308,7 +306,7 @@ const Ladakh = () => {
           className="w-full md:w-[800px] text-left p-6 md:p-8 bg-gray-50 hover:bg-white rounded-lg flex flex-col md:flex-row justify-start items-start md:items-center mb-4 md:mb-8 transition-colors"
         >
           <div className="flex items-center gap-4 md:gap-8">
-            <span className="text-xl md:text-3xl font-semibold text-gray-900">5N 6D</span>
+            <span className="text-xl md:text-3xl font-semibold text-gray-900">5N/6D</span>
             <span className="text-lg md:text-2xl text-gray-800">Ladakh Odyssey: A Journey to the Land of High Passes</span>
           </div>
         </button>
@@ -319,8 +317,58 @@ const Ladakh = () => {
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">10:00 pm:</span>
-                  <span className="ml-3 text-lg md:text-xl">Assemble at the designated pickup point in Pune and start the journey toward Morshi</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 1: Arrival in Leh (3,500m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- Arrival: Reach Leh Airport (IXL) and transfer to your hotel.<br/>
+- Check-In: Relax and allow your body to acclimatize to the high altitude.<br/>
+- Evening: Explore the Leh Market and its surroundings, soaking in the local vibes.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="mt-1">⏰</span>
+                <div>
+                  <span className="font-semibold text-lg md:text-xl">Day 2: Local Ride to Sham Valley</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 09:00 AM: Begin your bike ride to Sham Valley.<br/>
+- Highlights: Visit Magnetic Hill, Gurudwara Pathar Sahib, and the confluence of the Indus and Zanskar rivers at Sangam Point.<br/>
+- 04:00 PM: Return to Leh and spend the evening relaxing or exploring the local market.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="mt-1">⏰</span>
+                <div>
+                  <span className="font-semibold text-lg md:text-xl">Day 3: Leh to Nubra Valley (3,048m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to Nubra Valley via the iconic Khardung La Pass (5,602m), one of the highest motorable roads in the world.
+<br/>- 01:00 PM: Lunch at North Pullu.
+<br/>- 03:00 PM: Visit Diskit Monastery and the mesmerizing Hunder Sand Dunes.
+<br/>- 05:00 PM: Check-in at your camp/hotel in Nubra Valley.
+<br/>- Evening: Optional camel ride or ATV tour amidst the desert dunes.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="mt-1">⏰</span>
+                <div>
+                  <span className="font-semibold text-lg md:text-xl">Day 4: Nubra Valley to Pangong Lake (4,250m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to the world-famous Pangong Lake via Shyok River and Tangste Valley.
+<br/>- 02:00 PM: Lunch at Tangste.
+<br/>- 04:00 PM: Arrive at Pangong Lake and check-in at your lakeside camp.
+<br/>- Evening: Marvel at the lake's surreal hues and the surrounding landscapes.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="mt-1">⏰</span>
+                <div>
+                  <span className="font-semibold text-lg md:text-xl">Day 5: Pangong Lake to Leh (3,500m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive back to Leh, traversing the scenic Chang La Pass (5,360m).
+<br/>- 01:00 PM: Lunch at Karu.
+<br/>- 03:00 PM: Check-in at your hotel in Leh.
+<br/>- Evening: Free time to explore Leh Market or relax.</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="mt-1">⏰</span>
+                <div>
+                  <span className="font-semibold text-lg md:text-xl">Day 6: Departure from Leh</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Check-out from your hotel.
+<br/>- 09:00 AM: Transfer to Leh Airport (IXL) or bus stand for your onward journey</span>
                 </div>
               </div>
             </div>
@@ -335,8 +383,8 @@ const Ladakh = () => {
           className="w-full md:w-[800px] text-left p-6 md:p-8 bg-gray-50 hover:bg-white rounded-lg flex flex-col md:flex-row justify-start items-start md:items-center mb-4 md:mb-8 transition-colors"
         >
           <div className="flex items-center gap-4 md:gap-8">
-            <span className="text-xl md:text-3xl font-semibold text-gray-900">7N 8D<br/>Beyond</span>
-            <span className="text-lg md:text-2xl text-gray-800">Ladakh Odyssey: A Journey to the Land of High Passes &</span>
+            <span className="text-xl md:text-3xl font-semibold text-gray-900">7N/8D</span>
+            <span className="text-lg md:text-2xl text-gray-800">Ladakh Odyssey: A Journey to the Land of High Passes & Beyond</span>
           </div>
         </button>
         
@@ -346,70 +394,80 @@ const Ladakh = () => {
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">03:00 am:</span>
-                  <span className="ml-3 text-lg md:text-xl">Arrive at the base village, freshen up, and gear up for the trek</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 1: Arrival in Leh (3,500m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- Arrival: Reach Leh Airport (IXL) and transfer to your hotel.
+<br/>- Check-In: Spend the day resting to acclimatize to the high altitude.
+<br/>- Evening: Stroll through Leh Market and explore the local surroundings.</span>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">04:00 am:</span>
-                  <span className="ml-3 text-lg md:text-xl">Enjoy a hot breakfast to fuel your adventure.</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 2: Leh Local Sightseeing</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 09:00 AM: Visit Shanti Stupa for panoramic views of Leh and its surroundings.
+<br/>- 10:30 AM: Explore the Hall of Fame, a museum dedicated to the Indian Army.
+<br/>- 12:00 PM: Visit Pathar Sahib Gurudwara, Magnetic Hill, and the Sangam Point, where the Indus and Zanskar rivers meet.
+<br/>- Evening: Relax at your hotel or spend time exploring Leh Market.</span>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">04:30 am:</span>
-                  <span className="ml-3 text-lg md:text-xl">Quick introduction session and safety briefing before the trek begins.</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 3: Leh to Nubra Valley (3,048m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to Nubra Valley via Khardung La Pass (5,602m), one of the highest motorable roads in the world.
+<br/>- 01:00 PM: Lunch break at North Pullu.
+<br/>- 03:00 PM: Visit Diskit Monastery and the famous Hunder Sand Dunes.
+<br/>- 05:00 PM: Check-in at your camp/hotel in Nubra Valley.
+<br/>- Evening: Optional camel ride or ATV tour in the sand dunes.</span>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">10:00 am:</span>
-                  <span className="ml-3 text-lg md:text-xl">Reach the summit and soak in the stunning sunrise and 360° views of the Sahyadri range. Snap some Insta-worthy photos!</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 4: Nubra Valley to Pangong Lake (4,250m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Journey to Pangong Lake via the scenic Shyok River and Tangste Valley.
+<br/>- 02:00 PM: Lunch break at Tangste.
+<br/>- 04:00 PM: Arrive at Pangong Lake and check-in at your lakeside camp.
+<br/>- Evening: Experience the mesmerizing hues of the lake and its surrounding landscapes.</span>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">11:00 pm:</span>
-                  <span className="ml-3 text-lg md:text-xl">Begin the descent, navigating carefully through the rugged terrain.</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 5: Pangong Lake to Hanle (4,250m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to Hanle via Chushul and the Loma Bend.
+<br/>- 01:00 PM: Lunch break at Chushul.
+<br/>- 03:00 PM: Check-in at your camp/hotel in Hanle.
+<br/>- Evening: Visit Hanle Monastery and enjoy spectacular stargazing under the clear Ladakhi skies.</span>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">04:00 pm:</span>
-                  <span className="ml-3 text-lg md:text-xl">Reach the base village and celebrate your achievement.</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 6: Hanle to Umling La (5,350m) and Back to Hanle</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to Umling La Pass, the world’s highest motorable pass.
+<br/>- 12:00 PM: Lunch break at Umling La.
+<br/>- 02:00 PM: Return to Hanle.
+<br/>- Evening: Relax and unwind at your camp/hotel.</span>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">05:00 pm:</span>
-                  <span className="ml-3 text-lg md:text-xl">Relish a delicious lunch of authentic local cuisine.</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 7: Hanle to Leh (3,500m)</span>
+                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Begin your journey back to Leh via Chushul and Karu.
+<br/>- 01:00 PM: Lunch break at Karu.
+<br/>- 03:00 PM: Arrive in Leh and check-in at your hotel.
+<br/>- Evening: Spend your final evening exploring the vibrant Leh Market.</span>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <span className="mt-1">⏰</span>
                 <div>
-                  <span className="font-semibold text-lg md:text-xl">06:00 pm:</span>
-                  <span className="ml-3 text-lg md:text-xl">Start your return journey to Pune with hearts full of memories and triumph.</span>
+                  <span className="font-semibold text-lg md:text-xl">Day 8: Departure from Leh</span>
+                  <span className="ml-3 text-lg md:text-xl">- <br/>08:00 AM: Check-out from your hotel.
+<br/>- 09:00 AM: Transfer to Leh Airport (IXL) for your departure.</span>
                 </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">11:00 pm:</span>
-                  <span className="ml-3 text-lg md:text-xl">REACH PUNE</span>
-                </div>
-              </div>
-              <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gray-50 rounded-lg">
-                <p className="text-base md:text-lg text-gray-700">
-                  <strong>Note:</strong> Please be punctual throughout the trek. In some scenarios, our schedule might be delayed, but your cooperation is essential to ensure we stay on track.
-                </p>
               </div>
             </div>
           </div>
@@ -424,7 +482,7 @@ const Ladakh = () => {
     {/* Left column - single large image */}
     <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4] md:aspect-[3.5/4]">
       <img 
-        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+        src= {A1}
         alt="Mountain landscape with river" 
         className="w-full h-full object-cover"
       />
@@ -434,14 +492,14 @@ const Ladakh = () => {
     <div className="grid grid-rows-1 md:grid-rows-2 gap-4 md:gap-5">
       <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9]">
         <img 
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+          src= {A2}
           alt="Mountain landscape with trees" 
           className="w-full h-full object-cover"
         />
       </div>
       <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9]">
         <img 
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+        src={A3}
           alt="Mountain landscape with trees and river" 
           className="w-full h-full object-cover"
         />
