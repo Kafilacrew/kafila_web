@@ -157,7 +157,7 @@ const Ladakh = () => {
             {/* Slots Column */}
             <div>
               <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Slots:</h3>
-              <p className="text-gray-800 text-base md:text-lg">👥 24 Explorers</p>
+              <p className="text-gray-800 text-base md:text-lg">👥 25 Explorers</p>
             </div>
             
             {/* Schedule Column */}
