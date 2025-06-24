@@ -8,17 +8,66 @@ import A3 from '../assets/Treks/Ladakh/main-3.jpg';
 const Ladakh = () => {
   const [scrollY, setScrollY] = useState(0);
   const [expandedDay, setExpandedDay] = useState(null);
+  const [isVisible, setIsVisible] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Detect mobile devices - tablets and phones only
+    const checkIfMobile = () => {
+      const isMobileDevice = window.innerWidth < 768 || 
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      setIsMobile(isMobileDevice);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
     const handleScroll = () => {
       setScrollY(window.scrollY);
+      
+      // Trigger animations when elements come into view
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const isInView = rect.top <= window.innerHeight * 0.8;
+        const id = element.getAttribute('data-id');
+        
+        if (isInView && !isVisible[id]) {
+          setIsVisible(prev => ({ ...prev, [id]: true }));
+        }
+      });
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+    // For mobile: use optimized scroll handler
+    // For desktop: use regular scroll handler to preserve original behavior
+    if (isMobile) {
+      let ticking = false;
+      const handleScrollOptimized = () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            handleScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+      window.addEventListener('scroll', handleScrollOptimized, { passive: true });
+      return () => {
+        window.removeEventListener('scroll', handleScrollOptimized);
+        window.removeEventListener('resize', checkIfMobile);
+      };
+    } else {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', checkIfMobile);
+      };
+    }
+  }, [isVisible, isMobile]);
 
   // For true parallax effect, the image should move slower than scroll
   const parallaxOffset = scrollY * 0.3;
+
 
   return (
     <div className="min-h-screen">
