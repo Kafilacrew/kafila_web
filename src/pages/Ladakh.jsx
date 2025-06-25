@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import para from '../assets/Treks/Ladakh/parallax.jpg';
-import A1 from '../assets/Treks/Ladakh/main-1.jpg';
-import A2 from '../assets/Treks/Ladakh/main-2.jpg';
-import A3 from '../assets/Treks/Ladakh/main-3.jpg';
+import { useState, useEffect } from 'react';
+import BookingForm from '../components/Bookingform'; // Assuming shared component
+import UpcomingAdventuresSection from '../components/upcomingadventures';
+import RefundPolicy from '../components/RefundPolicy';
+import Ladakh1 from '../assets/Treks/Ladakh/parallax.jpg';
+import Ladakh2 from '../assets/Treks/Ladakh/main-1.jpg';
+import Ladakh3 from '../assets/Treks/Ladakh/main-2.jpg';
+import Ladakh4 from '../assets/Treks/Ladakh/main-3.jpg';
 
 const Ladakh = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -67,36 +70,48 @@ const Ladakh = () => {
   // For true parallax effect, the image should move slower than scroll
   const parallaxOffset = scrollY * 0.3;
 
-
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Header Section */}
-      <div className="relative bg-white py-8 lg:py-20">
-        <div className="max-w-[1600px] mx-auto px-4 md:px-8 py-6 md:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      <div className="relative bg-white py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mt-16 sm:mt-20 lg:mt-24 xl:mt-28">
             {/* Left Column - Title */}
-            <div className="flex items-center">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-tight md:ml-0 lg:ml-[150px]">
-               Leh Ladakh Backpacking
+            <div className="flex items-center justify-center lg:justify-start">
+              <h1 
+                className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl font-times font-bold text-gray-900 leading-[0.9] text-center lg:text-left lg:ml-[20px] xl:ml-[50px] 2xl:ml-[100px] transition-all duration-700 px-2 sm:px-0 break-words hyphens-auto"
+                style={{
+                  opacity: scrollY < 50 ? 1 : 0.8,
+                  transform: `translateY(${scrollY * 0.1}px)`
+                }}
+              >
+                Leh Ladakh Backpacking
               </h1>
             </div>
             
             {/* Right Column - Info */}
-            <div className="flex flex-col justify-center md:ml-0 lg:ml-[80px] mt-0 md:mt-[40px] lg:mt-[80px]">
-              <div className="mb-6 md:mb-8">
-                <p className="text-gray-600 text-lg md:text-xl lg:text-2xl flex items-center">
-                  <span className="mr-3">📍</span>
-                  Leh Ladakh
+            <div className="flex flex-col justify-center items-center lg:items-start space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 lg:ml-[15px] xl:ml-[30px] 2xl:ml-[60px] px-4 sm:px-0">
+              <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+                   data-id="location" 
+                   style={isVisible.location ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+                <p className="text-gray-600 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl flex items-center justify-center lg:justify-start">
+                  <span className="mr-2 sm:mr-3 text-lg sm:text-xl md:text-2xl flex-shrink-0">📍</span>
+                  <span className="break-words">Leh Ladakh</span>
                 </p>
               </div>
-              <div className="mb-8 md:mb-12">
-                <p className="text-gray-600 text-lg md:text-xl lg:text-2xl">
-                  🗓️ 25th-30th August 2025 <br/>24th-29th September
+              <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+                   data-id="date" 
+                   style={isVisible.date ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+                <p className="text-gray-600 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center lg:text-left">
+                  <span className="mr-2 sm:mr-3 text-lg sm:text-xl md:text-2xl flex-shrink-0">🗓️</span>
+                  <span className="break-words">25th-30th August 2025, 24th-29th September</span>
                 </p>
               </div>
-              <div>
-                <p className="text-gray-700 text-lg md:text-xl lg:text-2xl max-w-lg leading-relaxed">
-                Leh Ladakh, a land of breathtaking landscapes and serene monasteries, is a paradise for adventure enthusiasts and nature lovers alike. Nestled amidst the majestic Himalayas, it offers unique experiences with its rugged terrain, vibrant culture, and pristine beauty.
+              <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+                   data-id="description" 
+                   style={isVisible.description ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+                <p className="text-gray-700 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-full lg:max-w-lg leading-relaxed text-center lg:text-left break-words hyphens-auto">
+                  Discover the enchanting landscapes of Leh Ladakh, a paradise of rugged Himalayan terrain, serene monasteries, and vibrant culture, offering an unforgettable adventure for nature lovers and thrill-seekers.
                 </p>
               </div>
             </div>
@@ -104,14 +119,13 @@ const Ladakh = () => {
         </div>
       </div>
 
-      {/* Parallax Image Section - Keep desktop effect, fix mobile */}
-      <div className="relative h-[30vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
+      {/* Parallax Image Section */}
+      <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
         {isMobile ? (
-          // Mobile: Transform-based parallax
           <div 
             className="absolute inset-0 w-full h-[130%] -top-[15%]"
             style={{ 
-              backgroundImage: `url(${para})`,
+              backgroundImage: `url(${Ladakh1})`,
               backgroundPosition: 'center center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
@@ -121,11 +135,10 @@ const Ladakh = () => {
             }}
           />
         ) : (
-          // Desktop: Your exact original parallax effect
           <div 
             className="absolute inset-0 w-full h-full"
             style={{ 
-              backgroundImage: `url(${para})`,
+              backgroundImage: `url(${Ladakh1})`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundAttachment: 'fixed',
@@ -137,441 +150,418 @@ const Ladakh = () => {
 
       {/* Additional Content Area */}
       <div className="bg-white">
-        <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Details Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 mb-16 md:mb-24">
-            {/* Price Column */}
-            <div>
-              <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Price:</h3>
-              <p className="text-gray-800 text-base md:text-lg mb-2">5 Nights / 6 Days <br/>
-- Mini Bus Travel: ₹17,999/-<br/>
-- Bike Travel(Dual Sharing): ₹18,499/-<br/>
-- Bike Travel: ₹23,999/-<br/>
-7 Nights / 8 Days<br/>
-- Mini Bus Travel: ₹24,999/-<br/>
-- Bike Travel(Dual Sharing): ₹25,999/-<br/>
-- Bike Travel: ₹31,999/</p><br/>
-            
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 py-8 sm:py-12 lg:py-16">
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out text-left px-2 sm:px-0" 
+                 data-id="price" 
+                 style={isVisible.price ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+              <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Price:</h3>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">
+                5 Nights / 6 Days:<br/>
+                - Mini Bus: ₹17,999/-<br/>
+                - Bike (Dual Sharing): ₹18,499/-<br/>
+                - Bike: ₹23,999/-<br/>
+                7 Nights / 8 Days:<br/>
+                - Mini Bus: ₹24,999/-<br/>
+                - Bike (Dual Sharing): ₹25,999/-<br/>
+                - Bike: ₹31,999/-
+              </p>
             </div>
-            
-            {/* Slots Column */}
-            <div>
-              <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Slots:</h3>
-              <p className="text-gray-800 text-base md:text-lg">👥 25 Explorers</p>
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-100 text-left px-2 sm:px-0" 
+                 data-id="slots" 
+                 style={isVisible.slots ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+              <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Slots:</h3>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">👥 25 Explorers</p>
             </div>
-            
-            {/* Schedule Column */}
-            <div>
-              <h3 className="text-gray-900 font-semibold mb-3 md:mb-4 text-lg md:text-xl">Schedule:</h3>
-              <p className="text-gray-800 text-base md:text-lg">🕒 25th-30th August 2025 <br/>24th-29th September</p>
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200 text-left px-2 sm:px-0 sm:col-span-2 md:col-span-1" 
+                 data-id="schedule" 
+                 style={isVisible.schedule ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+              <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Schedule:</h3>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">🕒 25th-30th August 2025, 24th-29th September</p>
             </div>
           </div>
-          
+
           {/* Boarding Points */}
-          <div className="mb-16 md:mb-24">
-            <h3 className="text-gray-900 font-semibold mb-4 md:mb-6 text-lg md:text-xl">Boarding Points</h3>
-            <div className="space-y-2 md:space-y-3">
-              <p className="text-gray-800 text-base md:text-lg">📍 Leh</p>
-              <p className="text-gray-800 text-base md:text-lg">📍 Delhi</p>
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
+               data-id="boarding" 
+               style={isVisible.boarding ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+            <h3 className="text-gray-900 font-bold mb-4 sm:mb-6 text-lg sm:text-xl lg:text-2xl text-left">Boarding Points</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              {[
+                "Leh",
+                "Delhi"
+              ].map((point, index) => (
+                <p key={index} className="text-gray-800 text-sm sm:text-base lg:text-lg flex items-start text-left break-words">
+                  <span className="mr-2 sm:mr-3 text-base sm:text-lg flex-shrink-0 mt-0.5">📍</span>
+                  <span className="break-words">{point}</span>
+                </p>
+              ))}
             </div>
           </div>
-          
+
           {/* Historical Information */}
-          <div className="mb-16 md:mb-24">
-            <p className="text-gray-700 mb-4 md:mb-6 text-base md:text-lg leading-relaxed">
-            Experience the enchanting landscapes of Ladakh with this meticulously curated itinerary by Kafila Adventures Nestled in the lap of the Himalayas, Ladakh is a land of stunning mountain vistas, pristine lakes, and vibrant Buddhist culture. With high-altitude passes, serene valleys, and azure skies, this trip promises to be a soul-stirring adventure.Are you ready?
-            </p>
-          </div>
-          
-        
-
-          {/* Includes Section - Matching screenshot style */}
-          <div className="mb-16 md:mb-24">
-            <h3 className="text-gray-900 font-bold mb-6 md:mb-8 text-2xl md:text-3xl">Includes:</h3>
-            <div className="space-y-4 md:space-y-5">
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Private Transportation</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Comfortable accomodations on a triple sharing basis</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Meals (Breakfast & Dinner)</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Permits</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Sightseeing & Entry fees</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Oxygen Supply
-                </span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>First Aid Support</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Professional Tour Guides</span>
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
+               data-id="history" 
+               style={isVisible.history ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+            <div className="max-w-full">
+              <p className="text-gray-700 text-xs xs:text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed text-left break-words hyphens-auto">
+                Nestled in the heart of the Himalayas, Leh Ladakh is a land of unparalleled beauty, where rugged mountains, serene lakes, and ancient monasteries create a breathtaking tapestry. Known for its high-altitude passes like Khardung La and Umling La, vibrant Buddhist culture, and pristine landscapes, Ladakh offers an adventure of a lifetime. This curated journey by Kafila Adventures takes you through iconic destinations like Nubra Valley, Pangong Lake, and Hanle, blending thrilling rides with soul-stirring experiences under azure skies.
               </p>
             </div>
           </div>
 
-          {/* Excludes Section - Matching screenshot style */}
-          <div className="mb-16 md:mb-24">
-            <h3 className="text-gray-900 font-bold mb-6 md:mb-8 text-2xl md:text-3xl">Excludes:</h3>
-            <div className="space-y-4 md:space-y-5">
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-red-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg">✗</span>
-                </span>
-                <span>Personal expenses</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-red-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg">✗</span>
-                </span>
-                <span>Optional excursions</span>
-              </p>
+          {/* Includes Section */}
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
+               data-id="includes" 
+               style={isVisible.includes ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+            <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-left">Includes:</h3>
+            <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
+              {[
+                "Private Transportation",
+                "Comfortable accommodations on a triple sharing basis",
+                "Meals (Breakfast & Dinner)",
+                "Permits",
+                "Sightseeing & Entry fees",
+                "Oxygen Supply",
+                "First Aid Support",
+                "Professional Tour Guides"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start justify-start">
+                  <span className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-green-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
+                    <span className="text-xs sm:text-sm md:text-base font-bold">✓</span>
+                  </span>
+                  <span className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl break-words">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* What to Carry Section - Matching screenshot style */}
+          {/* Excludes Section */}
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
+               data-id="excludes" 
+               style={isVisible.excludes ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+            <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-left">Excludes:</h3>
+            <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
+              {[
+                "Personal expenses",
+                "Optional excursions"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start justify-start">
+                  <span className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-red-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
+                    <span className="text-xs sm:text-sm md:text-base">✗</span>
+                  </span>
+                  <span className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl break-words">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* What to Carry Section */}
           <div className="mb-24 md:mb-32">
             <h3 className="text-gray-900 font-bold mb-6 md:mb-8 text-2xl md:text-3xl">What to Carry?</h3>
             <div className="space-y-4 md:space-y-5">
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Backpack [30-40L]</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Thermal wear (inner layers)</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Fleece jackets and windcheaters</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Waterproof and insulated gloves</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Woolen caps, mufflers, and socks</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Comfortable trekking shoes
-                </span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Valid ID proof</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Personal medicines</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Sunglasses with UV protection</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Sunscreen lotion (SPF 50+), lip balm, and moisturizer</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Reusable water bottles (to stay hydrated)</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Headlamp or flashlight with extra batteries</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Camera to capture memories</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Power banks and chargers</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Head torch or Simple hand held torch</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Snacks and energy bars</span>
-              </p>
+              {[
+                "Backpack [30-40L]",
+                "Thermal wear (inner layers)",
+                "Fleece jackets and windcheaters",
+                "Waterproof and insulated gloves",
+                "Woolen caps, mufflers, and socks",
+                "Comfortable trekking shoes",
+                "Valid ID proof",
+                "Personal medicines",
+                "Sunglasses with UV protection",
+                "Sunscreen lotion (SPF 50+), lip balm, and moisturizer",
+                "Reusable water bottles",
+                "Headlamp or flashlight with extra batteries",
+                "Camera to capture memories",
+                "Power banks and chargers",
+                "Head torch or simple handheld torch",
+                "Snacks and energy bars"
+              ].map((item, index) => (
+                <p key={index} className="text-gray-900 text-xl md:text-2xl flex items-center">
+                  <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                    <span className="text-lg font-bold">✓</span>
+                  </span>
+                  <span>{item}</span>
+                </p>
+              ))}
             </div>
           </div>
         </div>
       </div>
-{/* The Journey Section - Matching the design but responsive */}
-<div className="py-16 md:py-24 bg-white">
-  <div className="max-w-[1600px] mx-auto px-4 md:px-8">
-    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center md:text-left mb-12 md:mb-16 md:ml-[100px] lg:ml-[150px]">The Journey</h2>
-    
-    <div className="max-w-6xl mx-auto">
-      {/* Day 1 Section */}
-      <div className="mb-8 md:mb-12">
-        <button 
-          onClick={() => setExpandedDay(expandedDay === 1 ? null : 1)}
-          className="w-full md:w-[800px] text-left p-6 md:p-8 bg-gray-50 hover:bg-white rounded-lg flex flex-col md:flex-row justify-start items-start md:items-center mb-4 md:mb-8 transition-colors"
-        >
-          <div className="flex items-center gap-4 md:gap-8">
-            <span className="text-xl md:text-3xl font-semibold text-gray-900">5N/6D</span>
-            <span className="text-lg md:text-2xl text-gray-800">Ladakh Odyssey: A Journey to the Land of High Passes</span>
-          </div>
-        </button>
-        
-        {expandedDay === 1 && (
-          <div className="p-6 md:p-8 bg-white rounded-lg mb-4 md:mb-8 md:w-[800px]">
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 1: Arrival in Leh (3,500m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- Arrival: Reach Leh Airport (IXL) and transfer to your hotel.<br/>
-- Check-In: Relax and allow your body to acclimatize to the high altitude.<br/>
-- Evening: Explore the Leh Market and its surroundings, soaking in the local vibes.</span>
+
+      {/* <BookingForm /> */}
+
+      {/* The Journey Section */}
+      <div className="py-12 sm:py-16 lg:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center lg:text-left mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out break-words" 
+              data-id="journey-title" 
+              style={isVisible['journey-title'] ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+            The Journey
+          </h2>
+          
+          <div className="space-y-6 sm:space-y-8">
+            {/* 5N/6D Itinerary */}
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out" 
+                 data-id="day1" 
+                 style={isVisible.day1 ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+              <button 
+                onClick={() => setExpandedDay(expandedDay === 1 ? null : 1)}
+                className="w-full max-w-4xl mx-auto block p-4 sm:p-6 lg:p-8 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 hover:shadow-lg group"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
+                    <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0">5N/6D</span>
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Ladakh Odyssey: Land of High Passes</span>
+                  </div>
+                  <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 1 ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
                 </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 2: Local Ride to Sham Valley</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 09:00 AM: Begin your bike ride to Sham Valley.<br/>
-- Highlights: Visit Magnetic Hill, Gurudwara Pathar Sahib, and the confluence of the Indus and Zanskar rivers at Sangam Point.<br/>
-- 04:00 PM: Return to Leh and spend the evening relaxing or exploring the local market.</span>
+              </button>
+              
+              {expandedDay === 1 && (
+                <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
+                  <div className="space-y-4 sm:space-y-6">
+                    {[
+                      { time: "Day 1", desc: "Arrival in Leh (3,500m): Reach Leh Airport (IXL), transfer to hotel, and rest to acclimatize. Evening exploration of Leh Market." },
+                      { time: "Day 2", desc: "Sham Valley Ride: Visit Magnetic Hill, Gurudwara Pathar Sahib, and Indus-Zanskar confluence at Sangam Point. Return to Leh by evening." },
+                      { time: "Day 3", desc: "Leh to Nubra Valley (3,048m): Drive via Khardung La Pass (5,602m). Visit Diskit Monastery and Hunder Sand Dunes. Optional camel ride or ATV tour." },
+                      { time: "Day 4", desc: "Nubra to Pangong Lake (4,250m): Drive via Shyok River. Check-in at lakeside camp and marvel at Pangong’s surreal hues." },
+                      { time: "Day 5", desc: "Pangong to Leh: Return via Chang La Pass (5,360m). Evening free to explore Leh Market." },
+                      { time: "Day 6", desc: "Departure: Check-out and transfer to Leh Airport (IXL) for onward journey." }
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3 sm:gap-4">
+                        <span className="text-xl sm:text-2xl mt-1 flex-shrink-0">⏰</span>
+                        <div className="min-w-0 flex-1">
+                          <span className="font-bold text-base sm:text-lg lg:text-xl text-gray-900 break-words">{item.time}:</span>
+                          <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl text-gray-700 break-words hyphens-auto">{item.desc}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 3: Leh to Nubra Valley (3,048m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to Nubra Valley via the iconic Khardung La Pass (5,602m), one of the highest motorable roads in the world.
-<br/>- 01:00 PM: Lunch at North Pullu.
-<br/>- 03:00 PM: Visit Diskit Monastery and the mesmerizing Hunder Sand Dunes.
-<br/>- 05:00 PM: Check-in at your camp/hotel in Nubra Valley.
-<br/>- Evening: Optional camel ride or ATV tour amidst the desert dunes.</span>
+              )}
+            </div>
+
+            {/* 7N/8D Itinerary */}
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-100" 
+                 data-id="day2" 
+                 style={isVisible.day2 ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+              <button 
+                onClick={() => setExpandedDay(expandedDay === 2 ? null : 2)}
+                className="w-full max-w-4xl mx-auto block p-4 sm:p-6 lg:p-8 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 hover:shadow-lg group"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
+                    <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0">7N/8D</span>
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Ladakh Odyssey: High Passes & Beyond</span>
+                  </div>
+                  <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 2 ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
                 </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 4: Nubra Valley to Pangong Lake (4,250m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to the world-famous Pangong Lake via Shyok River and Tangste Valley.
-<br/>- 02:00 PM: Lunch at Tangste.
-<br/>- 04:00 PM: Arrive at Pangong Lake and check-in at your lakeside camp.
-<br/>- Evening: Marvel at the lake's surreal hues and the surrounding landscapes.</span>
+              </button>
+              
+              {expandedDay === 2 && (
+                <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
+                  <div className="space-y-4 sm:space-y-6">
+                    {[
+                      { time: "Day 1", desc: "Arrival in Leh (3,500m): Reach Leh Airport (IXL), transfer to hotel, and rest to acclimatize. Evening stroll in Leh Market." },
+                      { time: "Day 2", desc: "Leh Sightseeing: Visit Shanti Stupa, Hall of Fame, Pathar Sahib Gurudwara, Magnetic Hill, and Sangam Point. Evening free." },
+                      { time: "Day 3", desc: "Leh to Nubra Valley (3,048m): Drive via Khardung La Pass. Visit Diskit Monastery and Hunder Sand Dunes. Optional camel ride or ATV tour." },
+                      { time: "Day 4", desc: "Nubra to Pangong Lake (4,250m): Drive via Shyok River. Check-in at lakeside camp and enjoy Pangong’s beauty." },
+                      { time: "Day 5", desc: "Pangong to Hanle (4,250m): Drive via Chushul. Visit Hanle Monastery and stargaze under clear skies." },
+                      { time: "Day 6", desc: "Hanle to Umling La (5,350m): Drive to the world’s highest motorable pass and return to Hanle. Evening relaxation." },
+                      { time: "Day 7", desc: "Hanle to Leh: Return via Chushul. Evening exploration of Leh Market." },
+                      { time: "Day 8", desc: "Departure: Check-out and transfer to Leh Airport (IXL) for departure." }
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3 sm:gap-4">
+                        <span className="text-xl sm:text-2xl mt-1 flex-shrink-0">⏰</span>
+                        <div className="min-w-0 flex-1">
+                          <span className="font-bold text-base sm:text-lg lg:text-xl text-gray-900 break-words">{item.time}:</span>
+                          <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl text-gray-700 break-words hyphens-auto">{item.desc}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 5: Pangong Lake to Leh (3,500m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive back to Leh, traversing the scenic Chang La Pass (5,360m).
-<br/>- 01:00 PM: Lunch at Karu.
-<br/>- 03:00 PM: Check-in at your hotel in Leh.
-<br/>- Evening: Free time to explore Leh Market or relax.</span>
+              )}
+            </div>
+
+            {/* Journey Images Grid */}
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200" 
+                 data-id="images" 
+                 style={isVisible.images ? {opacity: 1, transform: 'translateY(0)'} : {}}>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16">
+                <div className="lg:row-span-2">
+                  <div className="rounded-2xl overflow-hidden shadow-xl h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] group">
+                    <img 
+                      src={Ladakh2} 
+                      alt="Ladakh mountain landscape" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 6: Departure from Leh</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Check-out from your hotel.
-<br/>- 09:00 AM: Transfer to Leh Airport (IXL) or bus stand for your onward journey</span>
+                <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+                  <div className="rounded-2xl overflow-hidden shadow-xl h-40 sm:h-48 md:h-64 lg:h-72 group">
+                    <img 
+                      src={Ladakh3} 
+                      alt="Ladakh monastery view" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="rounded-2xl overflow-hidden shadow-xl h-40 sm:h-48 md:h-64 lg:h-72 group">
+                    <img 
+                      src={Ladakh4} 
+                      alt="Ladakh lake panorama" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
 
-      {/* Day 2 Section */}
-      <div className="mb-8 md:mb-12">
-        <button 
-          onClick={() => setExpandedDay(expandedDay === 2 ? null : 2)}
-          className="w-full md:w-[800px] text-left p-6 md:p-8 bg-gray-50 hover:bg-white rounded-lg flex flex-col md:flex-row justify-start items-start md:items-center mb-4 md:mb-8 transition-colors"
-        >
-          <div className="flex items-center gap-4 md:gap-8">
-            <span className="text-xl md:text-3xl font-semibold text-gray-900">7N/8D</span>
-            <span className="text-lg md:text-2xl text-gray-800">Ladakh Odyssey: A Journey to the Land of High Passes & Beyond</span>
-          </div>
-        </button>
+      {/* Enhanced CSS */}
+      <style jsx>{`
+        @keyframes scaleUp {
+          from {
+            opacity: 0;
+            transform: scale(0.95) translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+
+        .animate-scale-up {
+          animation: scaleUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .animate-on-scroll {
+          transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        @media (min-width: 475px) {
+          .xs\\:text-5xl {
+            font-size: 5rem;
+            line-height: 1;
+          }
+          .xs\\:text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+          }
+          .xs\\:text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+          }
+          .xs\\:text-base {
+            font-size: 1rem;
+            line-height: 1.5rem;
+          }
+        }
+
+        .text-8xl {
+          font-size: 6rem;
+          line-height: 1;
+        }
         
-        {expandedDay === 2 && (
-          <div className="p-6 md:p-8 bg-white rounded-lg mb-4 md:mb-8 md:w-[800px]">
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 1: Arrival in Leh (3,500m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- Arrival: Reach Leh Airport (IXL) and transfer to your hotel.
-<br/>- Check-In: Spend the day resting to acclimatize to the high altitude.
-<br/>- Evening: Stroll through Leh Market and explore the local surroundings.</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 2: Leh Local Sightseeing</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 09:00 AM: Visit Shanti Stupa for panoramic views of Leh and its surroundings.
-<br/>- 10:30 AM: Explore the Hall of Fame, a museum dedicated to the Indian Army.
-<br/>- 12:00 PM: Visit Pathar Sahib Gurudwara, Magnetic Hill, and the Sangam Point, where the Indus and Zanskar rivers meet.
-<br/>- Evening: Relax at your hotel or spend time exploring Leh Market.</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 3: Leh to Nubra Valley (3,048m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to Nubra Valley via Khardung La Pass (5,602m), one of the highest motorable roads in the world.
-<br/>- 01:00 PM: Lunch break at North Pullu.
-<br/>- 03:00 PM: Visit Diskit Monastery and the famous Hunder Sand Dunes.
-<br/>- 05:00 PM: Check-in at your camp/hotel in Nubra Valley.
-<br/>- Evening: Optional camel ride or ATV tour in the sand dunes.</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 4: Nubra Valley to Pangong Lake (4,250m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Journey to Pangong Lake via the scenic Shyok River and Tangste Valley.
-<br/>- 02:00 PM: Lunch break at Tangste.
-<br/>- 04:00 PM: Arrive at Pangong Lake and check-in at your lakeside camp.
-<br/>- Evening: Experience the mesmerizing hues of the lake and its surrounding landscapes.</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 5: Pangong Lake to Hanle (4,250m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to Hanle via Chushul and the Loma Bend.
-<br/>- 01:00 PM: Lunch break at Chushul.
-<br/>- 03:00 PM: Check-in at your camp/hotel in Hanle.
-<br/>- Evening: Visit Hanle Monastery and enjoy spectacular stargazing under the clear Ladakhi skies.</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 6: Hanle to Umling La (5,350m) and Back to Hanle</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Drive to Umling La Pass, the world’s highest motorable pass.
-<br/>- 12:00 PM: Lunch break at Umling La.
-<br/>- 02:00 PM: Return to Hanle.
-<br/>- Evening: Relax and unwind at your camp/hotel.</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 7: Hanle to Leh (3,500m)</span>
-                  <span className="ml-3 text-lg md:text-xl"><br/>- 08:00 AM: Begin your journey back to Leh via Chushul and Karu.
-<br/>- 01:00 PM: Lunch break at Karu.
-<br/>- 03:00 PM: Arrive in Leh and check-in at your hotel.
-<br/>- Evening: Spend your final evening exploring the vibrant Leh Market.</span>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="mt-1">⏰</span>
-                <div>
-                  <span className="font-semibold text-lg md:text-xl">Day 8: Departure from Leh</span>
-                  <span className="ml-3 text-lg md:text-xl">- <br/>08:00 AM: Check-out from your hotel.
-<br/>- 09:00 AM: Transfer to Leh Airport (IXL) for your departure.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+        .text-9xl {
+          font-size: 8rem;
+          line-height: 1;
+        }
+        
+        .text-10xl {
+          font-size: 10rem;
+          line-height: 1;
+        }
 
+        @media (max-width: 768px) {
+          button {
+            min-height: 44px;
+          }
+          
+          p, span, h1, h2, h3 {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          
+          .break-words {
+            word-wrap: break-word;
+            word-break: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+          }
+          
+          .container-mobile {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
+
+        @media (max-width: 475px) {
+          h1 {
+            font-size: 2.25rem !important;
+            line-height: 2.5rem !important;
+          }
+          
+          .py-6 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+        }
+
+        body {
+          overflow-x: hidden;
+        }
+
+        .min-w-0 {
+          min-width: 0;
+        }
+
+        .flex-1 {
+            flex: 1;
+            1 auto;
+        }
+
+        .flex-shrink-0 {
+          flex-shrink: 0;
+        }
+
+        .hyphens-auto {
+          hyphens: auto;
+          -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .animate-on-scroll,
+          .animate-scale-up {
+            animation: none;
+            transition: none;
+          }
+          
+          [style*="transform"] {
+            transform: none !important;
+          }
+        }
+      `}</style>
       
-      
-{/* Journey Images Grid */}
-<div className="bg-white p-4 md:p-8">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 max-w-7xl mx-auto">
-    {/* Left column - single large image */}
-    <div className="rounded-xl overflow-hidden shadow-lg aspect-[3/4] md:aspect-[3.5/4]">
-      <img 
-        src= {A1}
-        alt="Mountain landscape with river" 
-        className="w-full h-full object-cover"
-      />
+      <UpcomingAdventuresSection />
+      <RefundPolicy />
     </div>
-    
-    {/* Right column - two stacked smaller images */}
-    <div className="grid grid-rows-1 md:grid-rows-2 gap-4 md:gap-5">
-      <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9]">
-        <img 
-          src= {A2}
-          alt="Mountain landscape with trees" 
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9]">
-        <img 
-        src={A3}
-          alt="Mountain landscape with trees and river" 
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-</div>
-</div>
   );
 };
 

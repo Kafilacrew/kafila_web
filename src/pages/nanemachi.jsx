@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import harishchandragad from '../assets/Harishchandragad.jpg';
 import RefundPolicy from '../components/RefundPolicy';
 import UpcomingAdventuresSection from '../components/upcomingadventures';
 import BookingForm from '../components/Bookingform';
@@ -72,15 +71,15 @@ const NanemachiTrek = () => {
   const parallaxOffset = scrollY * 0.3;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Header Section */}
-      <div className="relative bg-white py-12 sm:py-8 md:py-12 lg:py-16 xl:py-20">
+      <div className="relative bg-white py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mt-12 sm:mt-16 lg:mt-20 xl:mt-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mt-16 sm:mt-20 lg:mt-24 xl:mt-28">
             {/* Left Column - Title */}
             <div className="flex items-center justify-center lg:justify-start">
               <h1 
-                className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-times font-bold text-gray-900 leading-[0.9] text-center lg:text-left lg:ml-[50px] xl:ml-[100px] 2xl:ml-[150px] transition-all duration-700"
+                className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl font-times font-bold text-gray-900 leading-[0.9] text-center lg:text-left lg:ml-[20px] xl:ml-[50px] 2xl:ml-[100px] transition-all duration-700 px-2 sm:px-0 break-words hyphens-auto"
                 style={{
                   opacity: scrollY < 50 ? 1 : 0.8,
                   transform: `translateY(${scrollY * 0.1}px)`
@@ -91,28 +90,28 @@ const NanemachiTrek = () => {
             </div>
             
             {/* Right Column - Info */}
-            <div className="flex flex-col justify-center items-center lg:items-start space-y-4 sm:space-y-6 lg:space-y-8 lg:ml-[30px] xl:ml-[60px] 2xl:ml-[80px]">
+            <div className="flex flex-col justify-center items-center lg:items-start space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 lg:ml-[15px] xl:ml-[30px] 2xl:ml-[60px] px-4 sm:px-0">
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
                    data-id="location" 
                    style={isVisible.location ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-                <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl flex items-center justify-center lg:justify-start">
-                  <span className="mr-3 text-xl sm:text-2xl">📍</span>
-                  Nanemachi, Maharashtra
+                <p className="text-gray-600 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl flex items-center justify-center lg:justify-start">
+                  <span className="mr-2 sm:mr-3 text-lg sm:text-xl md:text-2xl flex-shrink-0">📍</span>
+                  <span className="break-words">Nanemachi, Maharashtra</span>
                 </p>
               </div>
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
                    data-id="date" 
                    style={isVisible.date ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-                <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center lg:text-left">
-                  <span className="mr-3 text-xl sm:text-2xl">🗓️</span>
-                  June-July, 2025
+                <p className="text-gray-600 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center lg:text-left">
+                  <span className="mr-2 sm:mr-3 text-lg sm:text-xl md:text-2xl flex-shrink-0">🗓️</span>
+                  <span className="break-words">June-July, 2025</span>
                 </p>
               </div>
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
                    data-id="description" 
                    style={isVisible.description ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-                <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-lg leading-relaxed text-center lg:text-left">
-                  Unveil the beauty of tropical bliss. From sun-kissed shores to vibrant cultural experiences, this journey promises you a solitary escape.
+                <p className="text-gray-700 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-full lg:max-w-lg leading-relaxed text-center lg:text-left break-words hyphens-auto">
+                  Embark on a thrilling adventure to the majestic Nanemachi Waterfall, a hidden gem in the lush jungles of Raigad, offering a serene escape amidst cascading waters and vibrant greenery.
                 </p>
               </div>
             </div>
@@ -120,10 +119,9 @@ const NanemachiTrek = () => {
         </div>
       </div>
 
-      {/* Parallax Image Section - Keep desktop effect, fix mobile */}
+      {/* Parallax Image Section */}
       <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
         {isMobile ? (
-          // Mobile: Transform-based parallax
           <div 
             className="absolute inset-0 w-full h-[130%] -top-[15%]"
             style={{ 
@@ -137,7 +135,6 @@ const NanemachiTrek = () => {
             }}
           />
         ) : (
-          // Desktop: Your exact original parallax effect
           <div 
             className="absolute inset-0 w-full h-full"
             style={{ 
@@ -153,235 +150,174 @@ const NanemachiTrek = () => {
 
       {/* Additional Content Area */}
       <div className="bg-white">
-        <div className="max-w-[1200px] mx-auto px-4 md:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Details Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 lg:gap-16 mb-12 sm:mb-16 md:mb-24 mt-[30px] sm:mt-[40px]">
-            {/* Price Column */}
-            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500 text-left" 
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 py-8 sm:py-12 lg:py-16">
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out text-left px-2 sm:px-0" 
                  data-id="price" 
                  style={isVisible.price ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-              <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 md:mb-4 text-lg md:text-xl">Price:</h3>
-              <p className="text-gray-800 text-base md:text-lg mb-2">₹ 1399/- (Ex. Pune)</p>
+              <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Price:</h3>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">₹ 1399/- (Ex. Pune)</p>
             </div>
-            
-            {/* Slots Column */}
-            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500 text-left" 
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-100 text-left px-2 sm:px-0" 
                  data-id="slots" 
                  style={isVisible.slots ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-              <h3 className="text-gray-900 font-semibold mb-2 sm:mb-3 md:mb-4 text-lg md:text-xl">Slots:</h3>
-              <p className="text-gray-800 text-base md:text-lg">👥 50 Explorers</p>
+              <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Slots:</h3>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">👥 50 Explorers</p>
             </div>
-            
-            {/* Schedule Column */}
-            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500 text-left sm:col-span-2 md:col-span-1" 
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200 text-left px-2 sm:px-0 sm:col-span-2 md:col-span-1" 
                  data-id="schedule" 
                  style={isVisible.schedule ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-              <h3 className="text-gray-900 font-semibold mb-2 sm:mb-3 md:mb-4 text-lg md:text-xl">Schedule:</h3>
-              <p className="text-gray-800 text-base md:text-lg">🕒 June-July 2025</p>
+              <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Schedule:</h3>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">🕒 June-July 2025</p>
             </div>
           </div>
-          
+
           {/* Boarding Points */}
-          <div className="mb-12 sm:mb-16 md:mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
                data-id="boarding" 
                style={isVisible.boarding ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-            <h3 className="text-gray-900 font-semibold mb-4 md:mb-6 text-lg md:text-xl text-left">Boarding Points</h3>
-            <div className="space-y-2 md:space-y-3">
-              <p className="text-gray-800 text-sm sm:text-base md:text-lg text-left">📍 Swargate(Near Laxminarayan Theatre)</p>
-              <p className="text-gray-800 text-sm sm:text-base md:text-lg text-left">📍 Deccan Corner(Opp. to Vimlabai Garware College)</p>
-              <p className="text-gray-800 text-sm sm:text-base md:text-lg text-left">📍 Vanaz</p>
-              <p className="text-gray-800 text-sm sm:text-base md:text-lg text-left">📍 Waki Gavthan</p>
+            <h3 className="text-gray-900 font-bold mb-4 sm:mb-6 text-lg sm:text-xl lg:text-2xl text-left">Boarding Points</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              {[
+                "Swargate (Near Laxminarayan Theatre)",
+                "Deccan Corner (Opp. to Vimlabai Garware College)",
+                "Vanaz",
+                "Waki Gavthan"
+              ].map((point, index) => (
+                <p key={index} className="text-gray-800 text-sm sm:text-base lg:text-lg flex items-start text-left break-words">
+                  <span className="mr-2 sm:mr-3 text-base sm:text-lg flex-shrink-0 mt-0.5">📍</span>
+                  <span className="break-words">{point}</span>
+                </p>
+              ))}
             </div>
           </div>
-          
+
           {/* Historical Information */}
-          <div className="mb-12 sm:mb-16 md:mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
                data-id="history" 
                style={isVisible.history ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-            <p className="text-gray-700 mb-4 md:mb-6 text-sm sm:text-base md:text-lg leading-relaxed text-left">
-              Nanemachi waterfall is located in Nanemachi village in Mahad in the Raigad district of the Konkan region. Located inside the dense Jungle of Raigad, this heavenly & spectacular 400ft high waterfall is regarded as the biggest waterfall in Raigad. The view around and the waterfall is really fascinating to our eyes and make us lost completely. A must do waterfall trek in the monsoon season.
-            </p>
+            <div className="max-w-full">
+              <p className="text-gray-700 text-xs xs:text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed text-left break-words hyphens-auto">
+                Nestled in the dense jungles of Raigad district in the Konkan region, Nanemachi Waterfall in Nanemachi village, Mahad, stands as the largest waterfall in Raigad, cascading from a staggering height of 400 feet. This breathtaking natural wonder, surrounded by lush greenery and rugged trails, captivates trekkers with its serene beauty and majestic views. A must-visit during the monsoon, the trek to Nanemachi and nearby Saatsada Waterfall offers an unforgettable adventure through the heart of nature’s splendor.
+              </p>
+            </div>
           </div>
 
           {/* Includes Section */}
-          <div className="mb-12 sm:mb-16 md:mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
                data-id="includes" 
                style={isVisible.includes ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-            <h3 className="text-gray-900 font-bold mb-4 sm:mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl text-left">Includes:</h3>
-            <div className="space-y-3 sm:space-y-4 md:space-y-5">
-              <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl flex items-start justify-start">
-                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
-                  <span className="text-sm sm:text-lg font-bold">✓</span>
-                </span>
-                <span>Transport from Pune to Pune</span>
-              </p>
-              <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl flex items-start justify-start">
-                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
-                  <span className="text-sm sm:text-lg font-bold">✓</span>
-                </span>
-                <span>1 Breakfast and 1 lunch</span>
-              </p>
-              <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl flex items-start justify-start">
-                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
-                  <span className="text-sm sm:text-lg font-bold">✓</span>
-                </span>
-                <span>Forest Passes</span>
-              </p>
-              <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl flex items-start justify-start">
-                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
-                  <span className="text-sm sm:text-lg font-bold">✓</span>
-                </span>
-                <span>First Aid</span>
-              </p>
-              <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl flex items-start justify-start">
-                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
-                  <span className="text-sm sm:text-lg font-bold">✓</span>
-                </span>
-                <span>Guide charges</span>
-              </p>
+            <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-left">Includes:</h3>
+            <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
+              {[
+                "Transport from Pune to Pune",
+                "1 Breakfast and 1 lunch",
+                "Forest Passes",
+                "First Aid",
+                "Guide charges"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start justify-start">
+                  <span className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-green-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
+                    <span className="text-xs sm:text-sm md:text-base font-bold">✓</span>
+                  </span>
+                  <span className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl break-words">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Excludes Section */}
-          <div className="mb-12 sm:mb-16 md:mb-24 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
                data-id="excludes" 
                style={isVisible.excludes ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-            <h3 className="text-gray-900 font-bold mb-4 sm:mb-6 md:mb-8 text-lg sm:text-xl md:text-2xl text-left">Excludes:</h3>
-            <div className="space-y-3 sm:space-y-4 md:space-y-5">
-              <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl flex items-start justify-start">
-                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-red-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
-                  <span className="text-sm sm:text-lg">✗</span>
-                </span>
-                <span>Personal expenses</span>
-              </p>
-              <p className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl flex items-start justify-start">
-                <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-red-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1 sm:mt-0">
-                  <span className="text-sm sm:text-lg">✗</span>
-                </span>
-                <span>Optional excursions</span>
-              </p>
+            <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-left">Excludes:</h3>
+            <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
+              {[
+                "Personal expenses",
+                "Optional excursions"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start justify-start">
+                  <span className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full bg-red-500 text-white flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0 mt-1">
+                    <span className="text-xs sm:text-sm md:text-base">✗</span>
+                  </span>
+                  <span className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl break-words">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* What to Carry Section - Clean left-aligned list */}
+          {/* What to Carry Section */}
           <div className="mb-24 md:mb-32">
             <h3 className="text-gray-900 font-bold mb-6 md:mb-8 text-2xl md:text-3xl">What to Carry?</h3>
             <div className="space-y-4 md:space-y-5">
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Backpack [30-40L]</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Trekking Shoes [Good Grip]</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Full Sleeves Trekking T-Shirt</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Poncho/Raincoat</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Two Socks Pair</span>
-              </p>
-              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Winter Wear
-                </span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Towel</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Chappal/Sandals</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Minimum 2-3L Water</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Dry Food Items</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Valid Govt. ID</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Sunglasses</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Cap/Hat</span>
-              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
-                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                  <span className="text-lg font-bold">✓</span>
-                </span>
-                <span>Sunscreen</span>
-              </p>
+              {[
+                "Backpack [30-40L]",
+                "Trekking Shoes [Good Grip]",
+                "Full Sleeves Trekking T-Shirt",
+                "Poncho/Raincoat",
+                "Two Socks Pair",
+                "Winter Wear",
+                "Towel",
+                "Chappal/Sandals",
+                "Minimum 2-3L Water",
+                "Dry Food Items",
+                "Valid Govt. ID",
+                "Sunglasses",
+                "Cap/Hat",
+                "Sunscreen"
+              ].map((item, index) => (
+                <p key={index} className="text-gray-900 text-xl md:text-2xl flex items-center">
+                  <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                    <span className="text-lg font-bold">✓</span>
+                  </span>
+                  <span>{item}</span>
+                </p>
+              ))}
             </div>
           </div>
         </div>
       </div>
-      <BookingForm/>
+
+      <BookingForm />
 
       {/* The Journey Section */}
-      <div className="py-12 sm:py-16 md:py-16 bg-white">
-        <div className="max-w-[1600px] mx-auto px-4 md:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 text-center md:text-left mb-8 sm:mb-12 md:mb-16 md:ml-[50px] lg:ml-[100px] xl:ml-[150px] animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+      <div className="py-12 sm:py-16 lg:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center lg:text-left mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out break-words" 
               data-id="journey-title" 
               style={isVisible['journey-title'] ? {opacity: 1, transform: 'translateY(0)'} : {}}>
             The Journey
           </h2>
           
-          <div className="max-w-6xl mx-auto">
+          <div className="space-y-6 sm:space-y-8">
             {/* Day 1 Section */}
-            <div className="mb-6 sm:mb-8 md:mb-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out" 
                  data-id="day1" 
                  style={isVisible.day1 ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <button 
                 onClick={() => setExpandedDay(expandedDay === 1 ? null : 1)}
-                className="w-full max-w-[800px] text-left p-4 sm:p-6 md:p-8 bg-gray-50 hover:bg-gray-100 rounded-lg flex flex-col md:flex-row justify-start items-start md:items-center mb-4 md:mb-8 transition-all duration-300 hover:shadow-lg"
+                className="w-full max-w-4xl mx-auto block p-4 sm:p-6 lg:p-8 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 hover:shadow-lg group"
               >
-                <div className="flex items-center gap-3 sm:gap-4 md:gap-8">
-                  <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900">Day 1</span>
-                  <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800">The Journey Begins</span>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
+                    <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0">Day 1</span>
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">The Journey Begins</span>
+                  </div>
+                  <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 1 ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
                 </div>
               </button>
               
               {expandedDay === 1 && (
-                <div className="p-4 sm:p-6 md:p-8 bg-white rounded-lg mb-4 md:mb-8 max-w-[800px] animate-scale-up">
-                  <div className="space-y-4">
+                <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
+                  <div className="space-y-4 sm:space-y-6">
                     <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">10:00 pm:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl">Assemble at the designated pickup point in Pune and start the journey toward Waki Gavthan</span>
+                      <span className="text-xl sm:text-2xl mt-1 flex-shrink-0">⏰</span>
+                      <div className="min-w-0 flex-1">
+                        <span className="font-bold text-base sm:text-lg lg:text-xl text-gray-900 break-words">10:00 pm:</span>
+                        <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl text-gray-700 break-words">Assemble at the designated pickup point in Pune and start the journey toward Waki Gavthan</span>
                       </div>
                     </div>
                   </div>
@@ -390,80 +326,47 @@ const NanemachiTrek = () => {
             </div>
 
             {/* Day 2 Section */}
-            <div className="mb-6 sm:mb-8 md:mb-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-100" 
                  data-id="day2" 
                  style={isVisible.day2 ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <button 
                 onClick={() => setExpandedDay(expandedDay === 2 ? null : 2)}
-                className="w-full max-w-[800px] text-left p-4 sm:p-6 md:p-8 bg-gray-50 hover:bg-gray-100 rounded-lg flex flex-col md:flex-row justify-start items-start md:items-center mb-4 md:mb-8 transition-all duration-300 hover:shadow-lg"
+                className="w-full max-w-4xl mx-auto block p-4 sm:p-6 lg:p-8 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 hover:shadow-lg group"
               >
-                <div className="flex items-center gap-3 sm:gap-4 md:gap-8">
-                  <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-900">Day 2</span>
-                  <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800">Adventure Day</span>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
+                    <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0">Day 2</span>
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Adventure Day</span>
+                  </div>
+                  <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 2 ? 'rotate-180' : ''}`}>
+                    ▼
+                  </span>
                 </div>
               </button>
               
               {expandedDay === 2 && (
-                <div className="p-4 sm:p-6 md:p-8 bg-white rounded-lg mb-4 md:mb-8 max-w-[800px] animate-scale-up">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">4:30 am:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl"> Reach the Base Village.</span>
+                <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
+                  <div className="space-y-4 sm:space-y-6">
+                    {[
+                      { time: "04:30 am", desc: "Reach the base village of Waki Gavthan" },
+                      { time: "06:00 am", desc: "Freshen up, have breakfast, and start hiking after a short briefing session" },
+                      { time: "07:30 am", desc: "Reach Nanemachi Waterfall and embrace the stunning views" },
+                      { time: "09:00 am", desc: "Leave for Saatsada Waterfall after spending time at Nanemachi" },
+                      { time: "11:00 am", desc: "Arrive at Saatsada Waterfall after a short hike" },
+                      { time: "12:30 pm", desc: "Return to the base camp for lunch" },
+                      { time: "02:30 pm", desc: "Proceed towards Pune after resting" },
+                      { time: "08:30 pm", desc: "Reach Pune" }
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3 sm:gap-4">
+                        <span className="text-xl sm:text-2xl mt-1 flex-shrink-0">⏰</span>
+                        <div className="min-w-0 flex-1">
+                          <span className="font-bold text-base sm:text-lg lg:text-xl text-gray-900 break-words">{item.time}:</span>
+                          <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl text-gray-700 break-words hyphens-auto">{item.desc}</span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">06:00 am:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl"> Freshen up & Have Breakfast & start hiking on the trail after a short briefing session.</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">07:30 am:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl">Reach Nanemachi & embrace the views.</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">09:00 am:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl">Leave for Saatsada Waterfall after a brief time at the waterfall</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">11:00 am:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl">Reach Saatsada after a short hike.</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">12:30 pm:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl">Return towards the base camp for lunch.</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">02:30 pm:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl">Proceed towards Pune after resting for some time.</span>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3 sm:gap-4">
-                      <span className="mt-1">⏰</span>
-                      <div>
-                        <span className="font-semibold text-base sm:text-lg md:text-xl">08:30 pm:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg md:text-xl">Reach Pune.</span>
-                      </div>
-                    </div>
-                    <div className="mt-4 sm:mt-6 md:mt-8 p-3 sm:p-4 md:p-6 bg-gray-50 rounded-lg">
-                      <p className="text-sm sm:text-base md:text-lg text-gray-700">
+                    ))}
+                    <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gray-50 rounded-lg">
+                      <p className="text-base sm:text-lg text-gray-700 break-words">
                         <strong>Note:</strong> Please be punctual throughout the trek. In some scenarios, our schedule might be delayed, but your cooperation is essential to ensure we stay on track.
                       </p>
                     </div>
@@ -473,33 +376,32 @@ const NanemachiTrek = () => {
             </div>
 
             {/* Journey Images Grid */}
-            <div className="bg-white p-4 md:p-8 animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200" 
                  data-id="images" 
                  style={isVisible.images ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-10 max-w-7xl mx-auto">
-                {/* Left column - single large image */}
-                <div className="rounded-xl overflow-hidden shadow-lg aspect-[4/3] sm:aspect-[3/4] md:aspect-[3.5/4] group">
-                  <img 
-                    src={Nanemachi2} 
-                    alt="Mountain landscape with river" 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                
-                {/* Right column - two stacked smaller images */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 md:grid-rows-2 gap-4 md:gap-5">
-                  <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9] group">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16">
+                <div className="lg:row-span-2">
+                  <div className="rounded-2xl overflow-hidden shadow-xl h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] group">
                     <img 
-                      src={Nanemachi3} 
-                      alt="Mountain landscape with trees" 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      src={Nanemachi2} 
+                      alt="Nanemachi waterfall landscape" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-                  <div className="rounded-xl overflow-hidden shadow-lg aspect-[16/9] group">
+                </div>
+                <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+                  <div className="rounded-2xl overflow-hidden shadow-xl h-40 sm:h-48 md:h-64 lg:h-72 group">
+                    <img 
+                      src={Nanemachi3} 
+                      alt="Nanemachi waterfall view" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="rounded-2xl overflow-hidden shadow-xl h-40 sm:h-48 md:h-64 lg:h-72 group">
                     <img 
                       src={Nanemachi4} 
-                      alt="Mountain landscape with trees and river" 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      alt="Nanemachi trekking path" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
                 </div>
@@ -509,76 +411,124 @@ const NanemachiTrek = () => {
         </div>
       </div>
 
-      {/* Add custom CSS for animations */}
+      {/* Enhanced CSS */}
       <style jsx>{`
         @keyframes scaleUp {
           from {
             opacity: 0;
-            transform: scale(0.9);
+            transform: scale(0.95) translateY(20px);
           }
           to {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1) translateY(0);
           }
         }
 
         .animate-scale-up {
-          animation: scaleUp 0.3s ease-out forwards;
+          animation: scaleUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
         .animate-on-scroll {
-          transition: all 0.5s ease-out;
+          transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Enhanced CSS */
-        @keyframes scaleUp {
-          from {
-            opacity: 0;
-            transform: scale(0.9);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-
-        .animate-scale-up {
-          animation: scaleUp 0.3s ease-out forwards;
-        }
-
-        .animate-on-scroll {
-          transition: all 0.5s ease-out;
-        }
-
-        /* Smooth scrolling for all devices */
         html {
           scroll-behavior: smooth;
           -webkit-overflow-scrolling: touch;
         }
 
-        /* Custom breakpoint for extra small devices */
         @media (min-width: 475px) {
-          .xs\:text-4xl {
-            font-size: 2.25rem;
-            line-height: 2.5rem;
+          .xs\\:text-5xl {
+            font-size: 5rem;
+            line-height: 1;
+          }
+          .xs\\:text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+          }
+          .xs\\:text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+          }
+          .xs\\:text-base {
+            font-size: 1rem;
+            line-height: 1.5rem;
           }
         }
 
-        /* Enhanced mobile optimizations */
-        @media (max-width: 1024px) {
-          /* Better touch targets */
+        .text-8xl {
+          font-size: 6rem;
+          line-height: 1;
+        }
+        
+        .text-9xl {
+          font-size: 8rem;
+          line-height: 1;
+        }
+        
+        .text-10xl {
+          font-size: 10rem;
+          line-height: 1;
+        }
+
+        @media (max-width: 768px) {
           button {
             min-height: 44px;
           }
           
-          /* Improve text readability */
-          p, span {
+          p, span, h1, h2, h3 {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
           }
+          
+          .break-words {
+            word-wrap: break-word;
+            word-break: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+          }
+          
+          .container-mobile {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
         }
 
-        /* Reduce motion for users who prefer it */
+        @media (max-width: 475px) {
+          h1 {
+            font-size: 2.25rem !important;
+            line-height: 2.5rem !important;
+          }
+          
+          .py-6 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+          }
+        }
+
+        body {
+          overflow-x: hidden;
+        }
+
+        .min-w-0 {
+          min-width: 0;
+        }
+
+        .flex-1 {
+          flex: 1 1 0%;
+        }
+
+        .flex-shrink-0 {
+          flex-shrink: 0;
+        }
+
+        .hyphens-auto {
+          hyphens: auto;
+          -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .animate-on-scroll,
           .animate-scale-up {
@@ -592,9 +542,9 @@ const NanemachiTrek = () => {
         }
       `}</style>
       
-      <UpcomingAdventuresSection/>
-      <RefundPolicy/>
-          </div>
+      <UpcomingAdventuresSection />
+      <RefundPolicy />
+    </div>
   );
 };
 
