@@ -1,175 +1,177 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import kafilaLogo from '../assets/kafilalogo.png';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [hoveredSubmenu, setHoveredSubmenu] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileAdventureOpen, setIsMobileAdventureOpen] = useState(false);
+  const [isMobileMonsoonOpen, setIsMobileMonsoonOpen] = useState(false);
+  const [isMobileHimalayanOpen, setIsMobileHimalayanOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+        setHoveredSubmenu(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const linkClasses = `text-lg transition-colors duration-300 ${scrolled ? 'text-black hover:text-gray-500' : 'text-white hover:text-gray-300'}`;
 
   return (
-    <>
-      {/* Force viewport constraints */}
-      <style jsx>{`
-        * {
-          box-sizing: border-box;
-        }
-        
-        body {
-          overflow-x: hidden;
-          margin: 0;
-          padding: 0;
-        }
-        
-        .navbar-container {
-          width: 100vw;
-          max-width: 100vw;
-          overflow: hidden;
-          position: relative;
-        }
-        
-        .navbar-content {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          max-width: 100%;
-          padding: 8px 2px;
-          margin: 0;
-          box-sizing: border-box;
-        }
-        
-        .logo-container {
-          flex-shrink: 1;
-          min-width: 0;
-          overflow: hidden;
-        }
-        
-        .hamburger-container {
-          flex-shrink: 0;
-          width: 18px;
-          height: 18px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        
-        @media (min-width: 640px) {
-          .navbar-content {
-            padding: 16px 16px;
-          }
-        }
-        
-        @media (min-width: 1024px) {
-          .navbar-content {
-            padding: 24px 32px;
-          }
-          
-          .hamburger-container {
-            display: none;
-          }
-        }
-      `}</style>
-      
-      <nav className="fixed w-full z-50 bg-transparent">
-        <div className="navbar-container">
-          <div className="navbar-content">
-            {/* Logo */}
-            <div className="logo-container">
-              <img 
-                src={kafilaLogo} 
-                alt="Kafila Adventures Logo" 
-                className="w-[80px] h-[25px] sm:w-[45px] sm:h-[56px] md:w-[60px] md:h-[75px] lg:w-[80px] lg:h-[100px] brightness-0 ml-[15px] mt-[15px]"
-                style={{ display: 'block', maxWidth: '100%', height: 'auto' }}
-              />
-            </div>
+    <nav className={`fixed w-full z-50 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+      <div className="flex items-center justify-between px-4 py-2 lg:px-8">
+        {/* Logo */}
+        <div>
+          <img 
+            src={kafilaLogo} 
+            alt="Kafila Adventures Logo" 
+            className="w-[80px] h-[100px] sm:w-[45px] sm:h-[56px] md:w-[60px] md:h-[75px] lg:w-[80px] lg:h-[100px] brightness-0" 
+          />
+        </div>
 
-            {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center">
-              <div className="flex items-center space-x-10">
-                <a href="/" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
-                  Home
-                </a>
-                <a href="/about" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
-                  About
-                </a>
-                <a href="/Contactus" className="text-black hover:text-gray-500 text-lg font-normal transition-colors">
-                  Contact Us
-                </a>
-              </div>
-            </div>
+        {/* Desktop Links */}
+        <div className="hidden lg:flex items-center space-x-10">
+          <a href="/" className={linkClasses}>Home</a>
+          <a href="/about" className={linkClasses}>About</a>
 
-            {/* Mobile menu button */}
-            <div className="hamburger-container lg:hidden">
-              <button 
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-black hover:text-gray-500 focus:outline-none relative z-50"
-                style={{ 
-                  width: '20px', 
-                  height: '20px', 
-                  padding: '0',
-                  margin: '0',
-                  border: 'none',
-                  background: 'transparent',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center'
-                }}
-              >
-                <svg 
-                  width="40" 
-                  height="40" 
-                  fill="none" 
-                  viewBox="0 0 18 18" 
-                  stroke="currentColor" 
-                  strokeWidth="3"
-                  style={{ display: 'block' }}
-                >
-                  {isMobileMenuOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          <div className="relative" ref={dropdownRef}>
+            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className={`${linkClasses} flex items-center space-x-1`}>
+              <span>Adventures</span>
+              <svg className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute top-full left-0 mt-2 w-64 max-w-[90vw] min-w-[16rem] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                <div>
+                  <button onClick={() => setHoveredSubmenu(hoveredSubmenu === 'monsoon' ? null : 'monsoon')} className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <span>Monsoon Treks</span>
+                    <svg className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'monsoon' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {hoveredSubmenu === 'monsoon' && (
+                    <div className="px-4 pb-2">
+                      {["nanemachi", "devkund", "andharban", "kalu", "adrai", "visapur"].map((path) => (
+                        <a key={path} href={`/${path}`} onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">
+                          {path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} Trek
+                        </a>
+                      ))}
+                    </div>
                   )}
-                </svg>
-              </button>
-            </div>
+                </div>
+                <div className="h-px bg-gray-200 mx-2 my-1"></div>
+                <div>
+                  <button onClick={() => setHoveredSubmenu(hoveredSubmenu === 'himalayan' ? null : 'himalayan')} className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                    <span>Himalayan Treks</span>
+                    <svg className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'himalayan' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {hoveredSubmenu === 'himalayan' && (
+                    <div className="px-4 pb-2">
+                      <a href="/ladakh" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Leh Ladakh</a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
+
+          <a href="/Contactus" className={linkClasses}>Contact Us</a>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`lg:hidden fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} z-40`}>
-          <div className="px-6 pt-20 pb-6 space-y-4">
-            <a 
-              href="/" 
-              className="block text-black hover:text-gray-500 text-lg font-normal py-3 transition-colors border-b border-gray-100"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Home
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden">
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-black focus:outline-none relative z-50">
+            <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`lg:hidden fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} z-40`}>
+        <div className="px-6 pt-20 pb-6 space-y-4 overflow-y-auto">
+          {[{label: 'Home', href: '/'}, {label: 'About', href: '/about'}, {label: 'Contact Us', href: '/Contactus'}].map(link => (
+            <a key={link.href} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="block text-black hover:text-gray-500 text-lg py-3 border-b border-gray-100">
+              {link.label}
             </a>
-            <a 
-              href="/about" 
-              className="block text-black hover:text-gray-500 text-lg font-normal py-3 transition-colors border-b border-gray-100"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              About
-            </a>
-            <a 
-              href="/Contactus" 
-              className="block text-black hover:text-gray-500 text-lg font-normal py-3 transition-colors border-b border-gray-100"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact Us
-            </a>
+          ))}
+
+          {/* Adventure Dropdown */}
+          <div className="border-b border-gray-100">
+            <button onClick={() => setIsMobileAdventureOpen(!isMobileAdventureOpen)} className="w-full flex justify-between text-black text-lg py-3">
+              <span>Adventures</span>
+              <svg className={`w-4 h-4 transition-transform ${isMobileAdventureOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {isMobileAdventureOpen && (
+              <div className="pl-4 pb-2 space-y-2">
+                <div>
+                  <button onClick={() => setIsMobileMonsoonOpen(!isMobileMonsoonOpen)} className="w-full flex justify-between text-gray-700 py-2">
+                    <span>Monsoon Treks</span>
+                    <svg className={`w-3 h-3 transition-transform ${isMobileMonsoonOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {isMobileMonsoonOpen && (
+                    <div className="pl-4 space-y-1 mt-1">
+                      {["nanemachi", "devkund", "andharban", "kalu", "adrai", "visapur"].map((path) => (
+                        <a key={path} href={`/${path}`} onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileMonsoonOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
+                          {path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} Trek
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <button onClick={() => setIsMobileHimalayanOpen(!isMobileHimalayanOpen)} className="w-full flex justify-between text-gray-700 py-2">
+                    <span>Himalayan Treks</span>
+                    <svg className={`w-3 h-3 transition-transform ${isMobileHimalayanOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {isMobileHimalayanOpen && (
+                    <div className="pl-4 space-y-1 mt-1">
+                      <a href="/ladakh" onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileHimalayanOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
+                        Leh Ladakh
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
+      </div>
 
-        {/* Overlay for mobile menu */}
-        {isMobileMenuOpen && (
-          <div 
-            className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
-            onClick={() => setIsMobileMenuOpen(false)}
-          ></div>
-        )}
-      </nav>
-    </>
+      {/* Mobile Overlay */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30" onClick={() => setIsMobileMenuOpen(false)} />
+      )}
+    </nav>
   );
 };
 

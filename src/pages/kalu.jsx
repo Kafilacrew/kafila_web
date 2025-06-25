@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import RefundPolicy from '../components/RefundPolicy';
 import UpcomingAdventuresSection from '../components/upcomingadventures';
 import BookingForm from '../components/Bookingform';
-import Apara from '../assets/Treks/Andarbhan/Andarban-Parallex.webp'
-import A2 from '../assets/Treks/Andarbhan/Andarban-2.jpeg'
-import A3 from '../assets/Treks/Andarbhan/Andarban-3.webp'
+import Kpara from '../assets/Treks/Kalu/parallax.avif';
+import K1 from '../assets/Treks/Kalu/kalu-1.webp';
+import K2 from '../assets/Treks/Kalu/kalu-2.jpeg';
+import K3 from '../assets/Treks/Kalu/kalu-3.avif';
 
-const AndharbanJungleTrek = () => {
+const KaluWaterfallTrek = () => {
   const [scrollY, setScrollY] = useState(0);
   const [expandedDay, setExpandedDay] = useState(null);
   const [isVisible, setIsVisible] = useState({});
@@ -84,7 +85,7 @@ const AndharbanJungleTrek = () => {
                   transform: `translateY(${scrollY * 0.1}px)`
                 }}
               >
-                Andharban Jungle Trek
+                Kalu Waterfall Trek
               </h1>
             </div>
             
@@ -95,7 +96,7 @@ const AndharbanJungleTrek = () => {
                    style={isVisible.location ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-600 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl flex items-center justify-center lg:justify-start">
                   <span className="mr-2 sm:mr-3 text-lg sm:text-xl md:text-2xl flex-shrink-0">📍</span>
-                  <span className="break-words">Andharban, Maharashtra</span>
+                  <span className="break-words">Malshej, Maharashtra</span>
                 </p>
               </div>
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
@@ -110,7 +111,7 @@ const AndharbanJungleTrek = () => {
                    data-id="description" 
                    style={isVisible.description ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-700 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-full lg:max-w-lg leading-relaxed text-center lg:text-left break-words hyphens-auto">
-                  Unveil the beauty of tropical bliss. From misty forests to vibrant natural trails, this journey promises a serene escape into the heart of nature.
+                  Unveil the beauty of tropical bliss. From sun-kissed shores to vibrant cultural experiences, this journey promises you a solitary escape.
                 </p>
               </div>
             </div>
@@ -118,13 +119,14 @@ const AndharbanJungleTrek = () => {
         </div>
       </div>
 
-      {/* Parallax Image Section */}
+      {/* Parallax Image Section - Keep desktop effect, fix mobile */}
       <div className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] overflow-hidden">
         {isMobile ? (
+          // Mobile: Transform-based parallax
           <div 
             className="absolute inset-0 w-full h-[130%] -top-[15%]"
             style={{ 
-              backgroundImage: `url(${Apara})`,
+              backgroundImage: `url(${Kpara})`,
               backgroundPosition: 'center center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
@@ -134,10 +136,11 @@ const AndharbanJungleTrek = () => {
             }}
           />
         ) : (
+          // Desktop: Your exact original parallax effect
           <div 
             className="absolute inset-0 w-full h-full"
             style={{ 
-              backgroundImage: `url(${Apara})`,
+              backgroundImage: `url(${Kpara})`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundAttachment: 'fixed',
@@ -152,18 +155,23 @@ const AndharbanJungleTrek = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Details Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 py-8 sm:py-12 lg:py-16">
+            {/* Price Column */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out text-left px-2 sm:px-0" 
                  data-id="price" 
                  style={isVisible.price ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Price:</h3>
-              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">₹ 1399/- (Ex. Pune)</p>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">₹ 1399/-</p>
             </div>
+            
+            {/* Slots Column */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-100 text-left px-2 sm:px-0" 
                  data-id="slots" 
                  style={isVisible.slots ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Slots:</h3>
-              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">👥 25 Explorers</p>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">👥 30 Explorers</p>
             </div>
+            
+            {/* Schedule Column */}
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200 text-left px-2 sm:px-0 sm:col-span-2 md:col-span-1" 
                  data-id="schedule" 
                  style={isVisible.schedule ? {opacity: 1, transform: 'translateY(0)'} : {}}>
@@ -171,7 +179,7 @@ const AndharbanJungleTrek = () => {
               <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">🕒 June-July 2025</p>
             </div>
           </div>
-
+          
           {/* Boarding Points */}
           <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
                data-id="boarding" 
@@ -179,9 +187,10 @@ const AndharbanJungleTrek = () => {
             <h3 className="text-gray-900 font-bold mb-4 sm:mb-6 text-lg sm:text-xl lg:text-2xl text-left">Boarding Points</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {[
-                "Swargate (Opp. Laxminarayan Theatre)",
-                "Deccan Corner (Opp. To Vimlabai Garware)",
-                "Vanaz"
+                "Swargate",
+                "Good Luck Chowk",
+                "Khadki Railway Station",
+                "Thitabi"
               ].map((point, index) => (
                 <p key={index} className="text-gray-800 text-sm sm:text-base lg:text-lg flex items-start text-left break-words">
                   <span className="mr-2 sm:mr-3 text-base sm:text-lg flex-shrink-0 mt-0.5">📍</span>
@@ -190,14 +199,14 @@ const AndharbanJungleTrek = () => {
               ))}
             </div>
           </div>
-
+          
           {/* Historical Information */}
           <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
                data-id="history" 
                style={isVisible.history ? {opacity: 1, transform: 'translateY(0)'} : {}}>
             <div className="max-w-full">
               <p className="text-gray-700 text-xs xs:text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed text-left break-words hyphens-auto">
-                Andharban, meaning 'Dark Dense Forest', is a mesmerizing monsoon trek in the Sahyadri mountains, located near Pimpri, Maharashtra, approximately 16 km from Pune. Known as a trekker’s paradise, this trail takes you through misty, dense forests, lush green paths, and cascading waterfalls. The journey offers stunning views of the Kundalika Valley, Bhira Dam, and Tamhini Ghat ranges. With its serene ambiance and rich biodiversity, Andharban is an ideal escape for nature lovers and adventure enthusiasts, especially during the monsoon when the forest comes alive with vibrant greenery and fog-covered trails.
+                Kalu Waterfall is a spectacular seasonal waterfall located in the lush Malshej Ghat region of Maharashtra, originating from the Harishchandragad hills and cascading nearly 1,200 feet (≈370 m) in five distinct stages . It tumbles from the Deccan Plateau down into the Konkan, merging with the nearby Mahuli Falls to form the Kalu River.
               </p>
             </div>
           </div>
@@ -245,41 +254,95 @@ const AndharbanJungleTrek = () => {
             </div>
           </div>
 
-          {/* What to Carry Section */}
+          {/* What to Carry Section - Clean left-aligned list */}
           <div className="mb-24 md:mb-32">
             <h3 className="text-gray-900 font-bold mb-6 md:mb-8 text-2xl md:text-3xl">What to Carry?</h3>
             <div className="space-y-4 md:space-y-5">
-              {[
-                "Backpack [30-40L]",
-                "Trekking Shoes [Good Grip]",
-                "Full Sleeves Trekking T-Shirt",
-                "Poncho/Raincoat",
-                "Two Socks Pair",
-                "Winter Wear",
-                "Towel",
-                "Chappal/Sandals",
-                "Minimum 2-3L Water",
-                "Dry Food Items",
-                "Valid Govt. ID",
-                "Sunglasses",
-                "Cap/Hat",
-                "Sunscreen"
-              ].map((item, index) => (
-                <p key={index} className="text-gray-900 text-xl md:text-2xl flex items-center">
-                  <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                    <span className="text-lg font-bold">✓</span>
-                  </span>
-                  <span>{item}</span>
-                </p>
-              ))}
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Backpack [30-40L]</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Trekking Shoes [Good Grip]</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Full Sleeves Trekking T-Shirt</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Poncho/Raincoat</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Two Socks Pair</span>
+              </p>
+              <p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Winter Wear
+                </span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Towel</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Chappal/Sandals</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Minimum 2-3L Water</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Dry Food Items</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Valid Govt. ID</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Sunglasses</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Cap/Hat</span>
+              </p><p className="text-gray-900 text-xl md:text-2xl flex items-center">
+                <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+                  <span className="text-lg font-bold">✓</span>
+                </span>
+                <span>Sunscreen</span>
+              </p>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* <BookingForm/> */}
 
-      <BookingForm />
-
-      {/* The Journey Section */}
+      {/* The Journey Section - Enhanced */}
       <div className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center lg:text-left mb-8 sm:mb-12 lg:mb-16 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out break-words" 
@@ -315,7 +378,7 @@ const AndharbanJungleTrek = () => {
                       <span className="text-xl sm:text-2xl mt-1 flex-shrink-0">⏰</span>
                       <div className="min-w-0 flex-1">
                         <span className="font-bold text-base sm:text-lg lg:text-xl text-gray-900 break-words">10:30 pm:</span>
-                        <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl text-gray-700 break-words">Reporting at given pick-up points & depart towards Tamhini - Pimpri</span>
+                        <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl text-gray-700 break-words">Reporting at Given pick up points & Depart towards Thitabi.</span>
                       </div>
                     </div>
                   </div>
@@ -334,7 +397,7 @@ const AndharbanJungleTrek = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
                     <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0">Day 2</span>
-                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Adventure Day</span>
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Conquer Kalu Waterfall</span>
                   </div>
                   <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 2 ? 'rotate-180' : ''}`}>
                     ▼
@@ -346,10 +409,12 @@ const AndharbanJungleTrek = () => {
                 <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
                   <div className="space-y-4 sm:space-y-6">
                     {[
-                      { time: "03:30 am", desc: "Reach the base village of Pimpri, freshen up, and enjoy breakfast" },
-                      { time: "05:30 am", desc: "Start trekking through the Dark Forest after a short briefing session" },
-                      { time: "12:30 pm", desc: "Arrive at Pimpri-Tamhini base village, have lunch, and rest" },
-                      { time: "03:00 pm", desc: "Begin return journey to Pune" },
+                      { time: "04:30 am", desc: "Reach the Base Village" },
+                      { time: "05:30 am", desc: "Freshen up & Have Breakfast & start hiking on the trail after a short briefing session." },
+                      { time: "07:00 am", desc: "Leave for Kalu Waterfall after a brief time at the waterfall" },
+                      { time: "09:00 am", desc: "Reach Kalu after a short hike.Enjoy the mesmerising view." },
+                      { time: "11:00 am", desc: "Return towards the base camp for lunch." },
+                      { time: "01:30 pm", desc: "Proceed towards Pune after resting for some time." },
                       { time: "08:30 pm", desc: "Reach Pune" }
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-3 sm:gap-4">
@@ -360,11 +425,6 @@ const AndharbanJungleTrek = () => {
                         </div>
                       </div>
                     ))}
-                    <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gray-50 rounded-lg">
-                      <p className="text-base sm:text-lg text-gray-700 break-words">
-                        <strong>Note:</strong> Please be punctual throughout the trek. In some scenarios, our schedule might be delayed, but your cooperation is essential to ensure we stay on track.
-                      </p>
-                    </div>
                   </div>
                 </div>
               )}
@@ -377,8 +437,8 @@ const AndharbanJungleTrek = () => {
                 {/* Large vertical image */}
                     <div className="col-span-1 sm:col-span-2 lg:col-span-3 row-span-2 rounded-2xl overflow-hidden shadow-xl group">
                     <img 
-                        src={Apara} 
-                        alt="Andarban Jungle landscape" 
+                        src={K1} 
+                        alt="Kalu landscape" 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     </div>
@@ -386,8 +446,8 @@ const AndharbanJungleTrek = () => {
                 {/* Top right image */}
                     <div className="col-span-1 sm:col-span-1 lg:col-span-3 row-span-1 rounded-2xl overflow-hidden shadow-xl group">
                     <img 
-                    src={A3} 
-                    alt="Andarban Jungle view" 
+                    src={K2} 
+                    alt="Kalu view" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     </div>
@@ -395,8 +455,8 @@ const AndharbanJungleTrek = () => {
                     {/* Bottom right image */}
                     <div className="col-span-1 sm:col-span-2 lg:col-span-3 row-span-1 rounded-2xl overflow-hidden shadow-xl group">
                     <img 
-                    src={A2} 
-                    alt="Andarban Jungle path" 
+                    src={K3} 
+                    alt="Kalu path" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     </div>
@@ -428,11 +488,13 @@ const AndharbanJungleTrek = () => {
           transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        /* Smooth scrolling for all devices */
         html {
           scroll-behavior: smooth;
           -webkit-overflow-scrolling: touch;
         }
 
+        /* Custom breakpoint for extra small devices */
         @media (min-width: 475px) {
           .xs\\:text-5xl {
             font-size: 5rem;
@@ -452,6 +514,7 @@ const AndharbanJungleTrek = () => {
           }
         }
 
+        /* Add custom text utilities for larger sizes */
         .text-8xl {
           font-size: 6rem;
           line-height: 1;
@@ -467,16 +530,20 @@ const AndharbanJungleTrek = () => {
           line-height: 1;
         }
 
+        /* Enhanced mobile optimizations */
         @media (max-width: 768px) {
+          /* Better touch targets */
           button {
             min-height: 44px;
           }
           
+          /* Improve text readability */
           p, span, h1, h2, h3 {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
           }
           
+          /* Prevent text overflow */
           .break-words {
             word-wrap: break-word;
             word-break: break-word;
@@ -485,28 +552,34 @@ const AndharbanJungleTrek = () => {
             -ms-hyphens: auto;
           }
           
+          /* Better container spacing */
           .container-mobile {
             padding-left: 1rem;
             padding-right: 1rem;
           }
         }
 
+        /* Extra small devices */
         @media (max-width: 475px) {
+          /* Adjusted text size for very small screens */
           h1 {
             font-size: 2.25rem !important;
             line-height: 2.5rem !important;
           }
           
+          /* Reduce padding on small screens */
           .py-6 {
             padding-top: 1rem;
             padding-bottom: 1rem;
           }
         }
 
+        /* Prevent horizontal scroll */
         body {
           overflow-x: hidden;
         }
 
+        /* Better flex layout for buttons */
         .min-w-0 {
           min-width: 0;
         }
@@ -519,12 +592,14 @@ const AndharbanJungleTrek = () => {
           flex-shrink: 0;
         }
 
+        /* Hyphenation support */
         .hyphens-auto {
           hyphens: auto;
           -webkit-hyphens: auto;
           -ms-hyphens: auto;
         }
 
+        /* Reduce motion for users who prefer it */
         @media (prefers-reduced-motion: reduce) {
           .animate-on-scroll,
           .animate-scale-up {
@@ -538,10 +613,10 @@ const AndharbanJungleTrek = () => {
         }
       `}</style>
       
-      <UpcomingAdventuresSection />
-      <RefundPolicy />
+      <UpcomingAdventuresSection/>
+      <RefundPolicy/>
     </div>
   );
 };
 
-export default AndharbanJungleTrek;
+export default KaluWaterfallTrek;

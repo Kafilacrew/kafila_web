@@ -16,7 +16,9 @@ import NanemachiTrek from './pages/nanemachi';
 import DevkundTrek from './pages/devkund';
 import AndharbanJungleTrek from './pages/andharban';
 import UpcomingAdventuresSection from './components/upcomingadventures';
-
+import KaluTrek from './pages/kalu';
+import AdraiTrek from './pages/adrai1';
+import VisapurFort from './pages/visapurfort';
 
 
 function App() {
@@ -37,7 +39,11 @@ function App() {
         <Route path="/devkund" element={< DevkundTrek/>} />
         <Route path="/andharban" element={< AndharbanJungleTrek/>} />
         <Route path="#upcomingadventures" element={< UpcomingAdventuresSection/>} />
-         
+        <Route path="/kalu" element={< KaluTrek/>} />
+        <Route path="/adrai" element={< AdraiTrek/>} />
+        <Route path="/visapur" element={< VisapurFort/>} />
+        
+ 
 
       </Routes>
       <FloatingContactButtons/>

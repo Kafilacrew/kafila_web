@@ -375,37 +375,38 @@ const NanemachiTrek = () => {
               )}
             </div>
 
-            {/* Journey Images Grid */}
-            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200" 
-                 data-id="images" 
-                 style={isVisible.images ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16">
-                <div className="lg:row-span-2">
-                  <div className="rounded-2xl overflow-hidden shadow-xl h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[600px] group">
+            {/* Journey Images Bento Grid - Mobile Responsive */}
+            <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-200" data-id="images" style={isVisible.images ? { opacity: 1, transform: 'translateY(0)' } : {}}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 mt-12 sm:mt-16 auto-rows-[200px] sm:auto-rows-[220px] lg:auto-rows-[280px]">
+    
+                {/* Large vertical image */}
+                    <div className="col-span-1 sm:col-span-2 lg:col-span-3 row-span-2 rounded-2xl overflow-hidden shadow-xl group">
                     <img 
-                      src={Nanemachi2} 
-                      alt="Nanemachi waterfall landscape" 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        src={Nanemachi2} 
+                        alt="Nanemachi landscape" 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                  </div>
+                    </div>
+
+                {/* Top right image */}
+                    <div className="col-span-1 sm:col-span-1 lg:col-span-3 row-span-1 rounded-2xl overflow-hidden shadow-xl group">
+                    <img 
+                    src={Nanemachi3} 
+                    alt="Nanemachi view" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    </div>
+
+                    {/* Bottom right image */}
+                    <div className="col-span-1 sm:col-span-2 lg:col-span-3 row-span-1 rounded-2xl overflow-hidden shadow-xl group">
+                    <img 
+                    src={Nanemachi4} 
+                    alt="Nanemachi path" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    </div>
+
                 </div>
-                <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-                  <div className="rounded-2xl overflow-hidden shadow-xl h-40 sm:h-48 md:h-64 lg:h-72 group">
-                    <img 
-                      src={Nanemachi3} 
-                      alt="Nanemachi waterfall view" 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="rounded-2xl overflow-hidden shadow-xl h-40 sm:h-48 md:h-64 lg:h-72 group">
-                    <img 
-                      src={Nanemachi4} 
-                      alt="Nanemachi trekking path" 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

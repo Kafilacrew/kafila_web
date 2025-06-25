@@ -2,13 +2,16 @@ import React from 'react';
 import Devkund from '../assets/Treks/Devkund/Devkund-main.jpg'
 import Andharban from '../assets/Treks/Andarbhan/Andarban-main.webp'
 import Nanemachi from '../assets/Treks/Nanemachi/Nanemachi-main.jpg'
+import Kalu from '../assets/Treks/Kalu/main.webp'
+import Adrai from '../assets/Treks/AdraiJungle/Adrai-main.webp'
+import Visapur from '../assets/Treks/Visapur/main.webp'
 
 const UpcomingAdventuresSection = () => {
   const adventures = [
     {
       id: 1,
       title: "Nanemachi Waterfall Trek",
-      date: "June 2025",
+      date: "June-July 2025",
       slots: "25 Slots Available",
       image: Nanemachi,
       link: "/nanemachi"
@@ -24,10 +27,34 @@ const UpcomingAdventuresSection = () => {
     {
       id: 3,
       title: "Andharban Jungle Trek",
-      date: "June-July2025",
+      date: "June-July 2025",
       slots: "25 Slots Available",
       image: Andharban,
       link: "/andharban"
+    },
+    {
+      id: 4,
+      title: "Kalu Waterfall Trek",
+      date: "June-July 2025",
+      slots: "25 Slots Available",
+      image: Kalu,
+      link: "/kalu"
+    },
+    {
+      id: 5,
+      title: "Adrai Jungle Trek",
+      date: "June-July 2025",
+      slots: "25 Slots Available",
+      image: Adrai,
+      link: "/adrai"
+    },
+    {
+      id: 6,
+      title: "Visapur Fort Trek",
+      date: "June-July 2025",
+      slots: "25 Slots Available",
+      image: Visapur,
+      link: "/visapur"
     }
     
     /*,
