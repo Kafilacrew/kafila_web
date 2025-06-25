@@ -78,7 +78,7 @@ const Navbar = () => {
                 <div className="h-px bg-gray-200 mx-2 my-1"></div>
                 <div>
                   <button onClick={() => setHoveredSubmenu(hoveredSubmenu === 'himalayan' ? null : 'himalayan')} className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
-                    <span>Himalayan Treks</span>
+                    <span>Himalayan Bagpacking</span>
                     <svg className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'himalayan' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -148,7 +148,7 @@ const Navbar = () => {
                 </div>
                 <div>
                   <button onClick={() => setIsMobileHimalayanOpen(!isMobileHimalayanOpen)} className="w-full flex justify-between text-gray-700 py-2">
-                    <span>Himalayan Treks</span>
+                    <span>Himalayan Bagpacking</span>
                     <svg className={`w-3 h-3 transition-transform ${isMobileHimalayanOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
