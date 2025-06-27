@@ -78,7 +78,7 @@ const AndharbanJungleTrek = () => {
             {/* Left Column - Title */}
             <div className="flex items-center justify-center lg:justify-start">
               <h1 
-                className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl font-times font-bold text-gray-900 leading-[0.9] text-center lg:text-left lg:ml-[20px] xl:ml-[50px] 2xl:ml-[100px] transition-all duration-700 px-2 sm:px-0 break-words hyphens-auto"
+                className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl font-times font-bold text-gray-900 leading-[0.9] text-center lg:text-left lg:ml-[20px] xl:ml-[50px] 2xl:ml-[100px] transition-all duration-700 px-2 sm:px-0 break-words hyphens-auto mt-[50px]"
                 style={{
                   opacity: scrollY < 50 ? 1 : 0.8,
                   transform: `translateY(${scrollY * 0.1}px)`
