@@ -40,7 +40,7 @@ function App() {
         <Route path="/andharban" element={< AndharbanJungleTrek/>} />
         <Route path="#upcomingadventures" element={< UpcomingAdventuresSection/>} />
         <Route path="/kalu" element={< KaluTrek/>} />
-        <Route path="/adrai" element={< AdraiTrek/>} />
+        <Route path="/aadrai" element={< AdraiTrek/>} />
         <Route path="/visapur" element={< VisapurFort/>} />
         
  
