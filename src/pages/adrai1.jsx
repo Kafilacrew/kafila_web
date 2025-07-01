@@ -85,7 +85,7 @@ const AdraiJunglTrek = () => {
                   transform: `translateY(${scrollY * 0.1}px)`
                 }}
               >
-                Adrai Jungle Trek
+                Aadrai Jungle Trek
               </h1>
             </div>
             
@@ -340,7 +340,7 @@ const AdraiJunglTrek = () => {
         </div>
       </div>
       
-      {/* <BookingForm/> */}
+      <BookingForm/>
 
       {/* The Journey Section - Enhanced */}
       <div className="py-12 sm:py-16 lg:py-24 bg-white">
@@ -397,7 +397,7 @@ const AdraiJunglTrek = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
                     <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0">Day 2</span>
-                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Conquer Adrai Jungle</span>
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Conquer Aadrai Jungle</span>
                   </div>
                   <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 2 ? 'rotate-180' : ''}`}>
                     ▼
@@ -410,8 +410,7 @@ const AdraiJunglTrek = () => {
                   <div className="space-y-4 sm:space-y-6">
                     {[
                       { time: "05:00 am", desc: "Reach the Base Village" },
-                      { time: "06:00 am", desc: "Freshen up & Have Breakfast & start hiking on the trail after a short briefing session. Enjoy the Trail & Kalu Waterfall!: Experience the beauty of nature as we hike and explore the Kalu Waterfall." },
-                      { time: "07:00 am", desc: "Leave for Kalu Waterfall after a brief time at the waterfall" },
+                      { time: "06:00 am", desc: "Freshen up & Have Breakfast & start the trail after a short briefing session. Enjoy the Trail & Aadrai Jungle!: Experience the beauty of nature as we hike and explore the Aadrai Jungle." },
                       { time: "01:30 pm", desc: "Return towards the base village after exploring." },
                       { time: "02:30 pm", desc: "Have lunch and take some time to rest." },
                       { time: "03:30 pm", desc: "Begin our return journey to Pune." },

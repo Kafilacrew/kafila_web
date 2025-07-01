@@ -42,7 +42,7 @@ const UpcomingAdventuresSection = () => {
     },
     {
       id: 5,
-      title: "Adrai Jungle Trek",
+      title: "Aadrai Jungle Trek",
       date: "June-July 2025",
       slots: "25 Slots Available",
       image: Adrai,

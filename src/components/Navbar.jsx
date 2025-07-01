@@ -67,7 +67,7 @@ const Navbar = () => {
                   </button>
                   {hoveredSubmenu === 'monsoon' && (
                     <div className="px-4 pb-2">
-                      {["nanemachi", "devkund", "andharban", "kalu", "adrai", "visapur"].map((path) => (
+                      {["nanemachi", "devkund", "andharban", "kalu", "aadrai", "visapur"].map((path) => (
                         <a key={path} href={`/${path}`} onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">
                           {path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} Trek
                         </a>
@@ -138,7 +138,7 @@ const Navbar = () => {
                   </button>
                   {isMobileMonsoonOpen && (
                     <div className="pl-4 space-y-1 mt-1">
-                      {["nanemachi", "devkund", "andharban", "kalu", "adrai", "visapur"].map((path) => (
+                      {["nanemachi", "devkund", "andharban", "kalu", "aadrai", "visapur"].map((path) => (
                         <a key={path} href={`/${path}`} onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileMonsoonOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
                           {path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} Trek
                         </a>
