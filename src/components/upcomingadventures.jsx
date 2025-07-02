@@ -46,7 +46,7 @@ const UpcomingAdventuresSection = () => {
       date: "June-July 2025",
       slots: "25 Slots Available",
       image: Adrai,
-      link: "/adrai"
+      link: "/aadrai"
     },
     {
       id: 6,
