@@ -414,7 +414,7 @@ const AdraiJunglTrek = () => {
                       { time: "01:30 pm", desc: "Return towards the base village after exploring." },
                       { time: "02:30 pm", desc: "Have lunch and take some time to rest." },
                       { time: "03:30 pm", desc: "Begin our return journey to Pune." },
-                      { time: "09:00 am", desc: "Reach Pune." }
+                      { time: "09:00 pm", desc: "Reach Pune." }
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-3 sm:gap-4">
                         <span className="text-xl sm:text-2xl mt-1 flex-shrink-0">⏰</span>
