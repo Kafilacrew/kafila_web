@@ -190,7 +190,7 @@ const AdraiJunglTrek = () => {
                 "Swargate",
                 "Good Luck Chowk",
                 "Khadki Railway Station",
-                "Khireshwar"
+                "Nashik Phata"
               ].map((point, index) => (
                 <p key={index} className="text-gray-800 text-sm sm:text-base lg:text-lg flex items-start text-left break-words">
                   <span className="mr-2 sm:mr-3 text-base sm:text-lg flex-shrink-0 mt-0.5">📍</span>
