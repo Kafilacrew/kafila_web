@@ -340,7 +340,7 @@ const KaluWaterfallTrek = () => {
         </div>
       </div>
       
-      {/* <BookingForm/> */}
+       <BookingForm/> 
 
       {/* The Journey Section - Enhanced */}
       <div className="py-12 sm:py-16 lg:py-24 bg-white">

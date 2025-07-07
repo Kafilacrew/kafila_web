@@ -18,6 +18,8 @@ const BookingButtons = ({ trekType = "auto" }) => {
         currentTrekType = 'nanemachi';
       } else if (currentUrl.includes('aadrai') || currentPath.includes('aadrai')) {
         currentTrekType = 'aadrai';
+      } else if (currentUrl.includes('kalu') || currentPath.includes('kalu')) {
+        currentTrekType = 'kalu';
       } else {
         // Fallback: try to detect from page title or content
         const pageTitle = document.title.toLowerCase();
@@ -31,6 +33,8 @@ const BookingButtons = ({ trekType = "auto" }) => {
           currentTrekType = 'nanemachi';
         } else if (pageTitle.includes('aadrai') || pageContent.includes('aadrai')) {
           currentTrekType = 'aadrai';
+        } else if (pageTitle.includes('kalu') || pageContent.includes('kalu')) {
+          currentTrekType = 'kalu';
         } else {
           currentTrekType = 'nanemachi'; // default fallback
         }
@@ -41,7 +45,8 @@ const BookingButtons = ({ trekType = "auto" }) => {
       devkund: 'https://forms.easebuzz.in/register/KafilaMOzbn/devkundtrek',
       andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/andharbantrek',
       nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/nanemachitrek',
-      aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1'
+      aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
+      kalu: 'https://forms.easebuzz.in/register/KafilaMOzbn/kalu'
     };
     
     window.open(links[currentTrekType], '_blank');
