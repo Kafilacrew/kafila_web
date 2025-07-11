@@ -19,6 +19,7 @@ import UpcomingAdventuresSection from './components/upcomingadventures';
 import KaluTrek from './pages/kalu';
 import AdraiTrek from './pages/adrai1';
 import VisapurFort from './pages/visapurfort';
+import Kedarnath from './pages/kedarnath';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/kalu" element={< KaluTrek/>} />
         <Route path="/aadrai" element={< AdraiTrek/>} />
         <Route path="/visapur" element={< VisapurFort/>} />
+        <Route path="/kedarnath" element={< Kedarnath/>} />
         
  
 
