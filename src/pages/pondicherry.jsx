@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import BookingForm from '../components/Bookingform'; // Assuming shared component
 import RefundPolicy from '../components/RefundPolicy';
-import Kedarpara from '../assets/Treks/Kedarnath/kedarpara.jpg';
-import Kedar1 from '../assets/Treks/Kedarnath/Kedar1.jpg';
-import Kedar2 from '../assets/Treks/Kedarnath/kedar1.jpeg';
-import Kedar3 from '../assets/Treks/Kedarnath/kedar3.jpg';
+import para from '../assets/Treks/Pondicherry/Pondipara.jpg';
+import A1 from '../assets/Treks/Pondicherry/Pondi1.jpg';
+import A2 from '../assets/Treks/Pondicherry/pondi2.jpg';
+import A3 from '../assets/Treks/Pondicherry/pondi3.jpg';
 
-const Kedarnath = () => {
+const Pondicherry = () => {
   const [scrollY, setScrollY] = useState(0);
   const [expandedDay, setExpandedDay] = useState(null);
   const [isVisible, setIsVisible] = useState({});
@@ -84,7 +84,7 @@ const Kedarnath = () => {
                   transform: `translateY(${scrollY * 0.1}px)`
                 }}
               >
-                Kedarnath Backpacking
+                Pondicherry Backpacking
               </h1>
             </div>
             
@@ -95,7 +95,7 @@ const Kedarnath = () => {
                    style={isVisible.location ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-600 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl flex items-center justify-center lg:justify-start">
                   <span className="mr-2 sm:mr-3 text-lg sm:text-xl md:text-2xl flex-shrink-0">📍</span>
-                  <span className="break-words">Kedarnath</span>
+                  <span className="break-words">Pondicherry</span>
                 </p>
               </div>
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
@@ -110,7 +110,7 @@ const Kedarnath = () => {
                    data-id="description" 
                    style={isVisible.description ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-700 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-full lg:max-w-lg leading-relaxed text-center lg:text-left break-words hyphens-auto">
-                  Kedarnath is a sacred town located in the Indian state of Uttarakhand, nestled in the majestic Garhwal Himalayan range. It is one of the most revered pilgrimage sites in India and holds immense religious significance for Hindus, especially followers of Lord Shiva.
+                  Pondicherry, often called the French Riviera of the East, is a charming coastal town in South India known for its serene beaches, vibrant French colonial architecture, and spiritual vibe. It offers a unique blend of Indian culture and French influence, seen in its quaint cafes, tree-lined boulevards, and the famous Auroville township. Perfect for a peaceful getaway.
                 </p>
               </div>
             </div>
@@ -124,7 +124,7 @@ const Kedarnath = () => {
           <div 
             className="absolute inset-0 w-full h-[130%] -top-[15%]"
             style={{ 
-              backgroundImage: `url(${Kedarpara})`,
+              backgroundImage: `url(${para})`,
               backgroundPosition: 'center center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',
@@ -137,7 +137,7 @@ const Kedarnath = () => {
           <div 
             className="absolute inset-0 w-full h-full"
             style={{ 
-              backgroundImage: `url(${Kedarpara})`,
+              backgroundImage: `url(${para})`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundAttachment: 'fixed',
@@ -181,7 +181,7 @@ const Kedarnath = () => {
             <h3 className="text-gray-900 font-bold mb-4 sm:mb-6 text-lg sm:text-xl lg:text-2xl text-left">Boarding Points</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {[
-                "Delhi"
+                "Pune"
               ].map((point, index) => (
                 <p key={index} className="text-gray-800 text-sm sm:text-base lg:text-lg flex items-start text-left break-words">
                   <span className="mr-2 sm:mr-3 text-base sm:text-lg flex-shrink-0 mt-0.5">📍</span>
@@ -197,7 +197,7 @@ const Kedarnath = () => {
                style={isVisible.history ? {opacity: 1, transform: 'translateY(0)'} : {}}>
             <div className="max-w-full">
               <p className="text-gray-700 text-xs xs:text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed text-left break-words hyphens-auto">
-                Kedarnath is a soul-stirring blend of spirituality and adventure, nestled in the heart of the Himalayas. The 16 km uphill trek from Gaurikund takes you through rugged terrains, roaring rivers, and breathtaking alpine views. At 3,583 meters, the ancient Kedarnath Temple stands resilient against time and nature. Whether you're chasing divine peace or mountain thrills, this journey transforms you. It's not just a trip — it's an experience that stays with you forever.
+                Come join us on an unforgettable journey to the vibrant coastal town of Pondicherry — a place where French charm meets tropical soul. From sunrise surfing and café hopping to sacred temples and mangrove backwaters, this trip is the perfect blend of adventure, culture, and calm. Whether you're chasing waves or chasing peace, Pondicherry has a story waiting just for you.
               </p>
             </div>
           </div>
@@ -313,7 +313,7 @@ const Kedarnath = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
                     <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0"></span>
-                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Kedarnath Iternary</span>
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Pondicherry Escapade</span>
                   </div>
                   <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 1 ? 'rotate-180' : ''}`}>
                     ▼
@@ -325,15 +325,13 @@ const Kedarnath = () => {
                 <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
                   <div className="space-y-4 sm:space-y-6">
                     {[
-                      { time: "Day 1: Journey Begins – Pune to Haridwar", desc: "Our adventure begins from Pune as we make our way to Mumbai by train or private vehicle. From Mumbai, we board our train to the spiritual gateway of the north — Haridwar." },
-                      { time: "Day 2: Arrival in Haridwar | Explore the Sacred Town", desc: "Upon arrival in Haridwar, we check into our hotel and take some time to rest. Later, we head out to explore this holy town — visiting the serene Har Ki Pauri Ghat and the hilltop Mansa Devi Temple. As the sun sets, we witness the mesmerizing Ganga Aarti, a spiritual experience that stays with you forever. We return to our hotel for dinner and an overnight stay." },
-                      { time: "Day 3: Haridwar to Sonprayag | Scenic Drive through the Hills", desc: "We begin our scenic drive to Sonprayag, passing through picturesque towns like Rishikesh, Devprayag, Srinagar, and Rudraprayag, following the flow of the Ganga and Alaknanda rivers. By evening, we reach Sonprayag and check into our guesthouse, soaking in the crisp mountain air." },
-                      { time: "Day 4: Trek to Kedarnath | A Journey of Devotion and Beauty", desc: "We start early with a short drive to Gaurikund — the base of our trek. From here, we begin the uphill journey towards Kedarnath, traversing lush forests, scenic valleys, and river crossings. By late afternoon, we reach Kedarnath and check into our accommodation. As dusk falls, we attend the peaceful evening Aarti at the Kedarnath Temple. Overnight stay in Kedarnath." },
-                      { time: "Day 5: Morning Darshan | Trek Back to Sonprayag", desc: "We rise early for darshan at the Kedarnath Temple, embracing the divine atmosphere in the quiet morning hours. After some serene moments, we begin our descent back to Gaurikund and proceed to Sonprayag. We check in, rest, and rejuvenate after the long yet fulfilling day." },
-                      { time: "Day 6: Sonprayag to Rishikesh | Back to the Banks of the Ganga", desc: "After breakfast, we set off for Rishikesh. The route is lined with Himalayan landscapes and flowing rivers, making the drive picturesque and peaceful. By evening, we arrive in Rishikesh and settle into our hotel. The evening is free to explore riverside cafés or take a quiet stroll by the Ganga. Overnight stay in Rishikesh." },
-                      { time: "Day 7: Explore Rishikesh | Adventure & Spiritual Bliss", desc: "We spend the day soaking in the spiritual and vibrant vibes of Rishikesh — visiting Laxman Jhula, Ram Jhula, the Beatles Ashram, and colorful local markets. For thrill-seekers, we indulge in the exhilarating river rafting experience. In the evening, we gather at Triveni Ghat for the soulful Ganga Aarti. Overnight stay in Rishikesh." },
-                      { time: "Day 8: Rishikesh to Delhi | Train to Pune", desc: "After breakfast, we begin our return journey with a drive to Delhi. From there, we board our train back to Pune. The journey offers time to relax, reflect, and relive the beautiful memories we’ve made." },
-                      { time: "Day 9: Homecoming | Arrive in Pune", desc: "We arrive back in Pune, our hearts full of blessings, our minds refreshed by the mountains, and our spirits uplifted by the divine and adventurous experiences of the past few days." }
+                      { time: "Day 1 – Departure from Pune", desc: "We begin our journey from Pune, leaving behind the city buzz for the coastal calm. An overnight ride filled with stories, music, and the thrill of what’s to come." },
+                      { time: "Day 2 – Touchdown at the Coast", desc: "Upon arrival in Pondicherry, we head straight to Auroville Beach, letting the ocean air greet us. As the sun dips, we explore Rock Beach — lively, breezy, and the perfect start to this adventure." },
+                      { time: "Day 3 – Surf & Serenity", desc: "The day starts with optional surfing at Serenity Beach. Later, we explore Auroville’s peaceful energy, visit the Matrimandir, and wind down with an evening stroll at Auro Beach." },
+                      { time: "Day 4 - Mangroves & Mythology", desc: "A scenic boat ride through the Pichavaram mangroves sets the tone for the day. In the afternoon, we explore the historic Chidambaram Temple, steeped in spiritual grandeur." },
+                      { time: "Day 5 – Colonial Charm & Café Culture", desc: "White Town’s pastel streets and vibrant cafés invite slow exploration. We wrap up the day with a visit to the Basilica of the Sacred Heart of Jesus, echoing calm and heritage." },
+                      { time: "Day 6 – Sculpted Shores of Mahabalipuram", desc: "We visit the ancient wonders of Mahabalipuram, known for its stone temples by the sea. As night falls, we board the train back to Pune, carrying more than just souvenirs." },
+                      { time: "Day 7 - Return to Pune", desc: "We arrive back home — a little tanner, a lot lighter, and filled with memories that smell of sea breeze and freedom." }
                     ].map((item, index) => (
                       <div key={index} className="flex items-start gap-3 sm:gap-4">
                         <span className="text-xl sm:text-2xl mt-1 flex-shrink-0">⏰</span>
@@ -400,7 +398,7 @@ const Kedarnath = () => {
                 {/* Large vertical image */}
                     <div className="col-span-1 sm:col-span-2 lg:col-span-3 row-span-2 rounded-2xl overflow-hidden shadow-xl group">
                     <img 
-                        src={Kedar1} 
+                        src={A1} 
                         alt="Ladakh landscape" 
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
@@ -409,7 +407,7 @@ const Kedarnath = () => {
                 {/* Top right image */}
                     <div className="col-span-1 sm:col-span-1 lg:col-span-3 row-span-1 rounded-2xl overflow-hidden shadow-xl group">
                     <img 
-                    src={Kedar2} 
+                    src={A2} 
                     alt="Ladakh view" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
@@ -418,7 +416,7 @@ const Kedarnath = () => {
                     {/* Bottom right image */}
                     <div className="col-span-1 sm:col-span-2 lg:col-span-3 row-span-1 rounded-2xl overflow-hidden shadow-xl group">
                     <img 
-                    src={Kedar3} 
+                    src={A3} 
                     alt="Ladakh path" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
@@ -567,4 +565,4 @@ const Kedarnath = () => {
   );
 };
 
-export default Kedarnath;
+export default Pondicherry;
