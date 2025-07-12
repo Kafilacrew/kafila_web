@@ -429,7 +429,7 @@ const Pondicherry = () => {
       </div>
 
       {/* Enhanced CSS */}
-      <style jsx>{`
+      <style jsx="true">{`
         @keyframes scaleUp {
           from {
             opacity: 0;
