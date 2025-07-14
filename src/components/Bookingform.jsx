@@ -42,7 +42,7 @@ const BookingButtons = ({ trekType = "auto" }) => {
     }
     
     const links = {
-      devkund: 'https://forms.easebuzz.in/register/KafilaMOzbn/devkundtrek',
+      devkund: 'https://forms.easebuzz.in/register/KafilaMOzbn/devkund',
       andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/andharbantrek',
       nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/nanemachitrek',
       aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
