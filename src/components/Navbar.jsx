@@ -88,6 +88,7 @@ const Navbar = () => {
                       <a href="/ladakh" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Leh Ladakh</a>
                       <a href="/kedarnath" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Kedarnath</a>
                       <a href="/pondicherry" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Pondicherry</a>
+                      <a href="/hampi" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Hampi</a>
                     </div>
                   )}
                 </div>
@@ -165,6 +166,9 @@ const Navbar = () => {
                       </a>
                       <a href="/pondicherry" onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileHimalayanOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
                         Pondicherry
+                      </a>
+                      <a href="/hampi" onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileHimalayanOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
+                        Hampi
                       </a>
                     </div>
                   )}

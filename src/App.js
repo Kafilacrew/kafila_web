@@ -35,7 +35,7 @@ function App() {
         <Route path="/sandhanvalley" element={< Sandhanvalley/>} /> 
         <Route path="/ladakh" element={< Ladakh/>} /> 
         <Route path="/goa" element={< Goa/>} /> 
-        <Route path="/hamp" element ={<Hampi/>}/>
+        <Route path="/hampi" element ={<Hampi/>}/>
         <Route path="/Contactus" element={<Contactus/>}/>
         <Route path="/nanemachi" element={< NanemachiTrek/>} /> 
         <Route path="/devkund" element={< DevkundTrek/>} />
