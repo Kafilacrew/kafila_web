@@ -46,7 +46,7 @@ const BookingButtons = ({ trekType = "auto" }) => {
       andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/andharbantrek',
       nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/NS11',
       aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
-      kalu: 'https://forms.easebuzz.in/register/KafilaMOzbn/Kalu5'
+      kalu: 'https://forms.easebuzz.in/register/KafilaMOzbn/KW6'
     };
     
     window.open(links[currentTrekType], '_blank');
