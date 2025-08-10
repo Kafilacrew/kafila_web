@@ -313,7 +313,7 @@ const Kedarnath = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
                     <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0"></span>
-                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Kedarnath Iternary</span>
+                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Kedarnath Itinerary</span>
                   </div>
                   <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 1 ? 'rotate-180' : ''}`}>
                     ▼
