@@ -253,32 +253,16 @@ const Hampi = () => {
             <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-left">What to Carry?</h3>
             <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
               {[
-                "Backpack [30-40L]",
-                "Thermal wear (inner layers)",
-                "Fleece jackets and windcheaters",
-                "Waterproof and insulated gloves",
-                "Woolen caps, mufflers, and socks",
-                "Comfortable trekking shoes",
-                "Valid ID proof",
-                "Personal medicines (headache, fever, vomiting, stomach issues, pain relief gel/spray, antifungal cream)",
-                "Sunglasses with UV protection",
-                "Sunscreen lotion (SPF 50+), lip balm, and moisturizer",
-                "Reusable water bottles (Thermal/Insulated, 750ml+)",
-                "Headlamp or flashlight with extra batteries",
-                "Camera to capture memories",
-                "Power banks and chargers",
-                "Head torch or simple handheld torch",
-                "Snacks and energy bars",
-                "Quick dry trek pants, t-shirts (2 pairs minimum), and undergarments",
-                "Rain poncho or waterproof raincoat/cover",
-                "Cotton socks (3 pairs) and thermal socks (2 pairs)",
-                "Trekking pole",
-                "Plastic bags for wet/dirty clothes",
-                "Camp sandals",
-                "Toiletries (soap, toothbrush/mouthwash, wet wipes, sanitizer)",
-                "Down feather jackets and warm layers (minimum 3 layers)",
-                "Cash for emergencies"
-              ].map((item, index) => (
+    "Clothing & Footwear",
+    "Government-issued photo ID (Aadhar/Passport/Driving License)",
+    "Small backpack/daypack for local sightseeing",
+    "Reusable water bottle",
+    "Sunglasses, cap/hat",
+    "Personal hygiene items",
+    "Power bank",
+    "Camera",
+    "Personal medications & basic first aid items"
+].map((item, index) => (
                 <p key={index} className="text-gray-900 text-xl md:text-xl flex items-center">
                   <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-lg font-bold">✓</span>
