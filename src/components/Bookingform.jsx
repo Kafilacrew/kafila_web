@@ -1,11 +1,9 @@
 import React from 'react';
-import { CreditCard } from 'lucide-react';
 
 const BookingButtons = ({ trekType = "auto" }) => {
   const handleBookNow = () => {
     let currentTrekType = trekType;
     
-    // Auto-detect trek type from URL or page if not specified
     if (trekType === "auto") {
       const currentUrl = window.location.href.toLowerCase();
       const currentPath = window.location.pathname.toLowerCase();
@@ -20,8 +18,11 @@ const BookingButtons = ({ trekType = "auto" }) => {
         currentTrekType = 'aadrai';
       } else if (currentUrl.includes('kalu') || currentPath.includes('kalu')) {
         currentTrekType = 'kalu';
+      } else if (currentUrl.includes('kedarnath') || currentPath.includes('kedarnath')) {
+        currentTrekType = 'kedarnath';
+      } else if (currentUrl.includes('pondicherry') || currentPath.includes('pondicherry')) {
+        currentTrekType = 'pondicherry';
       } else {
-        // Fallback: try to detect from page title or content
         const pageTitle = document.title.toLowerCase();
         const pageContent = document.body.textContent.toLowerCase();
         
@@ -35,8 +36,12 @@ const BookingButtons = ({ trekType = "auto" }) => {
           currentTrekType = 'aadrai';
         } else if (pageTitle.includes('kalu') || pageContent.includes('kalu')) {
           currentTrekType = 'kalu';
+        } else if (pageTitle.includes('kedarnath') || pageContent.includes('kedarnath')) {
+          currentTrekType = 'kedarnath';
+        } else if (pageTitle.includes('pondicherry') || pageContent.includes('pondicherry')) {
+          currentTrekType = 'pondicherry';
         } else {
-          currentTrekType = 'nanemachi'; // default fallback
+          currentTrekType = 'nanemachi';
         }
       }
     }
@@ -46,7 +51,9 @@ const BookingButtons = ({ trekType = "auto" }) => {
       andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/andharbantrek',
       nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/NS12',
       aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
-      kalu: 'https://forms.easebuzz.in/register/KafilaMOzbn/KW6'
+      kalu: 'https://forms.easebuzz.in/register/KafilaMOzbn/KW6',
+      kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1', // update with actual form link
+      pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1' // update with actual form link
     };
     
     window.open(links[currentTrekType], '_blank');
