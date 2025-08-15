@@ -247,7 +247,7 @@ const Pondicherry = () => {
           </div>
 
           {/* What to Carry Section */}
-          <div className="mb-24 md:mb-32">
+          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0">
             <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-left">What to Carry?</h3>
             <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
               {[
