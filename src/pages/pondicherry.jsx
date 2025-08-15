@@ -210,7 +210,6 @@ const Pondicherry = () => {
             <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
               {[
                 "Transportation & accommodation",
-                "Rishikesh Rafting - 26kms",
                 "Meals along the trek route from the Base Camp to Base Camp",
                 "Sleeping bag, mattress, tents, crampons.",
                 "Outdoor experts, guide, cook and support staff",
