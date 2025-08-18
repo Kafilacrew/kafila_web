@@ -38,9 +38,15 @@ const Navbar = () => {
         {/* Logo */}
         <div>
           <img 
-            src={kafilaLogo} 
-            alt="Kafila Adventures Logo" 
-            className="w-[80px] h-[100px] sm:w-[45px] sm:h-[56px] md:w-[60px] md:h-[75px] lg:w-[80px] lg:h-[100px] brightness-0" 
+          src={kafilaLogo} 
+          alt="Kafila Adventures Logo" 
+          className="
+          w-[60px] h-[70px]        // mobile (<640px)
+          sm:w-[55px] sm:h-[65px]  // small screens ≥640px
+          md:w-[70px] md:h-[85px]  // medium screens ≥768px
+          lg:w-[80px] lg:h-[100px] // large screens ≥1024px
+          brightness-0
+          " 
           />
         </div>
 
