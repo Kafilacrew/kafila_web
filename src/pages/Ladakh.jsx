@@ -177,7 +177,7 @@ const Ladakh = () => {
                  data-id="schedule" 
                  style={isVisible.schedule ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Schedule:</h3>
-              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">🕒 25th-30th August 2025, 24th-29th September 2025</p>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">🕒 8th-13th September 2025</p>
             </div>
           </div>
 
