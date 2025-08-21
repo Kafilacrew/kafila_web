@@ -104,7 +104,7 @@ const KaluWaterfallTrek = () => {
                    style={isVisible.date ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-600 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-center lg:text-left">
                   <span className="mr-2 sm:mr-3 text-lg sm:text-xl md:text-2xl flex-shrink-0">🗓️</span>
-                  <span className="break-words">June-July, 2025</span>
+                  <span className="break-words">August-September, 2025</span>
                 </p>
               </div>
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
@@ -176,7 +176,7 @@ const KaluWaterfallTrek = () => {
                  data-id="schedule" 
                  style={isVisible.schedule ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Schedule:</h3>
-              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">🕒 June-July 2025</p>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">🕒 August-September 2025</p>
             </div>
           </div>
           

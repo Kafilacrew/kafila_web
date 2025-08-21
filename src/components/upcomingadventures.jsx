@@ -11,7 +11,7 @@ const UpcomingAdventuresSection = () => {
     {
       id: 1,
       title: "Nanemachi Waterfall Trek",
-      date: "June-July 2025",
+      date: "August-September 2025",
       slots: "25 Slots Available",
       image: Nanemachi,
       link: "/nanemachi"
@@ -19,7 +19,7 @@ const UpcomingAdventuresSection = () => {
     {
       id: 2,
       title: "Devkund Waterfall Trek",
-      date: "June-July 2025",
+      date: "August-September 2025",
       slots: "25 Slots Available",
       image: Devkund,
       link: "/devkund"
@@ -27,7 +27,7 @@ const UpcomingAdventuresSection = () => {
     {
       id: 3,
       title: "Andharban Jungle Trek",
-      date: "June-July 2025",
+      date: "August-September 2025",
       slots: "25 Slots Available",
       image: Andharban,
       link: "/andharban"
@@ -35,7 +35,7 @@ const UpcomingAdventuresSection = () => {
     {
       id: 4,
       title: "Kalu Waterfall Trek",
-      date: "June-July 2025",
+      date: "August-September 2025",
       slots: "25 Slots Available",
       image: Kalu,
       link: "/kalu"
@@ -43,7 +43,7 @@ const UpcomingAdventuresSection = () => {
     {
       id: 5,
       title: "Aadrai Jungle Trek",
-      date: "June-July 2025",
+      date: "August-September 2025",
       slots: "25 Slots Available",
       image: Adrai,
       link: "/aadrai"
@@ -51,7 +51,7 @@ const UpcomingAdventuresSection = () => {
     {
       id: 6,
       title: "Visapur Fort Trek",
-      date: "June-July 2025",
+      date: "August-September 2025",
       slots: "25 Slots Available",
       image: Visapur,
       link: "/visapur"
