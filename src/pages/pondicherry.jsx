@@ -247,29 +247,36 @@ const Pondicherry = () => {
           </div>
 
           {/* What to Carry Section */}
-          <div className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0">
-            <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-left">What to Carry?</h3>
-            <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
-              {[
-    "Clothing & Footwear",
-    "Government-issued photo ID (Aadhar/Passport/Driving License)",
-    "Small backpack/daypack for local sightseeing",
-    "Reusable water bottle",
-    "Sunglasses, cap/hat",
-    "Personal hygiene items",
-    "Power bank",
-    "Camera",
-    "Personal medications & basic first aid items"
-].map((item, index) => (
-                <p key={index} className="text-gray-900 text-xl md:text-xl flex items-center">
-                  <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
-                    <span className="text-lg font-bold">✓</span>
-                  </span>
-                  <span className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl break-words">{item}</span>
-                </p>
-              ))}
-            </div>
-          </div>
+<div 
+  className="py-6 sm:py-8 lg:py-12 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out px-2 sm:px-0" 
+  data-id="carry"
+  style={isVisible.carry ? { opacity: 1, transform: 'translateY(0)' } : {}}
+>
+  <h3 className="text-gray-900 font-bold mb-6 sm:mb-8 text-lg sm:text-xl lg:text-2xl xl:text-3xl text-left">
+    What to Carry?
+  </h3>
+  <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-6 max-w-full">
+    {[ 
+      "Clothing & Footwear",
+      "Government-issued photo ID (Aadhar/Passport/Driving License)",
+      "Small backpack/daypack for local sightseeing",
+      "Reusable water bottle",
+      "Sunglasses, cap/hat",
+      "Personal hygiene items",
+      "Power bank",
+      "Camera",
+      "Personal medications & basic first aid items"
+    ].map((item, index) => (
+      <p key={index} className="text-gray-900 text-xl md:text-xl flex items-center">
+        <span className="w-7 h-7 rounded-full bg-green-500 text-white flex items-center justify-center mr-4 flex-shrink-0">
+          <span className="text-lg font-bold">✓</span>
+        </span>
+        <span className="text-gray-900 text-sm sm:text-base md:text-lg lg:text-xl break-words">{item}</span>
+      </p>
+    ))}
+  </div>
+</div>
+
         </div>
       </div>
 
