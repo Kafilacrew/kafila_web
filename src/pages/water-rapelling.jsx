@@ -157,7 +157,10 @@ const Waterrapelling = () => {
                  style={isVisible.price ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Price:</h3>
               <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">
-                ₹1699/-
+                Regular - ₹1699/-
+              </p>
+              <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">
+                AC - ₹1999/-
               </p>
             </div>
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-100 text-left px-2 sm:px-0" 
