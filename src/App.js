@@ -21,6 +21,7 @@ import AdraiTrek from './pages/adrai1';
 import VisapurFort from './pages/visapurfort';
 import Kedarnath from './pages/kedarnath';
 import Pondicherry from './pages/pondicherry';
+import Waterrappelling from './pages/water-rapelling';
 
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
         <Route path="/visapur" element={< VisapurFort/>} />
         <Route path="/kedarnath" element={< Kedarnath/>} />
         <Route path="/pondicherry" element={< Pondicherry/>} />
-        
+        <Route path="/water-rappelling" element={< Waterrappelling/>} />
  
 
       </Routes>

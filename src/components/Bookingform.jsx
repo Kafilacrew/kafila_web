@@ -22,6 +22,8 @@ const BookingButtons = ({ trekType = "auto" }) => {
         currentTrekType = 'kedarnath';
       } else if (currentUrl.includes('pondicherry') || currentPath.includes('pondicherry')) {
         currentTrekType = 'pondicherry';
+      } else if (currentUrl.includes('water-rappelling') || currentPath.includes('water-rappelling')) {
+        currentTrekType = 'water-rappelling';
       } else {
         const pageTitle = document.title.toLowerCase();
         const pageContent = document.body.textContent.toLowerCase();
@@ -40,6 +42,8 @@ const BookingButtons = ({ trekType = "auto" }) => {
           currentTrekType = 'kedarnath';
         } else if (pageTitle.includes('pondicherry') || pageContent.includes('pondicherry')) {
           currentTrekType = 'pondicherry';
+        } else if (pageTitle.includes('water-rappelling') || pageContent.includes('water-rappelling')) {
+          currentTrekType = 'water-rappelling';
         } else {
           currentTrekType = 'nanemachi';
         }
@@ -52,8 +56,9 @@ const BookingButtons = ({ trekType = "auto" }) => {
       nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/NS12',
       aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
       kalu: 'https://forms.easebuzz.in/register/KafilaMOzbn/KW6',
-      kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1', // update with actual form link
-      pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1' // update with actual form link
+      kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1',
+      pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1',
+      'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5'
     };
     
     window.open(links[currentTrekType], '_blank');
