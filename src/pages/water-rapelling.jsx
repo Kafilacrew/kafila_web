@@ -84,7 +84,7 @@ const Waterrapelling = () => {
                   transform: `translateY(${scrollY * 0.1}px)`
                 }}
               >
-                Water Rappelling
+                Waterfall Rappelling
               </h1>
             </div>
             
@@ -95,7 +95,7 @@ const Waterrapelling = () => {
                    style={isVisible.location ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-600 text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl flex items-center justify-center lg:justify-start">
                   <span className="mr-2 sm:mr-3 text-lg sm:text-xl md:text-2xl flex-shrink-0">📍</span>
-                  <span className="break-words">Dev Puri</span>
+                  <span className="break-words">Bhivpuri</span>
                 </p>
               </div>
               <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500" 
@@ -110,7 +110,7 @@ const Waterrapelling = () => {
                    data-id="description" 
                    style={isVisible.description ? {opacity: 1, transform: 'translateY(0)'} : {}}>
                 <p className="text-gray-700 text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-full lg:max-w-lg leading-relaxed text-center lg:text-left break-words hyphens-auto">
-                  Experience the thrill of waterfall rappelling at Dev Puri! Conquer gushing cascades, trek through lush trails, and enjoy an action-packed adventure with Kafila Adventures.
+                  Experience the thrill of waterfall rappelling at Bhivpuri! Conquer gushing cascades, trek through lush trails, and enjoy an action-packed adventure with Kafila Adventures.
                 </p>
               </div>
             </div>
@@ -157,7 +157,7 @@ const Waterrapelling = () => {
                  style={isVisible.price ? {opacity: 1, transform: 'translateY(0)'} : {}}>
               <h3 className="text-gray-900 font-bold mb-2 sm:mb-3 text-lg sm:text-xl lg:text-2xl break-words">Price:</h3>
               <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">
-                Regular - ₹1699/-
+                Regular - ₹1799/-
               </p>
               <p className="text-gray-800 text-base sm:text-lg lg:text-xl break-words">
                 AC - ₹1999/-
@@ -184,7 +184,9 @@ const Waterrapelling = () => {
             <h3 className="text-gray-900 font-bold mb-4 sm:mb-6 text-lg sm:text-xl lg:text-2xl text-left">Boarding Points</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {[
-                "Pune"
+                "Katraj Chowk",
+                "Chandni Chowk",
+                "Wakad Chowk"
               ].map((point, index) => (
                 <p key={index} className="text-gray-800 text-sm sm:text-base lg:text-lg flex items-start text-left break-words">
                   <span className="mr-2 sm:mr-3 text-base sm:text-lg flex-shrink-0 mt-0.5">📍</span>
@@ -326,14 +328,14 @@ const Waterrapelling = () => {
                 <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
                   <div className="space-y-4 sm:space-y-6">
                     {[
-  { time: "03:30 am – Departure", desc: "Reporting at the given pick-up points & depart towards the base village." },
-  { time: "06:30 am – Arrival", desc: "Reach the base village and freshen up." },
-  { time: "07:30 am – Breakfast", desc: "Enjoy a delicious breakfast to fuel up for the adventure." },
-  { time: "09:30 am – Trek Begins", desc: "Start trekking towards the rappelling patch amidst lush greenery." },
-  { time: "11:30 am – Rappelling & Return Trek", desc: "Complete the waterfall rappelling session and trek back to the base village." },
-  { time: "12:30 pm – Lunch", desc: "Relish a wholesome lunch and relax for a while." },
-  { time: "01:30 pm – Return Journey", desc: "Start the return trip towards Pune." },
-  { time: "04:30 pm – Arrival at Pune", desc: "Reach Pune with memories of an adventurous day." }
+  { time: "04:30 am – Departure", desc: "Reporting at the given pick-up points & depart towards the base village." },
+  { time: "09:00 am – Arrival", desc: "Reach the base village and freshen up." },
+  { time: "10:00 am – Breakfast", desc: "Enjoy a delicious breakfast to fuel up for the adventure." },
+  { time: "12:00 am – Trek Begins", desc: "Start trekking towards the rappelling patch amidst lush greenery." },
+  { time: "02:30 am – Rappelling & Return Trek", desc: "Complete the waterfall rappelling session and trek back to the base village." },
+  { time: "03:30 pm – Lunch", desc: "Relish a wholesome lunch and relax for a while." },
+  { time: "04:30 pm – Return Journey", desc: "Start the return trip towards Pune." },
+  { time: "09:00 pm – Arrival at Pune", desc: "Reach Pune with memories of an adventurous day." }
 ].map((item, index) => (
                       <div key={index} className="flex items-start gap-3 sm:gap-4">
                         <span className="text-xl sm:text-2xl mt-1 flex-shrink-0">⏰</span>

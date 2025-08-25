@@ -76,7 +76,7 @@ const Navbar = () => {
                       {["nanemachi", "devkund", "andharban", "kalu", "aadrai", "visapur", "water-rappelling"].map((path) => (
                         <a key={path} href={`/${path}`} onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">
                           {path === "water-rappelling" 
-                            ? "Water Rappelling" 
+                            ? "Waterfall Rappelling" 
                             : path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) + " Trek"}
                         </a>
                       ))}
@@ -152,7 +152,7 @@ const Navbar = () => {
                       {["nanemachi", "devkund", "andharban", "kalu", "aadrai", "visapur", "water-rappelling"].map((path) => (
                         <a key={path} href={`/${path}`} onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileMonsoonOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
                           {path === "water-rappelling" 
-                            ? "Water Rappelling" 
+                            ? "Waterfall Rappelling" 
                             : path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) + " Trek"}
                         </a>
                       ))}
