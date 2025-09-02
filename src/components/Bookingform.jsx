@@ -55,7 +55,7 @@ const BookingButtons = ({ trekType = "auto" }) => {
       andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/AB12',
       nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/NS12',
       aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
-      kalu: 'https://forms.easebuzz.in/register/KafilaMOzbn/KW6',
+      kalu: 'https://forms.easebuzz.in/sign-up/KafilaMOzbn/KW8',
       kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1',
       pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1',
       'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5'
