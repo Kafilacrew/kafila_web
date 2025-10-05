@@ -9,7 +9,7 @@ import K3 from '../assets/Treks/Visapur/visapur-3.jpg';
 
 const VisapurFortTrek = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [expandedDay, setExpandedDay] = useState(null);
+
   const [isVisible, setIsVisible] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
@@ -388,24 +388,12 @@ const VisapurFortTrek = () => {
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out delay-100" 
                  data-id="day2" 
                  style={isVisible.day2 ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-              <button 
-                onClick={() => setExpandedDay(expandedDay === 2 ? null : 2)}
-                className="w-full max-w-4xl mx-auto block p-4 sm:p-6 lg:p-8 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 hover:shadow-lg group"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
-                    <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0">Day 1</span>
-                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Conquer Visapur Fort</span>
-                  </div>
-                  <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 2 ? 'rotate-180' : ''}`}>
-                    ▼
-                  </span>
+              <div className="w-full max-w-4xl mx-auto p-4 sm:p-6 lg:p-8 bg-gray-50 rounded-xl">
+                <div className="mb-6">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">Day 1 - Conquer Visapur Fort</h3>
                 </div>
-              </button>
-              
-              {expandedDay === 2 && (
-                <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
-                  <div className="space-y-4 sm:space-y-6">
+                
+                <div className="space-y-4 sm:space-y-6">
                     {[
                       { time: "04:30 am", desc: "Reporting at respective Boarding points & Depart towards Base." },
                       { time: "07:00 am", desc: "Reach the Base Village." },
@@ -423,9 +411,8 @@ const VisapurFortTrek = () => {
                         </div>
                       </div>
                     ))}
-                  </div>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Journey Images Bento Grid - Mobile Responsive */}

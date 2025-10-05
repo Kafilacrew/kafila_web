@@ -8,7 +8,7 @@ import A3 from '../assets/Treks/Pondicherry/pondi3.jpg';
 
 const Pondicherry = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [expandedDay, setExpandedDay] = useState(null);
+
   const [isVisible, setIsVisible] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
@@ -296,24 +296,12 @@ const Pondicherry = () => {
             <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 ease-out" 
                  data-id="day1" 
                  style={isVisible.day1 ? {opacity: 1, transform: 'translateY(0)'} : {}}>
-              <button 
-                onClick={() => setExpandedDay(expandedDay === 1 ? null : 1)}
-                className="w-full max-w-4xl mx-auto block p-4 sm:p-6 lg:p-8 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 hover:shadow-lg group"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
-                    <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 flex-shrink-0"></span>
-                    <span className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 break-words">Pondicherry Escapade</span>
-                  </div>
-                  <span className={`text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0 ${expandedDay === 1 ? 'rotate-180' : ''}`}>
-                    ▼
-                  </span>
+              <div className="w-full max-w-4xl mx-auto p-4 sm:p-6 lg:p-8 bg-gray-50 rounded-xl">
+                <div className="mb-6">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">Pondicherry Escapade</h3>
                 </div>
-              </button>
-              
-              {expandedDay === 1 && (
-                <div className="max-w-4xl mx-auto mt-4 p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg animate-scale-up">
-                  <div className="space-y-4 sm:space-y-6">
+                
+                <div className="space-y-4 sm:space-y-6">
                     {[
                       { time: "Day 1 – Departure from Pune", desc: "We begin our journey from Pune, leaving behind the city buzz for the coastal calm. An overnight ride filled with stories, music, and the thrill of what’s to come." },
                       { time: "Day 2 – Touchdown at the Coast", desc: "Upon arrival in Pondicherry, we head straight to Auroville Beach, letting the ocean air greet us. As the sun dips, we explore Rock Beach — lively, breezy, and the perfect start to this adventure." },
@@ -328,12 +316,11 @@ const Pondicherry = () => {
                         <div className="min-w-0 flex-1">
                           <span className="font-bold text-base sm:text-lg lg:text-xl text-gray-900 break-words">{item.time}:</span>
                           <span className="ml-2 sm:ml-3 text-base sm:text-lg lg:text-xl text-gray-700 break-words hyphens-auto">{item.desc}</span>
-                        </div>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
-              )}
+              </div>
             </div>
 
             {/* 7N/8D Itinerary */}
