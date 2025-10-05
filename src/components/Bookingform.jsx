@@ -1,67 +1,42 @@
 import React from 'react';
 
 const BookingButtons = ({ trekType = "auto" }) => {
+  const links = {
+    devkund: 'https://forms.easebuzz.in/register/KafilaMOzbn/devkund',
+    andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/AB12',
+    nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/NS12',
+    aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
+    kalu: 'https://forms.easebuzz.in/sign-up/KafilaMOzbn/KW8',
+    kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1',
+    pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1',
+    'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5'
+  };
+
+  const trekKeys = Object.keys(links); // ['devkund', 'andharban', ... ]
+
   const handleBookNow = () => {
     let currentTrekType = trekType;
-    
+
     if (trekType === "auto") {
-      const currentUrl = window.location.href.toLowerCase();
-      const currentPath = window.location.pathname.toLowerCase();
-      
-      if (currentUrl.includes('devkund') || currentPath.includes('devkund')) {
-        currentTrekType = 'devkund';
-      } else if (currentUrl.includes('andharban') || currentPath.includes('andharban')) {
-        currentTrekType = 'andharban';
-      } else if (currentUrl.includes('nanemachi') || currentPath.includes('nanemachi')) {
-        currentTrekType = 'nanemachi';
-      } else if (currentUrl.includes('aadrai') || currentPath.includes('aadrai')) {
-        currentTrekType = 'aadrai';
-      } else if (currentUrl.includes('kalu') || currentPath.includes('kalu')) {
-        currentTrekType = 'kalu';
-      } else if (currentUrl.includes('kedarnath') || currentPath.includes('kedarnath')) {
-        currentTrekType = 'kedarnath';
-      } else if (currentUrl.includes('pondicherry') || currentPath.includes('pondicherry')) {
-        currentTrekType = 'pondicherry';
-      } else if (currentUrl.includes('water-rappelling') || currentPath.includes('water-rappelling')) {
-        currentTrekType = 'water-rappelling';
-      } else {
-        const pageTitle = document.title.toLowerCase();
-        const pageContent = document.body.textContent.toLowerCase();
-        
-        if (pageTitle.includes('devkund') || pageContent.includes('devkund')) {
-          currentTrekType = 'devkund';
-        } else if (pageTitle.includes('andharban') || pageContent.includes('andharban')) {
-          currentTrekType = 'andharban';
-        } else if (pageTitle.includes('nanemachi') || pageContent.includes('nanemachi')) {
-          currentTrekType = 'nanemachi';
-        } else if (pageTitle.includes('aadrai') || pageContent.includes('aadrai')) {
-          currentTrekType = 'aadrai';
-        } else if (pageTitle.includes('kalu') || pageContent.includes('kalu')) {
-          currentTrekType = 'kalu';
-        } else if (pageTitle.includes('kedarnath') || pageContent.includes('kedarnath')) {
-          currentTrekType = 'kedarnath';
-        } else if (pageTitle.includes('pondicherry') || pageContent.includes('pondicherry')) {
-          currentTrekType = 'pondicherry';
-        } else if (pageTitle.includes('water-rappelling') || pageContent.includes('water-rappelling')) {
-          currentTrekType = 'water-rappelling';
-        } else {
-          currentTrekType = 'nanemachi';
-        }
-      }
+      const text = (
+        window.location.href + 
+        window.location.pathname + 
+        document.title + 
+        document.body.textContent
+      ).toLowerCase();
+
+      // Find first matching trek type
+      currentTrekType = trekKeys.find(key => text.includes(key)) || null;
     }
-    
-    const links = {
-      devkund: 'https://forms.easebuzz.in/register/KafilaMOzbn/devkund',
-      andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/AB12',
-      nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/NS12',
-      aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
-      kalu: 'https://forms.easebuzz.in/sign-up/KafilaMOzbn/KW8',
-      kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1',
-      pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1',
-      'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5'
-    };
-    
-    window.open(links[currentTrekType], '_blank');
+
+    if (currentTrekType && links[currentTrekType]) {
+      window.open(links[currentTrekType], '_blank');
+    } else {
+      // No redirection for other pages
+      console.log('No booking link available for this page.');
+      // Optionally, you can alert user:
+      // alert('Booking not available for this page.');
+    }
   };
 
   return (
@@ -92,12 +67,4 @@ const BookingButtons = ({ trekType = "auto" }) => {
   );
 };
 
-const App = () => {
-  return (
-    <div className="flex items-center justify-center py-4 sm:py-6 md:py-8">
-      <BookingButtons />
-    </div>
-  );
-};
-
-export default App;
+export default BookingButtons;

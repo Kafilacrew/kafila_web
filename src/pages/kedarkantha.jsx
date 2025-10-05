@@ -8,12 +8,12 @@ const Kedarkantha = () => {
   const kedarkanthaData = {
     title: "Kedarkantha Trek",
     location: "Kedarkantha, Uttarakhand",
-    date: "12 Days - January 2025",
+    date: "12 Days - January 2026",
     description: "Kedarkantha is a fun winter trek perfect for adventure seekers of all levels. Experience snow-covered pine forests, 360° Himalayan views, and easy-to-trek peaks with breathtaking vistas.",
     parallaxImage: KedarkanthaPara,
     price: "₹19,999/-",
     slots: "👥 50 Explorers",
-    schedule: "🕒 January 2025",
+    schedule: "🕒 January 2026",
     boardingPoints: ["Pune", "Mumbai"],
     historyText: "Kedarkantha offers a blend of adventure and serenity. From mesmerizing campsites and snow-clad forests to the chance to witness peaks like Swargarohini, Black Peak, and Bandarpoonch, this trek is ideal for beginners and experienced trekkers alike.",
     includes: [

@@ -8,13 +8,13 @@ const Hampi = () => {
   const hampiData = {
     title: "Hampi Backpacking",
     location: "Hampi, Karnataka",
-    date: "17th - 20th October 2025",
+    date: "February 2026",
     description:
       "Hampi, the ancient capital of the Vijayanagara Empire, is a UNESCO World Heritage site that blends history, culture, and surreal landscapes. Known for its boulder-strewn terrain, majestic ruins, and timeless charm, Hampi is a paradise for travelers seeking a mix of exploration and tranquility.",
     parallaxImage: HampiPara,
-    price: "₹7,499/-",
+    price: "₹8,999/-",
     slots: "👥 20 Explorers",
-    schedule: "🕒 October 2025",
+    schedule: "🕒 February 2025",
     boardingPoints: ["Pune", "Hubli"],
     historyText:
       "Once the mighty capital of the Vijayanagara Empire, Hampi is now an open-air museum where every rock and ruin tells a story of grandeur and resilience. From the magnificent Virupaksha Temple to the mystical boulder hills and the Tungabhadra River flowing through its heart — Hampi is a timeless blend of spirituality, adventure, and art. Whether you're exploring the ruins by bicycle, catching sunsets atop Matanga Hill, or wandering through the ancient bazaars, every corner of Hampi leaves you in awe.",
@@ -48,20 +48,24 @@ const Hampi = () => {
     journeyTitle: "Hampi Itinerary",
     itinerary: [
       {
-        time: "Day 1: Departure from Pune | Overnight Journey",
-        desc: "We kick off our Hampi adventure with an overnight journey from Pune. Get to know your fellow travelers as we head towards the land of boulders, ruins, and rich history.",
+        time: "Day 1: Departure and Travel Bonding",
+        desc: "Begin your exciting journey as you depart for Hosapete by bus or train. Use this travel time to connect with your fellow travelers, share stories, and build camaraderie, setting the tone for the adventure ahead.",
       },
       {
-        time: "Day 2: Arrival in Hampi | Exploring Temples & Monuments",
-        desc: "Upon arrival, we freshen up and begin exploring the architectural marvels of Hampi — Virupaksha Temple, Kadalekalu Ganesha, and the ancient Hampi Bazaar. As the sun sets, we hike up to Hemakuta Hill for a breathtaking panoramic view. Overnight stay in Hampi.",
+        time: "Day 2: Exploring North Hampi",
+        desc: "Arrive in Hosapete early morning and proceed to Hampi. Freshen up and enjoy a hearty breakfast. Trek to Anjanadri Hills, believed to be the birthplace of Lord Hanuman, and enjoy panoramic views. Later, indulge in a serene Coracle ride on Sanapur Lake, with optional cliff jumping for thrill seekers.",
       },
       {
-        time: "Day 3: Hampi Island & Adventure Day",
-        desc: "We start the day by crossing the Tungabhadra River to Hampi Island, popularly known as Hippie Island. Explore the laid-back cafés, try coracle rides, and unwind near Sanapur Lake. Later, enjoy sunset views from Anjaneya Hill — believed to be the birthplace of Lord Hanuman.",
+        time: "Day 3: Discovering South Hampi",
+        desc: "Start your day with a mesmerizing sunrise at Matanga Hill. After breakfast, explore key attractions including Virupaksha Temple, Badavalinga Temple, Underground Shiva Temple, Lotus Mahal, Hazara Rama Temple, Mahanavami Dibba, Queen's Bath, and Vittala Temple with its iconic Stone Chariot and musical pillars. End the day with a beautiful sunset capturing Hampi’s historic charm.",
       },
       {
-        time: "Day 4: Local Market Visit | Return Journey",
-        desc: "After breakfast, we stroll through the local handicraft markets and soak in the final glimpses of Hampi’s charm. We then begin our return journey to Pune with hearts full of memories and cameras full of stories.",
+        time: "Day 4: Exploring Badami",
+        desc: "After an early breakfast, head to Badami to explore its exquisite rock-cut architecture. Visit Badami Caves showcasing Hindu, Jain, and Buddhist influences, Aihole for ancient temples, and Pattadakal — a UNESCO World Heritage site. Board your bus or train in the evening for the return journey to Pune.",
+      },
+      {
+        time: "Day 5: Return to Pune",
+        desc: "Arrive in Pune with unforgettable memories of your journey through Hampi and Badami. Relive the moments, cherish the connections made, and carry home stories to share with friends and family.",
       },
     ],
     images: [Hampi1, Hampi2, Hampi3],

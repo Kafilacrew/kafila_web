@@ -1,62 +1,35 @@
 import React from 'react';
-import Devkund from '../assets/Treks/Devkund/Devkund-main.jpg'
-import Andharban from '../assets/Treks/Andarbhan/Andarban-main.webp'
-import Nanemachi from '../assets/Treks/Nanemachi/Nanemachi-main.jpg'
-import Kalu from '../assets/Treks/Kalu/main.webp'
-import Adrai from '../assets/Treks/AdraiJungle/Adrai-main.webp'
-import Visapur from '../assets/Treks/Visapur/main.webp'
+import bir from '../assets/Treks/Bir Billing/para.jpg'
+import brah from '../assets/Treks/Brahmatal/Para.jpg'
+import kedarkantha from '../assets/Treks/Kedarkantha/Para.jpg'
+import Brahmatal from '../assets/Treks/Brahmatal/Para.jpg';
 
 const UpcomingAdventuresSection = () => {
   const adventures = [
     {
       id: 1,
-      title: "Nanemachi Waterfall Trek",
-      date: "August-September 2025",
+      title: "Bir Billing Bagpacking Trip",
+      date: "December 2025",
       slots: "25 Slots Available",
-      image: Nanemachi,
-      link: "/nanemachi"
+      image: bir,
+      link: "/bir"
     },
     {
       id: 2,
-      title: "Devkund Waterfall Trek",
-      date: "August-September 2025",
+      title: "Brahmatal Himalayan Trek",
+      date: "January 2026",
       slots: "25 Slots Available",
-      image: Devkund,
-      link: "/devkund"
+      image: brah,
+      link: "/brahmatal"
      },
     {
       id: 3,
-      title: "Andharban Jungle Trek",
-      date: "August-September 2025",
+      title: "Kedarkantha Himalayan Trek",
+      date: "January 2026",
       slots: "25 Slots Available",
-      image: Andharban,
-      link: "/andharban"
-    },
-    {
-      id: 4,
-      title: "Kalu Waterfall Trek",
-      date: "August-September 2025",
-      slots: "25 Slots Available",
-      image: Kalu,
-      link: "/kalu"
-    },
-    {
-      id: 5,
-      title: "Aadrai Jungle Trek",
-      date: "August-September 2025",
-      slots: "25 Slots Available",
-      image: Adrai,
-      link: "/aadrai"
-    },
-    {
-      id: 6,
-      title: "Visapur Fort Trek",
-      date: "August-September 2025",
-      slots: "25 Slots Available",
-      image: Visapur,
-      link: "/visapur"
+      image: kedarkantha,
+      link: "/kedarkantha"
     }
-    
     /*,
     {
       id: 4,
@@ -90,7 +63,7 @@ const UpcomingAdventuresSection = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 gap-6 md:gap-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 w-full md:w-auto">
-            Monsoon Trails
+            Upcoming Adventures
           </h2>
           <div className="w-full md:w-auto md:text-right">
             <p className="text-sm sm:text-base text-gray-700 mb-4 max-w-2xl md:ml-auto">

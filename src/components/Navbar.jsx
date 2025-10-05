@@ -150,7 +150,7 @@ const Navbar = () => {
                       <div>
                         <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">Backpackings</p>
                         {[
-                          { name: 'Bir Billing', path: 'bir-billing' },
+                          { name: 'Bir Billing', path: 'bir' },
                           { name: 'Hampi Badami', path: 'hampi' },
                           { name: 'Goa Backpacking', path: 'goa' },
                           { name: 'Pondicherry', path: 'pondicherry' },
@@ -169,7 +169,7 @@ const Navbar = () => {
                         ))}
                       </div>
 
-                      {/* International Backpackings */}
+                      {/* International Backpackings
                       <div>
                         <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">
                           International Backpackings
@@ -190,7 +190,7 @@ const Navbar = () => {
                             {name}
                           </a>
                         ))}
-                      </div>
+                      </div> */}
 
                       {/* Himalayan Treks */}
                       <div>
@@ -198,7 +198,7 @@ const Navbar = () => {
                         {[
                           { name: 'Kedarkantha', path: 'kedarkantha' },
                           { name: 'Brahmatal', path: 'brahmatal' },
-                          { name: 'Leh Ladakh', path: 'leh-ladakh' },
+                          { name: 'Leh Ladakh', path: 'ladakh' },
                           { name: 'Kedarnath', path: 'kedarnath' },
                         ].map(({ name, path }) => (
                           <a
@@ -366,7 +366,7 @@ const Navbar = () => {
                         </a>
                       ))}
 
-                      {/* International */}
+                      {/* International
                       <p className="text-gray-800 font-semibold text-sm uppercase mt-3">International Backpackings</p>
                       {['thailand', 'bali'].map((path) => (
                         <a
@@ -377,11 +377,11 @@ const Navbar = () => {
                         >
                           {path === 'thailand' ? 'Thailand Backpacking' : 'Bali with Gili'}
                         </a>
-                      ))}
+                      ))} */}
 
                       {/* Himalayan */}
                       <p className="text-gray-800 font-semibold text-sm uppercase mt-3">Himalayan Treks</p>
-                      {['kedarkantha', 'brahmatal', 'leh-ladakh', 'kedarnath'].map((path) => (
+                      {['kedarkantha', 'brahmatal', 'ladakh', 'kedarnath'].map((path) => (
                         <a
                           key={path}
                           href={`/${path}`}

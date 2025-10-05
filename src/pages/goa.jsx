@@ -8,12 +8,12 @@ const GoaBackpacking = () => {
   const goaData = {
     title: "Goa Backpacking",
     location: "Goa",
-    date: "March 2025",
+    date: "March 2026",
     description: "Goa is a backpacker’s paradise, offering a perfect mix of sun-kissed beaches, vibrant nightlife, and cultural heritage. From the serene sands of South Goa to the bustling vibes of North Goa, it’s an adventure filled with hidden gems like quaint forts, cliffside cafés, and picturesque trails.",
     parallaxImage: GoaPara,
     price: "₹8,999/-",
     slots: "👥 24 Explorers",
-    schedule: "🕒 March 2025",
+    schedule: "🕒 March 2026",
     boardingPoints: ["Pune", "Goa"],
     historyText: "At Kafila Adventures, we craft the ultimate backpacking experience in Goa, blending exploration, adventure, and relaxation. From South Goa’s serene beaches and hidden gems to North Goa’s vibrant nightlife and historic landmarks, every moment is unforgettable.",
     includes: [
