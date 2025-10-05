@@ -80,53 +80,7 @@ const Navbar = () => {
             {/* Dropdown */}
             {isDropdownOpen && (
               <div className="absolute top-full left-0 mt-2 w-72 max-w-[90vw] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
-                {/* Monsoon Treks */}
-                <div>
-                  <button
-                    onClick={() => setHoveredSubmenu(hoveredSubmenu === 'monsoon' ? null : 'monsoon')}
-                    className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50"
-                  >
-                    <span>Monsoon Treks</span>
-                    <svg
-                      className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'monsoon' ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {hoveredSubmenu === 'monsoon' && (
-                    <div className="px-4 pb-2">
-                      {[
-                        'nanemachi',
-                        'devkund',
-                        'andharban',
-                        'kalu',
-                        'aadrai',
-                        'visapur',
-                        'water-rappelling',
-                      ].map((path) => (
-                        <a
-                          key={path}
-                          href={`/${path}`}
-                          onClick={() => {
-                            setIsDropdownOpen(false);
-                            setHoveredSubmenu(null);
-                          }}
-                          className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
-                        >
-                          {path === 'water-rappelling'
-                            ? 'Waterfall Rappelling'
-                            : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <div className="h-px bg-gray-200 mx-2 my-1"></div>
-
+                
                 {/* Backpacking Trips */}
                 <div>
                   <button
@@ -169,29 +123,6 @@ const Navbar = () => {
                         ))}
                       </div>
 
-                      {/* International Backpackings
-                      <div>
-                        <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">
-                          International Backpackings
-                        </p>
-                        {[
-                          { name: 'Thailand Backpacking', path: 'thailand' },
-                          { name: 'Bali with Gili', path: 'bali' },
-                        ].map(({ name, path }) => (
-                          <a
-                            key={path}
-                            href={`/${path}`}
-                            onClick={() => {
-                              setIsDropdownOpen(false);
-                              setHoveredSubmenu(null);
-                            }}
-                            className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
-                          >
-                            {name}
-                          </a>
-                        ))}
-                      </div> */}
-
                       {/* Himalayan Treks */}
                       <div>
                         <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">Himalayan Treks</p>
@@ -214,6 +145,53 @@ const Navbar = () => {
                           </a>
                         ))}
                       </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="h-px bg-gray-200 mx-2 my-1"></div>
+
+                {/* Monsoon Treks */}
+                <div>
+                  <button
+                    onClick={() => setHoveredSubmenu(hoveredSubmenu === 'monsoon' ? null : 'monsoon')}
+                    className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50"
+                  >
+                    <span>Monsoon Treks</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'monsoon' ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {hoveredSubmenu === 'monsoon' && (
+                    <div className="px-4 pb-2">
+                      {[
+                        'nanemachi',
+                        'devkund',
+                        'andharban',
+                        'kalu',
+                        'aadrai',
+                        'visapur',
+                        'water-rappelling',
+                      ].map((path) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => {
+                            setIsDropdownOpen(false);
+                            setHoveredSubmenu(null);
+                          }}
+                          className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
+                        >
+                          {path === 'water-rappelling'
+                            ? 'Waterfall Rappelling'
+                            : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
+                        </a>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -282,6 +260,61 @@ const Navbar = () => {
 
             {isMobileAdventureOpen && (
               <div className="pl-4 pb-2 space-y-2">
+                
+                {/* Backpacking Trips */}
+                <div>
+                  <button
+                    onClick={() => setIsMobileHimalayanOpen(!isMobileHimalayanOpen)}
+                    className="w-full flex justify-between text-gray-700 py-2"
+                  >
+                    <span>Backpacking Trips</span>
+                    <svg
+                      className={`w-3 h-3 transition-transform ${isMobileHimalayanOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {isMobileHimalayanOpen && (
+                    <div className="pl-4 space-y-1 mt-1">
+                      {/* Backpackings */}
+                      <p className="text-gray-800 font-semibold text-sm uppercase mt-2">Backpackings</p>
+                      {['bir-billing', 'hampi', 'goa', 'pondicherry'].map((path) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                        >
+                          {path === 'bir-billing'
+                            ? 'Bir Billing'
+                            : path === 'hampi'
+                            ? 'Hampi Badami'
+                            : path === 'goa'
+                            ? 'Goa Backpacking'
+                            : 'Pondicherry'}
+                        </a>
+                      ))}
+
+                      {/* Himalayan */}
+                      <p className="text-gray-800 font-semibold text-sm uppercase mt-3">Himalayan Treks</p>
+                      {['kedarkantha', 'brahmatal', 'ladakh', 'kedarnath'].map((path) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                        >
+                          {path.replace(/\b\w/g, (l) => l.toUpperCase()).replace('-', ' ')}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
                 {/* Monsoon Treks */}
                 <div>
                   <button
@@ -328,72 +361,6 @@ const Navbar = () => {
                   )}
                 </div>
 
-                {/* Backpacking Trips */}
-                <div>
-                  <button
-                    onClick={() => setIsMobileHimalayanOpen(!isMobileHimalayanOpen)}
-                    className="w-full flex justify-between text-gray-700 py-2"
-                  >
-                    <span>Backpacking Trips</span>
-                    <svg
-                      className={`w-3 h-3 transition-transform ${isMobileHimalayanOpen ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-
-                  {isMobileHimalayanOpen && (
-                    <div className="pl-4 space-y-1 mt-1">
-                      {/* Backpackings */}
-                      <p className="text-gray-800 font-semibold text-sm uppercase mt-2">Backpackings</p>
-                      {['bir-billing', 'hampi', 'goa', 'pondicherry'].map((path) => (
-                        <a
-                          key={path}
-                          href={`/${path}`}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
-                        >
-                          {path === 'bir-billing'
-                            ? 'Bir Billing'
-                            : path === 'hampi'
-                            ? 'Hampi Badami'
-                            : path === 'goa'
-                            ? 'Goa Backpacking'
-                            : 'Pondicherry'}
-                        </a>
-                      ))}
-
-                      {/* International
-                      <p className="text-gray-800 font-semibold text-sm uppercase mt-3">International Backpackings</p>
-                      {['thailand', 'bali'].map((path) => (
-                        <a
-                          key={path}
-                          href={`/${path}`}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
-                        >
-                          {path === 'thailand' ? 'Thailand Backpacking' : 'Bali with Gili'}
-                        </a>
-                      ))} */}
-
-                      {/* Himalayan */}
-                      <p className="text-gray-800 font-semibold text-sm uppercase mt-3">Himalayan Treks</p>
-                      {['kedarkantha', 'brahmatal', 'ladakh', 'kedarnath'].map((path) => (
-                        <a
-                          key={path}
-                          href={`/${path}`}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
-                        >
-                          {path.replace(/\b\w/g, (l) => l.toUpperCase()).replace('-', ' ')}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
               </div>
             )}
           </div>
