@@ -30,73 +30,190 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const linkClasses = `text-lg transition-colors duration-300 ${scrolled ? 'text-black hover:text-gray-500' : 'text-white hover:text-gray-300'}`;
+  const linkClasses = `text-lg transition-colors duration-300 ${
+    scrolled ? 'text-black hover:text-gray-500' : 'text-white hover:text-gray-300'
+  }`;
 
   return (
     <nav className={`fixed w-full z-50 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
       <div className="flex items-center justify-between px-4 py-2 lg:px-8">
         {/* Logo */}
         <div>
-          <img 
-          src={kafilaLogo} 
-          alt="Kafila Adventures Logo" 
-          className="
-          w-[50px] h-[70px]        // mobile (<640px)
-          sm:w-[55px] sm:h-[65px]  // small screens ≥640px
-          md:w-[70px] md:h-[85px]  // medium screens ≥768px
-          lg:w-[80px] lg:h-[100px] // large screens ≥1024px
-          brightness-0
-          " 
+          <img
+            src={kafilaLogo}
+            alt="Kafila Adventures Logo"
+            className="
+              w-[50px] h-[70px]
+              sm:w-[55px] sm:h-[65px]
+              md:w-[70px] md:h-[85px]
+              lg:w-[80px] lg:h-[100px]
+              brightness-0
+            "
           />
         </div>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center space-x-10">
-          <a href="/" className={linkClasses}>Home</a>
-          <a href="/about" className={linkClasses}>About</a>
+          <a href="/" className={linkClasses}>
+            Home
+          </a>
+          <a href="/about" className={linkClasses}>
+            About
+          </a>
 
           <div className="relative" ref={dropdownRef}>
-            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)} className={`${linkClasses} flex items-center space-x-1`}>
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className={`${linkClasses} flex items-center space-x-1`}
+            >
               <span>Adventures</span>
-              <svg className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
+
+            {/* Dropdown */}
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-64 max-w-[90vw] min-w-[16rem] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+              <div className="absolute top-full left-0 mt-2 w-72 max-w-[90vw] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                {/* Monsoon Treks */}
                 <div>
-                  <button onClick={() => setHoveredSubmenu(hoveredSubmenu === 'monsoon' ? null : 'monsoon')} className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                  <button
+                    onClick={() => setHoveredSubmenu(hoveredSubmenu === 'monsoon' ? null : 'monsoon')}
+                    className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50"
+                  >
                     <span>Monsoon Treks</span>
-                    <svg className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'monsoon' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'monsoon' ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
                   {hoveredSubmenu === 'monsoon' && (
                     <div className="px-4 pb-2">
-                      {["nanemachi", "devkund", "andharban", "kalu", "aadrai", "visapur", "water-rappelling"].map((path) => (
-                        <a key={path} href={`/${path}`} onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">
-                          {path === "water-rappelling" 
-                            ? "Waterfall Rappelling" 
-                            : path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) + " Trek"}
+                      {[
+                        'nanemachi',
+                        'devkund',
+                        'andharban',
+                        'kalu',
+                        'aadrai',
+                        'visapur',
+                        'water-rappelling',
+                      ].map((path) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => {
+                            setIsDropdownOpen(false);
+                            setHoveredSubmenu(null);
+                          }}
+                          className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
+                        >
+                          {path === 'water-rappelling'
+                            ? 'Waterfall Rappelling'
+                            : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
                         </a>
                       ))}
                     </div>
                   )}
                 </div>
+
                 <div className="h-px bg-gray-200 mx-2 my-1"></div>
+
+                {/* Backpacking Trips */}
                 <div>
-                  <button onClick={() => setHoveredSubmenu(hoveredSubmenu === 'himalayan' ? null : 'himalayan')} className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50">
+                  <button
+                    onClick={() => setHoveredSubmenu(hoveredSubmenu === 'backpacking' ? null : 'backpacking')}
+                    className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50"
+                  >
                     <span>Backpacking Trips</span>
-                    <svg className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'himalayan' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'backpacking' ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  {hoveredSubmenu === 'himalayan' && (
-                    <div className="px-4 pb-2">
-                      <a href="/ladakh" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Leh Ladakh</a>
-                      <a href="/kedarnath" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Kedarnath</a>
-                      <a href="/pondicherry" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Pondicherry</a>
-                      <a href="/hampi" onClick={() => {setIsDropdownOpen(false);setHoveredSubmenu(null);}} className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded">Hampi</a>
+
+                  {hoveredSubmenu === 'backpacking' && (
+                    <div className="px-4 pb-2 space-y-3">
+                      {/* Domestic Backpackings */}
+                      <div>
+                        <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">Backpackings</p>
+                        {[
+                          { name: 'Bir Billing', path: 'bir-billing' },
+                          { name: 'Hampi Badami', path: 'hampi' },
+                          { name: 'Goa Backpacking', path: 'goa' },
+                          { name: 'Pondicherry', path: 'pondicherry' },
+                        ].map(({ name, path }) => (
+                          <a
+                            key={path}
+                            href={`/${path}`}
+                            onClick={() => {
+                              setIsDropdownOpen(false);
+                              setHoveredSubmenu(null);
+                            }}
+                            className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
+                          >
+                            {name}
+                          </a>
+                        ))}
+                      </div>
+
+                      {/* International Backpackings */}
+                      <div>
+                        <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">
+                          International Backpackings
+                        </p>
+                        {[
+                          { name: 'Thailand Backpacking', path: 'thailand' },
+                          { name: 'Bali with Gili', path: 'bali' },
+                        ].map(({ name, path }) => (
+                          <a
+                            key={path}
+                            href={`/${path}`}
+                            onClick={() => {
+                              setIsDropdownOpen(false);
+                              setHoveredSubmenu(null);
+                            }}
+                            className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
+                          >
+                            {name}
+                          </a>
+                        ))}
+                      </div>
+
+                      {/* Himalayan Treks */}
+                      <div>
+                        <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">Himalayan Treks</p>
+                        {[
+                          { name: 'Kedarkantha', path: 'kedarkantha' },
+                          { name: 'Brahmatal', path: 'brahmatal' },
+                          { name: 'Leh Ladakh', path: 'leh-ladakh' },
+                          { name: 'Kedarnath', path: 'kedarnath' },
+                        ].map(({ name, path }) => (
+                          <a
+                            key={path}
+                            href={`/${path}`}
+                            onClick={() => {
+                              setIsDropdownOpen(false);
+                              setHoveredSubmenu(null);
+                            }}
+                            className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
+                          >
+                            {name}
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -104,12 +221,17 @@ const Navbar = () => {
             )}
           </div>
 
-          <a href="/Contactus" className={linkClasses}>Contact Us</a>
+          <a href="/Contactus" className={linkClasses}>
+            Contact Us
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-black focus:outline-none relative z-50">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-black focus:outline-none relative z-50"
+          >
             <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
               {isMobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -122,64 +244,153 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'} z-40`}>
+      <div
+        className={`lg:hidden fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        } z-40`}
+      >
         <div className="px-6 pt-20 pb-6 space-y-4 overflow-y-auto">
-          {[{label: 'Home', href: '/'}, {label: 'About', href: '/about'}, {label: 'Contact Us', href: '/Contactus'}].map(link => (
-            <a key={link.href} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="block text-black hover:text-gray-500 text-lg py-3 border-b border-gray-100">
-              {link.label}
-            </a>
-          ))}
+          {[{ label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Contact Us', href: '/Contactus' }].map(
+            (link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block text-black hover:text-gray-500 text-lg py-3 border-b border-gray-100"
+              >
+                {link.label}
+              </a>
+            )
+          )}
 
           {/* Adventure Dropdown */}
           <div className="border-b border-gray-100">
-            <button onClick={() => setIsMobileAdventureOpen(!isMobileAdventureOpen)} className="w-full flex justify-between text-black text-lg py-3">
+            <button
+              onClick={() => setIsMobileAdventureOpen(!isMobileAdventureOpen)}
+              className="w-full flex justify-between text-black text-lg py-3"
+            >
               <span>Adventures</span>
-              <svg className={`w-4 h-4 transition-transform ${isMobileAdventureOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className={`w-4 h-4 transition-transform ${isMobileAdventureOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
+
             {isMobileAdventureOpen && (
               <div className="pl-4 pb-2 space-y-2">
+                {/* Monsoon Treks */}
                 <div>
-                  <button onClick={() => setIsMobileMonsoonOpen(!isMobileMonsoonOpen)} className="w-full flex justify-between text-gray-700 py-2">
+                  <button
+                    onClick={() => setIsMobileMonsoonOpen(!isMobileMonsoonOpen)}
+                    className="w-full flex justify-between text-gray-700 py-2"
+                  >
                     <span>Monsoon Treks</span>
-                    <svg className={`w-3 h-3 transition-transform ${isMobileMonsoonOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className={`w-3 h-3 transition-transform ${isMobileMonsoonOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
                   {isMobileMonsoonOpen && (
                     <div className="pl-4 space-y-1 mt-1">
-                      {["nanemachi", "devkund", "andharban", "kalu", "aadrai", "visapur", "water-rappelling"].map((path) => (
-                        <a key={path} href={`/${path}`} onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileMonsoonOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
-                          {path === "water-rappelling" 
-                            ? "Waterfall Rappelling" 
-                            : path.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) + " Trek"}
+                      {[
+                        'nanemachi',
+                        'devkund',
+                        'andharban',
+                        'kalu',
+                        'aadrai',
+                        'visapur',
+                        'water-rappelling',
+                      ].map((path) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setIsMobileAdventureOpen(false);
+                            setIsMobileMonsoonOpen(false);
+                          }}
+                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                        >
+                          {path === 'water-rappelling'
+                            ? 'Waterfall Rappelling'
+                            : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
                         </a>
                       ))}
                     </div>
                   )}
                 </div>
+
+                {/* Backpacking Trips */}
                 <div>
-                  <button onClick={() => setIsMobileHimalayanOpen(!isMobileHimalayanOpen)} className="w-full flex justify-between text-gray-700 py-2">
+                  <button
+                    onClick={() => setIsMobileHimalayanOpen(!isMobileHimalayanOpen)}
+                    className="w-full flex justify-between text-gray-700 py-2"
+                  >
                     <span>Backpacking Trips</span>
-                    <svg className={`w-3 h-3 transition-transform ${isMobileHimalayanOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className={`w-3 h-3 transition-transform ${isMobileHimalayanOpen ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
+
                   {isMobileHimalayanOpen && (
                     <div className="pl-4 space-y-1 mt-1">
-                      <a href="/ladakh" onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileHimalayanOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
-                        Leh Ladakh
-                      </a>
-                      <a href="/kedarnath" onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileHimalayanOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
-                        Kedarnath
-                      </a>
-                      <a href="/pondicherry" onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileHimalayanOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
-                        Pondicherry
-                      </a>
-                      <a href="/hampi" onClick={() => {setIsMobileMenuOpen(false);setIsMobileAdventureOpen(false);setIsMobileHimalayanOpen(false);}} className="block text-gray-600 hover:text-gray-800 text-sm py-1.5">
-                        Hampi
-                      </a>
+                      {/* Backpackings */}
+                      <p className="text-gray-800 font-semibold text-sm uppercase mt-2">Backpackings</p>
+                      {['bir-billing', 'hampi', 'goa', 'pondicherry'].map((path) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                        >
+                          {path === 'bir-billing'
+                            ? 'Bir Billing'
+                            : path === 'hampi'
+                            ? 'Hampi Badami'
+                            : path === 'goa'
+                            ? 'Goa Backpacking'
+                            : 'Pondicherry'}
+                        </a>
+                      ))}
+
+                      {/* International */}
+                      <p className="text-gray-800 font-semibold text-sm uppercase mt-3">International Backpackings</p>
+                      {['thailand', 'bali'].map((path) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                        >
+                          {path === 'thailand' ? 'Thailand Backpacking' : 'Bali with Gili'}
+                        </a>
+                      ))}
+
+                      {/* Himalayan */}
+                      <p className="text-gray-800 font-semibold text-sm uppercase mt-3">Himalayan Treks</p>
+                      {['kedarkantha', 'brahmatal', 'leh-ladakh', 'kedarnath'].map((path) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                        >
+                          {path.replace(/\b\w/g, (l) => l.toUpperCase()).replace('-', ' ')}
+                        </a>
+                      ))}
                     </div>
                   )}
                 </div>

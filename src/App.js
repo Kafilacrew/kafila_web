@@ -15,44 +15,45 @@ import Contactus from './pages/Contactus';
 import NanemachiTrek from './pages/nanemachi';
 import DevkundTrek from './pages/devkund';
 import AndharbanJungleTrek from './pages/andharban';
-import UpcomingAdventuresSection from './components/upcomingadventures';
 import KaluTrek from './pages/kalu';
 import AdraiTrek from './pages/adrai1';
 import VisapurFort from './pages/visapurfort';
 import Kedarnath from './pages/kedarnath';
 import Pondicherry from './pages/pondicherry';
 import Waterrappelling from './pages/water-rapelling';
-
+import Kedarkantha from './pages/kedarkantha';
+import Brahmatal from './pages/brahmatal';
+import BirBilling from './pages/birbilling';
 
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={< About/>} /> 
-        <Route path="/harishchandragad" element={< HarishchandragadTrek/>} /> 
-        <Route path="/kalsubai" element={< Kalsubai/>} />
-        <Route path="/sandhanvalley" element={< Sandhanvalley/>} /> 
-        <Route path="/ladakh" element={< Ladakh/>} /> 
-        <Route path="/goa" element={< Goa/>} /> 
-        <Route path="/hampi" element ={<Hampi/>}/>
-        <Route path="/Contactus" element={<Contactus/>}/>
-        <Route path="/nanemachi" element={< NanemachiTrek/>} /> 
-        <Route path="/devkund" element={< DevkundTrek/>} />
-        <Route path="/andharban" element={< AndharbanJungleTrek/>} />
-        <Route path="#upcomingadventures" element={< UpcomingAdventuresSection/>} />
-        <Route path="/kalu" element={< KaluTrek/>} />
-        <Route path="/aadrai" element={< AdraiTrek/>} />
-        <Route path="/visapur" element={< VisapurFort/>} />
-        <Route path="/kedarnath" element={< Kedarnath/>} />
-        <Route path="/pondicherry" element={< Pondicherry/>} />
-        <Route path="/water-rappelling" element={< Waterrappelling/>} />
- 
-
+        <Route path="/about" element={<About />} /> 
+        <Route path="/harishchandragad" element={<HarishchandragadTrek />} /> 
+        <Route path="/kalsubai" element={<Kalsubai />} />
+        <Route path="/sandhanvalley" element={<Sandhanvalley />} /> 
+        <Route path="/ladakh" element={<Ladakh />} /> 
+        <Route path="/goa" element={<Goa />} /> 
+        <Route path="/hampi" element={<Hampi />} />
+        <Route path="/Contactus" element={<Contactus />} />
+        <Route path="/nanemachi" element={<NanemachiTrek />} /> 
+        <Route path="/devkund" element={<DevkundTrek />} />
+        <Route path="/andharban" element={<AndharbanJungleTrek />} />
+        <Route path="/kalu" element={<KaluTrek />} />
+        <Route path="/aadrai" element={<AdraiTrek />} />
+        <Route path="/visapur" element={<VisapurFort />} />
+        <Route path="/kedarnath" element={<Kedarnath />} />
+        <Route path="/pondicherry" element={<Pondicherry />} />
+        <Route path="/water-rappelling" element={<Waterrappelling />} />
+        <Route path="/kedarkantha" element={<Kedarkantha />} />
+        <Route path="/bir" element={<BirBilling />} />
+        <Route path="/brahmatal" element={<Brahmatal />} />        
       </Routes>
-      <FloatingContactButtons/>
-      <Footer/>
+      <FloatingContactButtons />
+      <Footer />
     </Router>
   );
 }
