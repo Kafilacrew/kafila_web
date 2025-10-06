@@ -1,8 +1,8 @@
 import ReusableComponent from '../components/ReusableComponent';
 import BrahmPara from '../assets/Treks/Brahmatal/A4.jpg';
-import Brahm1 from '../assets/Treks/Brahmatal/A1.jpg';
-import Brahm2 from '../assets/Treks/Brahmatal/A2.jpg';
-import Brahm3 from '../assets/Treks/Brahmatal/A3.jpg';
+import Brahm1 from '../assets/Treks/Brahmatal/Image1.jpg';
+import Brahm2 from '../assets/Treks/Brahmatal/Image2.jpg';
+import Brahm3 from '../assets/Treks/Brahmatal/Image3.jpg';
 
 const Brahmatal = () => {
   const brahmatalData = {
