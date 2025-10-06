@@ -1,8 +1,8 @@
 import React from 'react';
 import bir from '../assets/Treks/Bir Billing/para.jpg'
-import brah from '../assets/Treks/Brahmatal/Para.jpg'
+import brah from '../assets/Treks/Brahmatal/A4.jpg'
 import kedarkantha from '../assets/Treks/Kedarkantha/Para.jpg'
-import Brahmatal from '../assets/Treks/Brahmatal/Para.jpg';
+
 
 const UpcomingAdventuresSection = () => {
   const adventures = [
