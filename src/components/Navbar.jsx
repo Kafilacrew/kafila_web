@@ -282,7 +282,7 @@ const Navbar = () => {
                     <div className="pl-4 space-y-1 mt-1">
                       {/* Backpackings */}
                       <p className="text-gray-800 font-semibold text-sm uppercase mt-2">Backpackings</p>
-                      {['bir-billing', 'hampi', 'goa', 'pondicherry'].map((path) => (
+                      {['bir', 'hampi', 'goa', 'pondicherry'].map((path) => (
                         <a
                           key={path}
                           href={`/${path}`}
