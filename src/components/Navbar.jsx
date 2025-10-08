@@ -289,7 +289,7 @@ const Navbar = () => {
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
                         >
-                          {path === 'bir-billing'
+                          {path === 'bir'
                             ? 'Bir Billing'
                             : path === 'hampi'
                             ? 'Hampi Badami'
