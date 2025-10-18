@@ -24,6 +24,7 @@ import Waterrappelling from './pages/water-rapelling';
 import Kedarkantha from './pages/kedarkantha';
 import Brahmatal from './pages/brahmatal';
 import BirBilling from './pages/birbilling';
+import RatangadFort from './pages/ratangad';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path="/kedarkantha" element={<Kedarkantha />} />
         <Route path="/bir" element={<BirBilling />} />
         <Route path="/brahmatal" element={<Brahmatal />} />        
+        <Route path="/ratangad" element={<RatangadFort />} />
       </Routes>
       <FloatingContactButtons />
       <Footer />
