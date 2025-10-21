@@ -9,10 +9,11 @@ const BookingButtons = ({ trekType = "auto" }) => {
     kalu: 'https://forms.easebuzz.in/sign-up/KafilaMOzbn/KW8',
     kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1',
     pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1',
-    'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5'
+    'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5',
+    bir: 'https://forms.easebuzz.in/register/KafilaMOzbn/bir', // ✅ New link added
   };
 
-  const trekKeys = Object.keys(links); // ['devkund', 'andharban', ... ]
+  const trekKeys = Object.keys(links);
 
   const handleBookNow = () => {
     let currentTrekType = trekType;
@@ -25,17 +26,13 @@ const BookingButtons = ({ trekType = "auto" }) => {
         document.body.textContent
       ).toLowerCase();
 
-      // Find first matching trek type
       currentTrekType = trekKeys.find(key => text.includes(key)) || null;
     }
 
     if (currentTrekType && links[currentTrekType]) {
       window.open(links[currentTrekType], '_blank');
     } else {
-      // No redirection for other pages
       console.log('No booking link available for this page.');
-      // Optionally, you can alert user:
-      // alert('Booking not available for this page.');
     }
   };
 

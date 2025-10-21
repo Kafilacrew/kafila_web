@@ -1,8 +1,8 @@
 import ReusableComponent from '../components/ReusableComponent';
-import RatanPara from '../assets/Treks/Ratangad/A22.jpg';
+import RatanPara from '../assets/Treks/Ratangad/para.jpeg';
 import Ratan1 from '../assets/Treks/Ratangad/A1.jpg';
-import Ratan2 from '../assets/Treks/Ratangad/Rpara.webp';
-import Ratan3 from '../assets/Treks/Ratangad/A33.jpg';
+import Ratan2 from '../assets/Treks/Ratangad/A2 (2).jpg';
+import Ratan3 from '../assets/Treks/Ratangad/A3 (2).jpg';
 
 const Ratangad = () => {
   const ratangadData = {
