@@ -10,7 +10,9 @@ const BookingButtons = ({ trekType = "auto" }) => {
     kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1',
     pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1',
     'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5',
-    bir: 'https://forms.easebuzz.in/register/KafilaMOzbn/bir', // ✅ New link added
+    bir: 'https://forms.easebuzz.in/register/KafilaMOzbn/bir',
+    ratangad: 'https://forms.easebuzz.in/register/KafilaMOzbn/RT5', // ✅ Added
+    kedarkantha: 'https://forms.easebuzz.in/register/KafilaMOzbn/KK3', // ✅ Added
   };
 
   const trekKeys = Object.keys(links);

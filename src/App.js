@@ -25,6 +25,7 @@ import Kedarkantha from './pages/kedarkantha';
 import Brahmatal from './pages/brahmatal';
 import BirBilling from './pages/birbilling';
 import RatangadFort from './pages/ratangad';
+import Adventures from './pages/adventure';
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
         <Route path="/bir" element={<BirBilling />} />
         <Route path="/brahmatal" element={<Brahmatal />} />        
         <Route path="/ratangad" element={<RatangadFort />} />
+        <Route path="/adventures" element={<Adventures />} />
       </Routes>
       <FloatingContactButtons />
       <Footer />
