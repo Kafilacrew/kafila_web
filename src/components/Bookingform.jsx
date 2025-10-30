@@ -11,8 +11,9 @@ const BookingButtons = ({ trekType = "auto" }) => {
     pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1',
     'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5',
     bir: 'https://forms.easebuzz.in/register/KafilaMOzbn/bir',
-    ratangad: 'https://forms.easebuzz.in/register/KafilaMOzbn/RT5', // ✅ Added
-    kedarkantha: 'https://forms.easebuzz.in/register/KafilaMOzbn/KK3', // ✅ Added
+    ratangad: 'https://forms.easebuzz.in/register/KafilaMOzbn/RT5',
+    kedarkantha: 'https://forms.easebuzz.in/register/KafilaMOzbn/KK3',
+    brahmatal: 'https://forms.easebuzz.in/register/KafilaMOzbn/BT4', // ✅ Added Brahmatal link
   };
 
   const trekKeys = Object.keys(links);
