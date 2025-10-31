@@ -6,8 +6,9 @@ const Navbar = () => {
   const [hoveredSubmenu, setHoveredSubmenu] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileAdventureOpen, setIsMobileAdventureOpen] = useState(false);
-  const [isMobileMonsoonOpen, setIsMobileMonsoonOpen] = useState(false);
+  const [isMobileBackpackingOpen, setIsMobileBackpackingOpen] = useState(false);
   const [isMobileHimalayanOpen, setIsMobileHimalayanOpen] = useState(false);
+  const [isMobileMonsoonOpen, setIsMobileMonsoonOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -23,9 +24,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -42,25 +41,16 @@ const Navbar = () => {
           <img
             src={kafilaLogo}
             alt="Kafila Adventures Logo"
-            className="
-              w-[50px] h-[70px]
-              sm:w-[55px] sm:h-[65px]
-              md:w-[70px] md:h-[85px]
-              lg:w-[80px] lg:h-[100px]
-              brightness-0
-            "
+            className="w-[50px] h-[70px] sm:w-[55px] sm:h-[65px] md:w-[70px] md:h-[85px] lg:w-[80px] lg:h-[100px] brightness-0"
           />
         </div>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center space-x-10">
-          <a href="/" className={linkClasses}>
-            Home
-          </a>
-          <a href="/about" className={linkClasses}>
-            About
-          </a>
+          <a href="/" className={linkClasses}>Home</a>
+          <a href="/about" className={linkClasses}>About</a>
 
+          {/* Adventures Dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -69,18 +59,14 @@ const Navbar = () => {
               <span>Adventures</span>
               <svg
                 className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
 
-            {/* Dropdown */}
             {isDropdownOpen && (
               <div className="absolute top-full left-0 mt-2 w-72 max-w-[90vw] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
-                
+
                 {/* Backpacking Trips */}
                 <div>
                   <button
@@ -90,61 +76,69 @@ const Navbar = () => {
                     <span>Backpacking Trips</span>
                     <svg
                       className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'backpacking' ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
 
                   {hoveredSubmenu === 'backpacking' && (
-                    <div className="px-4 pb-2 space-y-3">
-                      {/* Domestic Backpackings */}
-                      <div>
-                        <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">Backpackings</p>
-                        {[
-                          { name: 'Bir Billing', path: 'bir' },
-                          { name: 'Hampi Badami', path: 'hampi' },
-                          { name: 'Goa Backpacking', path: 'goa' },
-                          { name: 'Pondicherry', path: 'pondicherry' },
-                        ].map(({ name, path }) => (
+                    <div className="px-4 pb-2 space-y-2">
+                      {[
+                        { name: 'Bir Billing', path: 'bir' },
+                        { name: 'Goa Backpacking', path: 'goa' },
+                        { name: 'Hampi Badami', path: 'hampi' },
+                        { name: 'Pondicherry', path: 'pondicherry' },
+                      ]
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map(({ name, path }) => (
                           <a
                             key={path}
                             href={`/${path}`}
-                            onClick={() => {
-                              setIsDropdownOpen(false);
-                              setHoveredSubmenu(null);
-                            }}
+                            onClick={() => { setIsDropdownOpen(false); setHoveredSubmenu(null); }}
                             className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
                           >
                             {name}
                           </a>
                         ))}
-                      </div>
+                    </div>
+                  )}
+                </div>
 
-                      {/* Himalayan Treks */}
-                      <div>
-                        <p className="text-gray-800 font-semibold text-sm uppercase px-3 py-1">Himalayan Treks</p>
-                        {[
-                          { name: 'Kedarkantha', path: 'kedarkantha' },
-                          { name: 'Brahmatal', path: 'brahmatal' },
-                          { name: 'Leh Ladakh', path: 'ladakh' },
-                          { name: 'Kedarnath', path: 'kedarnath' },
-                        ].map(({ name, path }) => (
+                <div className="h-px bg-gray-200 mx-2 my-1"></div>
+
+                {/* Himalayan Treks */}
+                <div>
+                  <button
+                    onClick={() => setHoveredSubmenu(hoveredSubmenu === 'himalayan' ? null : 'himalayan')}
+                    className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50"
+                  >
+                    <span>Himalayan Treks</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'himalayan' ? 'rotate-180' : ''}`}
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {hoveredSubmenu === 'himalayan' && (
+                    <div className="px-4 pb-2 space-y-2">
+                      {[
+                        { name: 'Brahmatal', path: 'brahmatal' },
+                        { name: 'Kedarnath', path: 'kedarnath' },
+                        { name: 'Kedarkantha', path: 'kedarkantha' },
+                        { name: 'Kuari Pass', path: 'kuaripass' },
+                        { name: 'Leh Ladakh', path: 'ladakh' },
+                      ]
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map(({ name, path }) => (
                           <a
                             key={path}
                             href={`/${path}`}
-                            onClick={() => {
-                              setIsDropdownOpen(false);
-                              setHoveredSubmenu(null);
-                            }}
+                            onClick={() => { setIsDropdownOpen(false); setHoveredSubmenu(null); }}
                             className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
                           >
                             {name}
                           </a>
                         ))}
-                      </div>
                     </div>
                   )}
                 </div>
@@ -160,38 +154,34 @@ const Navbar = () => {
                     <span>Monsoon Treks</span>
                     <svg
                       className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'monsoon' ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
                   {hoveredSubmenu === 'monsoon' && (
-                    <div className="px-4 pb-2">
+                    <div className="px-4 pb-2 space-y-2">
                       {[
-                        'nanemachi',
-                        'devkund',
-                        'andharban',
-                        'kalu',
                         'aadrai',
+                        'andharban',
+                        'devkund',
+                        'kalu',
+                        'nanemachi',
                         'visapur',
                         'water-rappelling',
-                      ].map((path) => (
-                        <a
-                          key={path}
-                          href={`/${path}`}
-                          onClick={() => {
-                            setIsDropdownOpen(false);
-                            setHoveredSubmenu(null);
-                          }}
-                          className="block px-3 py-2 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
-                        >
-                          {path === 'water-rappelling'
-                            ? 'Waterfall Rappelling'
-                            : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
-                        </a>
-                      ))}
+                      ]
+                        .sort()
+                        .map((path) => (
+                          <a
+                            key={path}
+                            href={`/${path}`}
+                            onClick={() => { setIsDropdownOpen(false); setHoveredSubmenu(null); }}
+                            className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
+                          >
+                            {path === 'water-rappelling'
+                              ? 'Waterfall Rappelling'
+                              : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
+                          </a>
+                        ))}
                     </div>
                   )}
                 </div>
@@ -199,17 +189,12 @@ const Navbar = () => {
             )}
           </div>
 
-          <a href="/Contactus" className={linkClasses}>
-            Contact Us
-          </a>
+          <a href="/Contactus" className={linkClasses}>Contact Us</a>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-black focus:outline-none relative z-50"
-          >
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-black focus:outline-none relative z-50">
             <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
               {isMobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -241,7 +226,7 @@ const Navbar = () => {
             )
           )}
 
-          {/* Adventure Dropdown */}
+          {/* Adventures */}
           <div className="border-b border-gray-100">
             <button
               onClick={() => setIsMobileAdventureOpen(!isMobileAdventureOpen)}
@@ -250,67 +235,90 @@ const Navbar = () => {
               <span>Adventures</span>
               <svg
                 className={`w-4 h-4 transition-transform ${isMobileAdventureOpen ? 'rotate-180' : ''}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
 
             {isMobileAdventureOpen && (
-              <div className="pl-4 pb-2 space-y-2">
-                
-                {/* Backpacking Trips */}
+              <div className="pl-4 pb-2 space-y-3">
+
+                {/* Backpacking */}
+                <div>
+                  <button
+                    onClick={() => setIsMobileBackpackingOpen(!isMobileBackpackingOpen)}
+                    className="w-full flex justify-between text-gray-700 py-2"
+                  >
+                    <span>Backpacking Trips</span>
+                    <svg
+                      className={`w-3 h-3 transition-transform ${isMobileBackpackingOpen ? 'rotate-180' : ''}`}
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {isMobileBackpackingOpen && (
+                    <div className="pl-4 mt-1 space-y-1">
+                      {['bir', 'goa', 'hampi', 'pondicherry']
+                        .sort()
+                        .map((path) => (
+                          <a
+                            key={path}
+                            href={`/${path}`}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                          >
+                            {path === 'bir'
+                              ? 'Bir Billing'
+                              : path === 'goa'
+                              ? 'Goa Backpacking'
+                              : path === 'hampi'
+                              ? 'Hampi Badami'
+                              : 'Pondicherry'}
+                          </a>
+                        ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Himalayan Treks (updated to use name-path mapping) */}
                 <div>
                   <button
                     onClick={() => setIsMobileHimalayanOpen(!isMobileHimalayanOpen)}
                     className="w-full flex justify-between text-gray-700 py-2"
                   >
-                    <span>Backpacking Trips</span>
+                    <span>Himalayan Treks</span>
                     <svg
                       className={`w-3 h-3 transition-transform ${isMobileHimalayanOpen ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
 
                   {isMobileHimalayanOpen && (
-                    <div className="pl-4 space-y-1 mt-1">
-                      {/* Backpackings */}
-                      <p className="text-gray-800 font-semibold text-sm uppercase mt-2">Backpackings</p>
-                      {['bir', 'hampi', 'goa', 'pondicherry'].map((path) => (
-                        <a
-                          key={path}
-                          href={`/${path}`}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
-                        >
-                          {path === 'bir'
-                            ? 'Bir Billing'
-                            : path === 'hampi'
-                            ? 'Hampi Badami'
-                            : path === 'goa'
-                            ? 'Goa Backpacking'
-                            : 'Pondicherry'}
-                        </a>
-                      ))}
-
-                      {/* Himalayan */}
-                      <p className="text-gray-800 font-semibold text-sm uppercase mt-3">Himalayan Treks</p>
-                      {['kedarkantha', 'brahmatal', 'ladakh', 'kedarnath'].map((path) => (
-                        <a
-                          key={path}
-                          href={`/${path}`}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
-                        >
-                          {path.replace(/\b\w/g, (l) => l.toUpperCase()).replace('-', ' ')}
-                        </a>
-                      ))}
+                    <div className="pl-4 mt-1 space-y-1">
+                      {[
+                        { name: 'Brahmatal', path: 'brahmatal' },
+                        { name: 'Kedarnath', path: 'kedarnath' },
+                        { name: 'Kedarkantha', path: 'kedarkantha' },
+                        { name: 'Kuari Pass', path: 'kuaripass' },
+                        { name: 'Leh Ladakh', path: 'ladakh' },
+                      ]
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map(({ name, path }) => (
+                          <a
+                            key={path}
+                            href={`/${path}`}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setIsMobileAdventureOpen(false);
+                              setIsMobileHimalayanOpen(false);
+                            }}
+                            className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                          >
+                            {name}
+                          </a>
+                        ))}
                     </div>
                   )}
                 </div>
@@ -324,43 +332,42 @@ const Navbar = () => {
                     <span>Monsoon Treks</span>
                     <svg
                       className={`w-3 h-3 transition-transform ${isMobileMonsoonOpen ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
+
                   {isMobileMonsoonOpen && (
-                    <div className="pl-4 space-y-1 mt-1">
+                    <div className="pl-4 mt-1 space-y-1">
                       {[
-                        'nanemachi',
-                        'devkund',
-                        'andharban',
-                        'kalu',
                         'aadrai',
+                        'andharban',
+                        'devkund',
+                        'kalu',
+                        'nanemachi',
                         'visapur',
                         'water-rappelling',
-                      ].map((path) => (
-                        <a
-                          key={path}
-                          href={`/${path}`}
-                          onClick={() => {
-                            setIsMobileMenuOpen(false);
-                            setIsMobileAdventureOpen(false);
-                            setIsMobileMonsoonOpen(false);
-                          }}
-                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
-                        >
-                          {path === 'water-rappelling'
-                            ? 'Waterfall Rappelling'
-                            : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
-                        </a>
-                      ))}
+                      ]
+                        .sort()
+                        .map((path) => (
+                          <a
+                            key={path}
+                            href={`/${path}`}
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setIsMobileAdventureOpen(false);
+                              setIsMobileMonsoonOpen(false);
+                            }}
+                            className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                          >
+                            {path === 'water-rappelling'
+                              ? 'Waterfall Rappelling'
+                              : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
+                          </a>
+                        ))}
                     </div>
                   )}
                 </div>
-
               </div>
             )}
           </div>

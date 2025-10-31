@@ -8,7 +8,7 @@ const UpcomingAdventuresSection = () => {
   const adventures = [
     {
       id: 1,
-      title: "Bir Billing Bagpacking Trip",
+      title: "Bir Billing Bagpacking",
       date: "December 2025",
       slots: "25 Slots Available",
       image: bir,
