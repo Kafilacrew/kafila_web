@@ -54,18 +54,18 @@ const Brahmatal = () => {
     ],
     journeyTitle: "Brahmatal Itinerary",
     itinerary: [
-      { time: "Day 1: The Journey Begins", desc: "Departure from Pune Railway Station to Mumbai, scenic views and relaxation en route." },
-      { time: "Day 2: Train to Haridwar", desc: "Board train from Mumbai to Haridwar, enjoy landscapes and prepare for trek." },
-      { time: "Day 3: Stay in Haridwar", desc: "Explore Haridwar, witness Ganga Aarti at Har Ki Pauri, overnight stay." },
-      { time: "Day 4: Haridwar to Lohajung", desc: "12-hour drive through Uttarakhand, pass through Bheemtal, Almora, Kausani, arrive Lohajung by evening." },
-      { time: "Day 5: Lohajung to Bekaltal", desc: "5-hour trek through forests and villages to Bekaltal, camp near Khopdaliya Lake." },
-      { time: "Day 6: Bekaltal to Brahmatal Base Camp", desc: "Trek through oak & rhododendron forests, reach snow-covered meadows and Brahmatal Base Camp." },
-      { time: "Day 7: Brahmatal Base Camp to Brahmatal Summit and Return", desc: "Early climb to Brahmatal Lake, summit ascent, panoramic Himalayan views, return to base camp." },
-      { time: "Day 8: Brahmatal Base Camp to Lohajung", desc: "Descend back to Lohajung, enjoy scenic trails, overnight stay at guest house." },
-      { time: "Day 9: Lohajung to Rishikesh", desc: "8-9 hour drive from Lohajung to Rishikesh, relax and enjoy landscapes." },
-      { time: "Day 10: Adventure in Rishikesh", desc: "Adventure activities like white water rafting, evening Maha Aarti at Triveni Ghat." },
-      { time: "Day 11: Rishikesh to Delhi", desc: "Travel from Rishikesh to Delhi, board train back to Pune/Mumbai." },
-      { time: "Day 12: Arrival in Pune/Mumbai", desc: "Return to Pune/Mumbai, concluding the journey with cherished memories." }
+      { time: "Day 0: The Journey Begins", desc: "Departure from Pune Railway Station to Mumbai, scenic views and relaxation en route." },
+      { time: "Day 1: Train to Haridwar", desc: "Board train from Mumbai to Haridwar, enjoy landscapes and prepare for trek." },
+      { time: "Day 2: Stay in Haridwar", desc: "Explore Haridwar, witness Ganga Aarti at Har Ki Pauri, overnight stay." },
+      { time: "Day 3: Haridwar to Lohajung", desc: "12-hour drive through Uttarakhand, pass through Bheemtal, Almora, Kausani, arrive Lohajung by evening." },
+      { time: "Day 4: Lohajung to Bekaltal", desc: "5-hour trek through forests and villages to Bekaltal, camp near Khopdaliya Lake." },
+      { time: "Day 5: Bekaltal to Brahmatal Base Camp", desc: "Trek through oak & rhododendron forests, reach snow-covered meadows and Brahmatal Base Camp." },
+      { time: "Day 6: Brahmatal Base Camp to Brahmatal Summit and Return", desc: "Early climb to Brahmatal Lake, summit ascent, panoramic Himalayan views, return to base camp." },
+      { time: "Day 7: Brahmatal Base Camp to Lohajung", desc: "Descend back to Lohajung, enjoy scenic trails, overnight stay at guest house." },
+      { time: "Day 8: Lohajung to Rishikesh", desc: "8-9 hour drive from Lohajung to Rishikesh, relax and enjoy landscapes." },
+      { time: "Day 9: Adventure in Rishikesh", desc: "Adventure activities like white water rafting, evening Maha Aarti at Triveni Ghat." },
+      { time: "Day 10: Rishikesh to Delhi", desc: "Travel from Rishikesh to Delhi, board train back to Pune/Mumbai." },
+      { time: "Day 11: Arrival in Pune/Mumbai", desc: "Return to Pune/Mumbai, concluding the journey with cherished memories." }
     ],
     images: [Brahm1, Brahm2, Brahm3]
   };

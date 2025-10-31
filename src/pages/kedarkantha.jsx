@@ -54,18 +54,18 @@ const Kedarkantha = () => {
     ],
     journeyTitle: "Kedarkantha Trek Itinerary",
     itinerary: [
-      { time: "Day 1: The Journey Begins", desc: "Departure from Pune to Mumbai Railway Station." },
-      { time: "Day 2: Train to Haridwar", desc: "Boarding train towards Haridwar from Bandra." },
-      { time: "Day 3: Stay in Haridwar", desc: "Check into hotel, enjoy Ganga Aarti at Har Ki Pauri in the evening." },
-      { time: "Day 4: Haridwar to Sankri", desc: "Drive to Sankri (6400 FT), the last road head to Govind Wildlife Sanctuary. Overnight at local guest house." },
-      { time: "Day 5: Sankri to Juda Ka Taal", desc: "5 km trek through pine forests to Juda Ka Taal campsite. Enjoy scenic views and overnight camp." },
-      { time: "Day 6: Juda Ka Taal to Kedarkantha Base Camp", desc: "4 km trek ascending through pine forests and meadows. Camp overnight at Kedarkantha base camp." },
-      { time: "Day 7: Summit Kedarkantha & Trek to Hargaon", desc: "Summit attempt before sunrise, panoramic views of Swargarohini, Black Peak, Bandarpoonch. Descend to Hargaon campsite." },
-      { time: "Day 8: Hargaon to Sankri", desc: "Leisurely trek of 6 km back to Sankri through pine forests and scenic villages." },
-      { time: "Day 9: Sankri to Rishikesh", desc: "Drive 8-9 hours to Rishikesh, reflecting on the trek's adventures." },
-      { time: "Day 10: Adventure in Rishikesh", desc: "Optional adventure activities and white water rafting. Visit Triveni Ghat and enjoy evening Aarti." },
-      { time: "Day 11: Rishikesh to Delhi", desc: "Travel to Delhi and board train back to Pune/Mumbai." },
-      { time: "Day 12: Arrival in Pune/Mumbai", desc: "Reach home with cherished memories of the trek and the Himalayan adventure." }
+      { time: "Day 0: The Journey Begins", desc: "Departure from Pune to Mumbai Railway Station." },
+      { time: "Day 1: Train to Haridwar", desc: "Boarding train towards Haridwar from Bandra." },
+      { time: "Day 2: Stay in Haridwar", desc: "Check into hotel, enjoy Ganga Aarti at Har Ki Pauri in the evening." },
+      { time: "Day 3: Haridwar to Sankri", desc: "Drive to Sankri (6400 FT), the last road head to Govind Wildlife Sanctuary. Overnight at local guest house." },
+      { time: "Day 4: Sankri to Juda Ka Taal", desc: "5 km trek through pine forests to Juda Ka Taal campsite. Enjoy scenic views and overnight camp." },
+      { time: "Day 5: Juda Ka Taal to Kedarkantha Base Camp", desc: "4 km trek ascending through pine forests and meadows. Camp overnight at Kedarkantha base camp." },
+      { time: "Day 6: Summit Kedarkantha & Trek to Hargaon", desc: "Summit attempt before sunrise, panoramic views of Swargarohini, Black Peak, Bandarpoonch. Descend to Hargaon campsite." },
+      { time: "Day 7: Hargaon to Sankri", desc: "Leisurely trek of 6 km back to Sankri through pine forests and scenic villages." },
+      { time: "Day 8: Sankri to Rishikesh", desc: "Drive 8-9 hours to Rishikesh, reflecting on the trek's adventures." },
+      { time: "Day 9: Adventure in Rishikesh", desc: "Optional adventure activities and white water rafting. Visit Triveni Ghat and enjoy evening Aarti." },
+      { time: "Day 10: Rishikesh to Delhi", desc: "Travel to Delhi and board train back to Pune/Mumbai." },
+      { time: "Day 11: Arrival in Pune/Mumbai", desc: "Reach home with cherished memories of the trek and the Himalayan adventure." }
     ],
     images: [Ked1, Ked2, Ked3]
   };

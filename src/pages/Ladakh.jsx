@@ -60,26 +60,26 @@ const Ladakh = () => {
         title: "Ladakh Odyssey: Land of High Passes",
         subtitle: "5N/6D",
         items: [
-          { time: "Day 1", desc: "Arrival in Leh (3,500m): Reach Leh Airport (IXL), transfer to hotel, and rest to acclimatize. Evening exploration of Leh Market." },
-          { time: "Day 2", desc: "Sham Valley Ride: Visit Magnetic Hill, Gurudwara Pathar Sahib, and Indus-Zanskar confluence at Sangam Point. Return to Leh by evening." },
-          { time: "Day 3", desc: "Leh to Nubra Valley (3,048m): Drive via Khardung La Pass (5,602m). Visit Diskit Monastery and Hunder Sand Dunes. Optional camel ride or ATV tour." },
-          { time: "Day 4", desc: "Nubra to Pangong Lake (4,250m): Drive via Shyok River. Check-in at lakeside camp and marvel at Pangong's surreal hues." },
-          { time: "Day 5", desc: "Pangong to Leh: Return via Chang La Pass (5,360m). Evening free to explore Leh Market." },
-          { time: "Day 6", desc: "Departure: Check-out and transfer to Leh Airport (IXL) for onward journey." }
+          { time: "Day 0", desc: "Arrival in Leh (3,500m): Reach Leh Airport (IXL), transfer to hotel, and rest to acclimatize. Evening exploration of Leh Market." },
+          { time: "Day 1", desc: "Sham Valley Ride: Visit Magnetic Hill, Gurudwara Pathar Sahib, and Indus-Zanskar confluence at Sangam Point. Return to Leh by evening." },
+          { time: "Day 2", desc: "Leh to Nubra Valley (3,048m): Drive via Khardung La Pass (5,602m). Visit Diskit Monastery and Hunder Sand Dunes. Optional camel ride or ATV tour." },
+          { time: "Day 3", desc: "Nubra to Pangong Lake (4,250m): Drive via Shyok River. Check-in at lakeside camp and marvel at Pangong's surreal hues." },
+          { time: "Day 4", desc: "Pangong to Leh: Return via Chang La Pass (5,360m). Evening free to explore Leh Market." },
+          { time: "Day 5", desc: "Departure: Check-out and transfer to Leh Airport (IXL) for onward journey." }
         ]
       },
       {
         title: "Ladakh Odyssey: High Passes & Beyond",
         subtitle: "7N/8D",
         items: [
-          { time: "Day 1", desc: "Arrival in Leh (3,500m): Reach Leh Airport (IXL), transfer to hotel, and rest to acclimatize. Evening stroll in Leh Market." },
-          { time: "Day 2", desc: "Leh Sightseeing: Visit Shanti Stupa, Hall of Fame, Pathar Sahib Gurudwara, Magnetic Hill, and Sangam Point. Evening free." },
-          { time: "Day 3", desc: "Leh to Nubra Valley (3,048m): Drive via Khardung La Pass. Visit Diskit Monastery and Hunder Sand Dunes. Optional camel ride or ATV tour." },
-          { time: "Day 4", desc: "Nubra to Pangong Lake (4,250m): Drive via Shyok River. Check-in at lakeside camp and enjoy Pangong's beauty." },
-          { time: "Day 5", desc: "Pangong to Hanle (4,250m): Drive via Chushul. Visit Hanle Monastery and stargaze under clear skies." },
-          { time: "Day 6", desc: "Hanle to Umling La (5,350m): Drive to the world's highest motorable pass and return to Hanle. Evening relaxation." },
-          { time: "Day 7", desc: "Hanle to Leh: Return via Chushul. Evening exploration of Leh Market." },
-          { time: "Day 8", desc: "Departure: Check-out and transfer to Leh Airport (IXL) for departure." }
+          { time: "Day 0", desc: "Arrival in Leh (3,500m): Reach Leh Airport (IXL), transfer to hotel, and rest to acclimatize. Evening stroll in Leh Market." },
+          { time: "Day 1", desc: "Leh Sightseeing: Visit Shanti Stupa, Hall of Fame, Pathar Sahib Gurudwara, Magnetic Hill, and Sangam Point. Evening free." },
+          { time: "Day 2", desc: "Leh to Nubra Valley (3,048m): Drive via Khardung La Pass. Visit Diskit Monastery and Hunder Sand Dunes. Optional camel ride or ATV tour." },
+          { time: "Day 3", desc: "Nubra to Pangong Lake (4,250m): Drive via Shyok River. Check-in at lakeside camp and enjoy Pangong's beauty." },
+          { time: "Day 4", desc: "Pangong to Hanle (4,250m): Drive via Chushul. Visit Hanle Monastery and stargaze under clear skies." },
+          { time: "Day 5", desc: "Hanle to Umling La (5,350m): Drive to the world's highest motorable pass and return to Hanle. Evening relaxation." },
+          { time: "Day 6", desc: "Hanle to Leh: Return via Chushul. Evening exploration of Leh Market." },
+          { time: "Day 7", desc: "Departure: Check-out and transfer to Leh Airport (IXL) for departure." }
         ]
       }
     ],
