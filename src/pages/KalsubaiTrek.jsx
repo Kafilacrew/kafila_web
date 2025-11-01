@@ -6,15 +6,15 @@ import Kal3 from '../assets/Treks/Kalsubai/A3.jpg';
 
 const Kalsubai = () => {
   const kalsubaiData = {
-    title: "Kalsubai Fort Trek",
+    title: "Kalsubai Peak Trek",
     location: "Kalsubai Fort, Maharashtra",
-    date: "⏱︎ November-December 2026",
+    date: "⏱︎ November-December 2025",
     description:
       "Unveil the beauty of tropical bliss. From sun-kissed shores to vibrant cultural experiences, this journey promises you a solitary escape.",
     parallaxImage: KalsubaiPara,
     price: "₹1,399/-",
     slots: "👥 50 Explorers",
-    schedule: "🕒 November-December 2026",
+    schedule: "🕒 November-December 2025",
     boardingPoints: [
       "Katraj Chowk",
       "Swargate (Opp. Laxminarayan Theatre)",

@@ -14,6 +14,7 @@ const BookingButtons = ({ trekType = "auto" }) => {
     ratangad: 'https://forms.easebuzz.in/register/KafilaMOzbn/RT5',
     kedarkantha: 'https://forms.easebuzz.in/register/KafilaMOzbn/KK3',
     brahmatal: 'https://forms.easebuzz.in/register/KafilaMOzbn/BT4', // ✅ Added Brahmatal link
+    kalsubai:  'https://forms.easebuzz.in/register/KafilaMOzbn/K',
   };
 
   const trekKeys = Object.keys(links);
