@@ -11,7 +11,7 @@ const Brahmatal = () => {
     date: "January 2026",
     description: "The Brahmatal Trek, nestled in the Chamoli district of Uttarakhand, is a mesmerizing journey through the pristine landscapes of the Indian Himalayas. This trek is known for its breathtaking views, snow-laden trails, and serene alpine lakes.",
     parallaxImage: BrahmPara,
-    price: "₹19,999/-",
+    price: "₹24,999/-",
     slots: "👥 50 Explorers",
     schedule: "January 2026",
     boardingPoints: ["Pune"],

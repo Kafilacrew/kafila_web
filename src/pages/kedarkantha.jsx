@@ -11,7 +11,7 @@ const Kedarkantha = () => {
     date: "12 Days - January 2026",
     description: "Kedarkantha is a fun winter trek perfect for adventure seekers of all levels. Experience snow-covered pine forests, 360° Himalayan views, and easy-to-trek peaks with breathtaking vistas.",
     parallaxImage: KedarkanthaPara,
-    price: "₹19,999/-",
+    price: "₹24,999/-",
     slots: "👥 50 Explorers",
     schedule: "🕒 January 2026",
     boardingPoints: ["Pune", "Mumbai"],

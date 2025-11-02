@@ -12,7 +12,7 @@ const KuariPass = () => {
     description:
       "The Kuari Pass Trek, known as the ‘Lord Curzon Trail’, offers one of the most breathtaking Himalayan experiences. It’s a blend of scenic trails, ancient forests, and mesmerizing 360° views of towering peaks like Nanda Devi, Kamet, Chaukhamba, and Trishul.",
     parallaxImage: KuariPara,
-    price: "₹19,999/-",
+    price: "₹24,999/-",
     slots: "👥 50 Explorers",
     schedule: "🕒 20 - 30 January 2026",
     boardingPoints: ["Pune", "Mumbai"],
