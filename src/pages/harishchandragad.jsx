@@ -12,7 +12,7 @@ const Harishchandragad = () => {
     description:
       "Unveil the beauty of tropical bliss. From sun-kissed shores to vibrant cultural experiences, this journey promises you a solitary escape.",
     parallaxImage: HarishchandragadPara,
-    price: "₹1,299/- Non AC (Ex. Pune) | ₹1,499/- AC (Ex. Pune)",
+    price: "₹1,399/-",
     slots: "👥 30 Explorers",
     schedule: "🕒 November - December 2025",
     boardingPoints: [

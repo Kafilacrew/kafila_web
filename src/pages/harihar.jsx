@@ -12,7 +12,7 @@ const Harihar = () => {
     description:
       "Escape into the heart of the Sahyadris with the Harihar Fort Trek — an iconic climb featuring steep rock-cut steps and breathtaking panoramas. This adventure blends thrill, history, and scenic beauty for an unforgettable trekking experience.",
     parallaxImage: HariharPara,
-    price: "₹1,299/- Non AC (Ex. Pune) | ₹1,499/- AC (Ex. Pune)",
+    price: "₹1,399/-",
     slots: "👥 30 Explorers",
     schedule: "🕒 November - December 2025",
     boardingPoints: [
