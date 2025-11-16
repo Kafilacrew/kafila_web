@@ -28,6 +28,7 @@ import RatangadFort from './pages/ratangad';
 import Adventures from './pages/adventure';
 import KauriPass from './pages/kauripass';
 import Harihar from './pages/harihar';
+import Bhairavgad from './pages/bhairavgad';
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
         <Route path="/adventures" element={<Adventures />} />
         <Route path="/kuaripass" element={<KauriPass />} />
         <Route path="/harihar" element={<Harihar />} />
+        <Route path="/bhairavgad" element={<Bhairavgad />} />
       </Routes>
       <FloatingContactButtons />
       <Footer />
