@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isMobileBackpackingOpen, setIsMobileBackpackingOpen] = useState(false);
   const [isMobileHimalayanOpen, setIsMobileHimalayanOpen] = useState(false);
   const [isMobileMonsoonOpen, setIsMobileMonsoonOpen] = useState(false);
+  const [isMobileSahyadriOpen, setIsMobileSahyadriOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -32,6 +33,13 @@ const Navbar = () => {
   const linkClasses = `text-lg transition-colors duration-300 ${
     scrolled ? 'text-black hover:text-gray-500' : 'text-white hover:text-gray-300'
   }`;
+
+  const sahyadriTreks = [
+    { name: 'Harishchandragad', path: 'harishchandragad' },
+    { name: 'Harihar Fort', path: 'harihar' },
+    { name: 'Kalsubai', path: 'kalsubai' },
+    { name: 'Ratangad', path: 'ratangad' },
+  ].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <nav className={`fixed w-full z-50 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
@@ -182,6 +190,37 @@ const Navbar = () => {
                               : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
                           </a>
                         ))}
+                    </div>
+                  )}
+                </div>
+
+                <div className="h-px bg-gray-200 mx-2 my-1"></div>
+
+                {/* Sahyadri Treks */}
+                <div>
+                  <button
+                    onClick={() => setHoveredSubmenu(hoveredSubmenu === 'sahyadri' ? null : 'sahyadri')}
+                    className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50"
+                  >
+                    <span>Sahyadri Treks</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'sahyadri' ? 'rotate-180' : ''}`}
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {hoveredSubmenu === 'sahyadri' && (
+                    <div className="px-4 pb-2 space-y-2">
+                      {sahyadriTreks.map(({ name, path }) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => { setIsDropdownOpen(false); setHoveredSubmenu(null); }}
+                          className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
+                        >
+                          {name}
+                        </a>
+                      ))}
                     </div>
                   )}
                 </div>
@@ -365,6 +404,40 @@ const Navbar = () => {
                               : path.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()) + ' Trek'}
                           </a>
                         ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Sahyadri Treks */}
+                <div>
+                  <button
+                    onClick={() => setIsMobileSahyadriOpen(!isMobileSahyadriOpen)}
+                    className="w-full flex justify-between text-gray-700 py-2"
+                  >
+                    <span>Sahyadri Treks</span>
+                    <svg
+                      className={`w-3 h-3 transition-transform ${isMobileSahyadriOpen ? 'rotate-180' : ''}`}
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {isMobileSahyadriOpen && (
+                    <div className="pl-4 mt-1 space-y-1">
+                      {sahyadriTreks.map(({ name, path }) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setIsMobileAdventureOpen(false);
+                            setIsMobileSahyadriOpen(false);
+                          }}
+                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                        >
+                          {name}
+                        </a>
+                      ))}
                     </div>
                   )}
                 </div>
