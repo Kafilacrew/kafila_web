@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import BookingForm from './Bookingform';
 import RefundPolicy from './RefundPolicy';
+import RefundPolicy1 from './RefundPolicy1';   // <-- ADDED
 import DropdownSection from './DropdownSection';
 
 const ReusableComponent = ({
@@ -26,6 +27,9 @@ const ReusableComponent = ({
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState({});
   const [isMobile, setIsMobile] = useState(false);
+
+  const currentURL = window.location.pathname;
+
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -474,7 +478,24 @@ const ReusableComponent = ({
         }
       `}</style>
 
-      <RefundPolicy />
+      {(() => {
+        const refundPolicy1Pages = [
+  "/bir",
+  "/goa",
+  "/hampi",
+  "/pondicherry",
+  "/brahmatal",
+  "/kedarkantha",
+  "/kedarnath",
+  "/kuaripass",
+  "/ladakh"
+];
+
+        return refundPolicy1Pages.includes(currentURL)
+          ? <RefundPolicy1 />
+          : <RefundPolicy />;
+      })()}
+
     </div>
   );
 };
