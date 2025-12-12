@@ -2,22 +2,30 @@ import React from 'react';
 
 const BookingButtons = ({ trekType = "auto" }) => {
   const links = {
-    devkund: 'https://forms.easebuzz.in/register/KafilaMOzbn/devkund',
-    andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/AB12',
-    nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/NS12',
-    aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/aadraiJungle1',
-    kalu: 'https://forms.easebuzz.in/sign-up/KafilaMOzbn/KW8',
-    kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/kedarnath1',
-    pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/pondicherry1',
-    'water-rappelling': 'https://forms.easebuzz.in/register/KafilaMOzbn/WR5',
-    bir: 'https://forms.easebuzz.in/register/KafilaMOzbn/bir',
-    ratangad: 'https://forms.easebuzz.in/register/KafilaMOzbn/RT5',
-    kedarkantha: 'https://forms.easebuzz.in/register/KafilaMOzbn/KK3',
-    brahmatal: 'https://forms.easebuzz.in/register/KafilaMOzbn/BT4', // ✅ Added Brahmatal link
-    kalsubai:  'https://forms.easebuzz.in/register/KafilaMOzbn/K',
-    harishchandragad: 'https://forms.easebuzz.in/register/KafilaMOzbn/Harishchandragad',
-    harihar: 'https://forms.easebuzz.in/register/KafilaMOzbn/Harihar',
-  };
+  harishchandragad: 'https://forms.easebuzz.in/register/KafilaMOzbn/Harishchandragad',
+  kalsubai: 'https://forms.easebuzz.in/register/KafilaMOzbn/Kalsubai',
+  sandhanvalley: 'https://forms.easebuzz.in/register/KafilaMOzbn/Sandhanvalley',
+  ladakh: 'https://forms.easebuzz.in/register/KafilaMOzbn/Ladakh',
+  goa: 'https://forms.easebuzz.in/register/KafilaMOzbn/Goa',
+  hampi: 'https://forms.easebuzz.in/register/KafilaMOzbn/Hampi',
+  nanemachi: 'https://forms.easebuzz.in/register/KafilaMOzbn/Nanemachi',
+  devkund: 'https://forms.easebuzz.in/register/KafilaMOzbn/Devkund',
+  andharban: 'https://forms.easebuzz.in/register/KafilaMOzbn/Andharban',
+  kalu: 'https://forms.easebuzz.in/register/KafilaMOzbn/Kalu',
+  aadrai: 'https://forms.easebuzz.in/register/KafilaMOzbn/Aadrai',
+  visapur: 'https://forms.easebuzz.in/register/KafilaMOzbn/Visapur',
+  kedarnath: 'https://forms.easebuzz.in/register/KafilaMOzbn/Kedarnath',
+  pondicherry: 'https://forms.easebuzz.in/register/KafilaMOzbn/Pondicherry',
+  "water-rappelling": 'https://forms.easebuzz.in/register/KafilaMOzbn/Water-rappelling',
+  kedarkantha: 'https://forms.easebuzz.in/register/KafilaMOzbn/Kedarkantha',
+  bir: 'https://forms.easebuzz.in/register/KafilaMOzbn/Bir',
+  brahmatal: 'https://forms.easebuzz.in/register/KafilaMOzbn/Brahmatal',
+  ratangad: 'https://forms.easebuzz.in/register/KafilaMOzbn/Ratangad',
+  kuaripass: 'https://forms.easebuzz.in/register/KafilaMOzbn/Kuaripass',
+  harihar: 'https://forms.easebuzz.in/register/KafilaMOzbn/Harihar',
+  bhairavgad: 'https://forms.easebuzz.in/register/KafilaMOzbn/Bhairavgad',
+};
+
 
   const trekKeys = Object.keys(links);
 
