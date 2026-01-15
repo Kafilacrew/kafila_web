@@ -12,7 +12,7 @@ const Hampi = () => {
     description:
       "Hampi, the ancient capital of the Vijayanagara Empire, is a UNESCO World Heritage site that blends history, culture, and surreal landscapes. Known for its boulder-strewn terrain, majestic ruins, and timeless charm, Hampi is a paradise for travelers seeking a mix of exploration and tranquility.",
     parallaxImage: HampiPara,
-    price: "₹8,999/-",
+    price: "₹9,999/-",
     slots: "👥 20 Explorers",
     schedule: "🕒 February 2025",
     boardingPoints: ["Pune", "Hubli"],
