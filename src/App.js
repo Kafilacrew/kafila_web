@@ -29,6 +29,7 @@ import Adventures from './pages/adventure';
 import KauriPass from './pages/kauripass';
 import Harihar from './pages/harihar';
 import Bhairavgad from './pages/bhairavgad';
+import Vietnam from './pages/Vietnam'
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         <Route path="/kuaripass" element={<KauriPass />} />
         <Route path="/harihar" element={<Harihar />} />
         <Route path="/bhairavgad" element={<Bhairavgad />} />
+        <Route path="/vietnam" element={<Vietnam />} />
       </Routes>
       <FloatingContactButtons />
       <Footer />

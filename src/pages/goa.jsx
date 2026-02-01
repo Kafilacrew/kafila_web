@@ -8,12 +8,12 @@ const GoaBackpacking = () => {
   const goaData = {
     title: "Goa Backpacking",
     location: "Goa",
-    date: "March 2026",
+    date: "April 2026",
     description: "Goa is a backpacker’s paradise, offering a perfect mix of sun-kissed beaches, vibrant nightlife, and cultural heritage. From the serene sands of South Goa to the bustling vibes of North Goa, it’s an adventure filled with hidden gems like quaint forts, cliffside cafés, and picturesque trails.",
     parallaxImage: GoaPara,
-    price: "₹8,999/-",
+    price: "₹12,999/-",
     slots: "👥 24 Explorers",
-    schedule: "🕒 March 2026",
+    schedule: "🕒 April 2026",
     boardingPoints: ["Pune", "Goa"],
     historyText: "At Kafila Adventures, we craft the ultimate backpacking experience in Goa, blending exploration, adventure, and relaxation. From South Goa’s serene beaches and hidden gems to North Goa’s vibrant nightlife and historic landmarks, every moment is unforgettable.",
     includes: [
@@ -22,7 +22,6 @@ const GoaBackpacking = () => {
       "Meals (Breakfast & Dinner)",
       "Permits",
       "Sightseeing & Entry fees",
-      "Oxygen supply",
       "First aid support",
       "Professional tour guides"
     ],
@@ -45,13 +44,13 @@ const GoaBackpacking = () => {
     ],
     journeyTitle: "Goa Backpacking Itinerary",
     itinerary: [
-      { time: "Day 1: Departure from Pune", desc: "Begin your journey from Pune by boarding the Goa Express towards Margao." },
-      { time: "Day 2: South Goa Adventures", desc: "Arrive at Margao and catch a bus to Palolem Beach. Check in to your stay and relax. Evening boat ride to spot dolphins, visit Rajbagh Beach, Butterfly Beach, Honeymoon Beach, Turtle-shaped Rock and Monkey Island." },
-      { time: "Day 3: Serene South Goa", desc: "Sunrise at Galgibagh Beach, afternoon at a cliffside café, evening visit to Cabo de Rama Fort and Pebble Beach." },
-      { time: "Day 4: North Goa’s Heritage and Nightlife", desc: "Morning travel to Panjim, visit churches, explore Fontainhas streets, ride along Parra Road, and enjoy North Goa nightlife in the evening." },
-      { time: "Day 5: Historical North Goa", desc: "Visit Chapora Fort, lunch at Artjuna Café, explore Devil’s Finger viewpoint and Lower Aguada Fort." },
-      { time: "Day 6: Beach Bliss in North Goa", desc: "Morning at Vagator Beach, afternoon at Baga Beach, and evening return journey to Pune." },
-      { time: "Day 7: Arrival in Pune", desc: "Reach Pune early morning, ending the trip with cherished memories." }
+      {time:"Day 0: Departure from Pune",desc:"Begin your journey from Pune by boarding the Goa Express towards Margao."},
+{time:"Day 1: South Goa Adventures",desc:"Arrive at Margao and take a bus to Palolem Beach. Check in to your stay and relax. In the evening, enjoy a boat ride to spot dolphins and visit Rajbagh Beach, Butterfly Beach, Honeymoon Beach, Turtle-shaped Rock, and Monkey Island."},
+{time:"Day 2: Serene South Goa",desc:"Witness sunrise at Galgibagh Beach. Spend the afternoon at a scenic cliffside café. In the evening, visit Cabo de Rama Fort and Pebble Beach."},
+{time:"Day 3: North Goa’s Heritage & Nightlife",desc:"Travel to Panjim in the morning. Visit famous churches, explore the colorful streets of Fontainhas, enjoy a ride along Parra Road, and experience the vibrant North Goa nightlife in the evening."},
+{time:"Day 4: Historical North Goa",desc:"Visit Chapora Fort in the morning. Enjoy lunch at Artjuna Café and spend the rest of the day exploring nearby beaches and local markets."},
+{time:"Day 5: Beach Bliss & Adventure in North Goa",desc:"Relax at Vagator Beach in the morning. Head to Baga Beach in the afternoon for water sports and activities. In the evening, begin your return journey to Pune."},
+{time:"Day 6: Arrival in Pune",desc:"Reach Pune early morning, marking the end of an unforgettable backpacking experience."}
     ],
     images: [Goa1, Goa2, Goa3]
   };
