@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import kafilaLogo from '../assets/kafilalogo.png';
+import kafilaLogo from '../assets/Kafila.black.jpg';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isMobileHimalayanOpen, setIsMobileHimalayanOpen] = useState(false);
   const [isMobileMonsoonOpen, setIsMobileMonsoonOpen] = useState(false);
   const [isMobileSahyadriOpen, setIsMobileSahyadriOpen] = useState(false);
+  const [isMobileInternationalOpen, setIsMobileInternationalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -34,11 +35,18 @@ const Navbar = () => {
     scrolled ? 'text-black hover:text-gray-500' : 'text-white hover:text-gray-300'
   }`;
 
+  const internationalTrips = [
+    { name: 'Vietnam', path: 'vietnam' },
+  ];
+
   const sahyadriTreks = [
     { name: 'Harishchandragad', path: 'harishchandragad' },
     { name: 'Harihar Fort', path: 'harihar' },
     { name: 'Kalsubai', path: 'kalsubai' },
+    { name: 'Rajmachi Fireflies', path: 'rajmachi-fireflies' },
     { name: 'Ratangad', path: 'ratangad' },
+    { name: 'Sandhan Valley', path: 'sandhanvalley' },
+    { name: 'Vasota Fort', path: 'vasotafort' },
   ].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
@@ -224,6 +232,37 @@ const Navbar = () => {
                     </div>
                   )}
                 </div>
+
+                <div className="h-px bg-gray-200 mx-2 my-1"></div>
+
+                {/* International Trip */}
+                <div>
+                  <button
+                    onClick={() => setHoveredSubmenu(hoveredSubmenu === 'international' ? null : 'international')}
+                    className="w-full flex justify-between px-4 py-3 text-gray-700 hover:bg-gray-50"
+                  >
+                    <span>International Trip</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${hoveredSubmenu === 'international' ? 'rotate-180' : ''}`}
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {hoveredSubmenu === 'international' && (
+                    <div className="px-4 pb-2 space-y-2">
+                      {internationalTrips.map(({ name, path }) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => { setIsDropdownOpen(false); setHoveredSubmenu(null); }}
+                          className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-white hover:text-gray-900 rounded"
+                        >
+                          {name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -249,9 +288,9 @@ const Navbar = () => {
       <div
         className={`lg:hidden fixed top-0 right-0 h-full w-full max-w-xs bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } z-40`}
+        } z-40 flex flex-col`}
       >
-        <div className="px-6 pt-20 pb-6 space-y-4 overflow-y-auto">
+        <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden scroll-smooth px-6 pt-20 pb-8 space-y-4 overscroll-contain [-webkit-overflow-scrolling:touch]">
           {[{ label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Contact Us', href: '/Contactus' }].map(
             (link) => (
               <a
@@ -432,6 +471,40 @@ const Navbar = () => {
                             setIsMobileMenuOpen(false);
                             setIsMobileAdventureOpen(false);
                             setIsMobileSahyadriOpen(false);
+                          }}
+                          className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
+                        >
+                          {name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* International Trip */}
+                <div>
+                  <button
+                    onClick={() => setIsMobileInternationalOpen(!isMobileInternationalOpen)}
+                    className="w-full flex justify-between text-gray-700 py-2"
+                  >
+                    <span>International Trip</span>
+                    <svg
+                      className={`w-3 h-3 transition-transform ${isMobileInternationalOpen ? 'rotate-180' : ''}`}
+                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {isMobileInternationalOpen && (
+                    <div className="pl-4 mt-1 space-y-1">
+                      {internationalTrips.map(({ name, path }) => (
+                        <a
+                          key={path}
+                          href={`/${path}`}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            setIsMobileAdventureOpen(false);
+                            setIsMobileInternationalOpen(false);
                           }}
                           className="block text-gray-600 hover:text-gray-800 text-sm py-1.5"
                         >

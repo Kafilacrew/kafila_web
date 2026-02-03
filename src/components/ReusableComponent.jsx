@@ -4,6 +4,15 @@ import RefundPolicy from './RefundPolicy';
 import RefundPolicy1 from './RefundPolicy1';   // <-- ADDED
 import DropdownSection from './DropdownSection';
 
+const titleWithLineBreak = (title) => {
+  if (!title || typeof title !== 'string') return title;
+  const words = title.trim().split(/\s+/);
+  if (words.length < 2) return title;
+  const firstPart = words.slice(0, -1).join(' ');
+  const lastWord = words[words.length - 1];
+  return <>{firstPart}<br />{lastWord}</>;
+};
+
 const ReusableComponent = ({
   title,
   location,
@@ -91,13 +100,9 @@ const ReusableComponent = ({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mt-16 sm:mt-20 lg:mt-24 xl:mt-28">
             <div className="flex items-center justify-center lg:justify-start">
               <h1
-                className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl font-times font-bold text-gray-900 leading-[0.9] text-center lg:text-left lg:ml-[20px] xl:ml-[50px] 2xl:ml-[100px] transition-all duration-700 px-2 sm:px-0 break-words hyphens-auto"
-                style={{
-                  opacity: scrollY < 50 ? 1 : 0.8,
-                  transform: `translateY(${scrollY * 0.1}px)`
-                }}
+                className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-10xl font-times font-bold text-gray-900 leading-[0.9] text-center lg:text-left lg:ml-[20px] xl:ml-[50px] 2xl:ml-[100px] px-2 sm:px-0 break-words hyphens-auto"
               >
-                {title}
+                {titleWithLineBreak(title)}
               </h1>
             </div>
 

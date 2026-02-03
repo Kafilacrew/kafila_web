@@ -24,6 +24,9 @@ const BookingButtons = ({ trekType = "auto" }) => {
   kuaripass: 'https://forms.easebuzz.in/register/KafilaMOzbn/Kuaripass',
   harihar: 'https://forms.easebuzz.in/register/KafilaMOzbn/Harihar',
   bhairavgad: 'https://forms.easebuzz.in/register/KafilaMOzbn/Bhairavgad',
+  vasotafort: 'https://forms.easebuzz.in/register/KafilaMOzbn/VasotaFort',
+  'rajmachi-fireflies': 'https://forms.easebuzz.in/register/KafilaMOzbn/RajmachiFireflies',
+  vietnam: 'https://forms.easebuzz.in/register/KafilaMOzbn/Vietnam',
 };
 
 
