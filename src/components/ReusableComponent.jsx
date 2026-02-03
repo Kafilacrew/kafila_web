@@ -107,25 +107,28 @@ const ReusableComponent = ({
             </div>
 
             <div className="flex flex-col justify-center items-center lg:items-start space-y-4 sm:space-y-6 lg:ml-[15px] xl:ml-[30px] 2xl:ml-[60px] px-4 sm:px-0">
-              <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500"
+              <div
+                className={isMobile ? '' : 'animate-on-scroll opacity-0 translate-y-10 transition-all duration-500'}
                 data-id="location"
-                style={isVisible.location ? { opacity: 1, transform: 'translateY(0)' } : {}}>
+                style={isMobile || isVisible.location ? { opacity: 1, transform: 'translateY(0)' } : {}}>
                 <p className="text-gray-600 text-lg sm:text-xl lg:text-2xl flex items-center justify-center lg:justify-start">
                   <span className="mr-3 text-xl flex-shrink-0">📍</span>
                   <span className="break-words">{location}</span>
                 </p>
               </div>
-              <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500"
+              <div
+                className={isMobile ? '' : 'animate-on-scroll opacity-0 translate-y-10 transition-all duration-500'}
                 data-id="date"
-                style={isVisible.date ? { opacity: 1, transform: 'translateY(0)' } : {}}>
+                style={isMobile || isVisible.date ? { opacity: 1, transform: 'translateY(0)' } : {}}>
                 <p className="text-gray-600 text-lg sm:text-xl lg:text-2xl text-center lg:text-left">
                   <span className="mr-3 text-xl flex-shrink-0">🗓️</span>
                   <span className="break-words">{date}</span>
                 </p>
               </div>
-              <div className="animate-on-scroll opacity-0 translate-y-10 transition-all duration-500"
+              <div
+                className={isMobile ? '' : 'animate-on-scroll opacity-0 translate-y-10 transition-all duration-500'}
                 data-id="description"
-                style={isVisible.description ? { opacity: 1, transform: 'translateY(0)' } : {}}>
+                style={isMobile || isVisible.description ? { opacity: 1, transform: 'translateY(0)' } : {}}>
                 <p className="text-gray-700 text-base sm:text-lg lg:text-xl max-w-full lg:max-w-lg leading-relaxed text-center lg:text-left break-words hyphens-auto">
                   {description}
                 </p>
