@@ -1,24 +1,22 @@
 import ReusableComponent from '../components/ReusableComponent';
-import Vasota1 from '../assets/Treks/Harishchandragad/Para.jpg';
-import Vasota2 from '../assets/Treks/Harishchandragad/AA1.jpg';
-import Vasota3 from '../assets/Treks/Harishchandragad/AA2.jpg';
-import Vasota4 from '../assets/Treks/Harishchandragad/AA3.jpg';
+import Vasota1 from '../assets/Treks/Vasota/Para.jpeg';
+import Vasota2 from '../assets/Treks/Vasota/A1.jpeg';
+import Vasota3 from '../assets/Treks/Vasota/A2.jpeg';
+import Vasota4 from '../assets/Treks/Vasota/A3.jpeg';
 
 const VasotaFort = () => {
   const vasotaData = {
     title: "Vasota Fort Trek",
     location: "Bamnoli, Satara, Maharashtra",
-    date: "October 2025 – February 2026",
+    date: "February 2026",
     description: "Embark on an adventurous trek to the historic Vasota Fort nestled in the Koyna Wildlife Sanctuary. Experience a scenic boat ride across Shivsagar Lake, camp under the stars, and conquer the fort for breathtaking views of the Sahyadris.",
     parallaxImage: Vasota1,
-    price: "₹ 1,999/- (Ex. Pune)",
+    price: "₹ 1,999/-",
     slots: "👥 40 Explorers",
-    schedule: "🕒 Saturday–Sunday",
+    schedule: "🕒 February 2026",
     boardingPoints: [
-      "Swargate (Near Laxminarayan Theatre)",
-      "Deccan Corner (Opp. to Vimlabai Garware College)",
-      "Vanaz",
-      "Hinjewadi"
+      "Swargate",
+      "Katraj Chowk"
     ],
     historyText:
       "Vasota Fort, also known as Vyaghragad, is a historic hill fort located in the Koyna Wildlife Sanctuary in Satara district. Perched at an elevation of about 3,800 feet, it offers stunning views of the surrounding forests and Shivsagar Lake. The fort was built by the Kolhapur Shilahara dynasty and later came under the Maratha rule. The trek involves a scenic boat ride across the lake to reach the base, making it one of the most unique and memorable treks in the Sahyadri range.",
