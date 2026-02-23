@@ -1,8 +1,8 @@
 import ReusableComponent from '../components/ReusableComponent';
-import Sandhan1 from '../assets/Treks/Harishchandragad/Para.jpg';
-import Sandhan2 from '../assets/Treks/Harishchandragad/AA1.jpg';
-import Sandhan3 from '../assets/Treks/Harishchandragad/AA2.jpg';
-import Sandhan4 from '../assets/Treks/Harishchandragad/AA3.jpg';
+import Sandhan1 from '../assets/Treks/Sandhan/Para.jpg';
+import Sandhan2 from '../assets/Treks/Sandhan/A1.jpg';
+import Sandhan3 from '../assets/Treks/Sandhan/A2.jpg';
+import Sandhan4 from '../assets/Treks/Sandhan/A3.jpg';
 
 const Sandhanvalley = () => {
   const sandhanData = {
