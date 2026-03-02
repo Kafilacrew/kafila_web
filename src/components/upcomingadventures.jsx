@@ -1,34 +1,34 @@
 import React from 'react';
-import bir from '../assets/Treks/Bir Billing/para.jpg'
-import brah from '../assets/Treks/Brahmatal/A4.jpg'
-import kedarkantha from '../assets/Treks/Kedarkantha/Para.jpg'
+import vasota from '../assets/Treks/Vasota/Para.jpeg';
+import goaPara from '../assets/Treks/Goa/para.jpg';
+import sandhan from '../assets/Treks/Sandhan/Para.jpg';
 
 
 const UpcomingAdventuresSection = () => {
   const adventures = [
     {
       id: 1,
-      title: "Bir Billing Bagpacking",
-      date: "December 2025",
+      title: "Vasota Fort Trek",
+      date: "February 2026",
       slots: "25 Slots Available",
-      image: bir,
-      link: "/bir"
+      image: vasota,
+      link: "/vasotafort"
     },
     {
       id: 2,
-      title: "Brahmatal Himalayan Trek",
-      date: "January 2026",
+      title: "Goa Backpacking",
+      date: "April 2026",
       slots: "25 Slots Available",
-      image: brah,
-      link: "/brahmatal"
-     },
+      image: goaPara,
+      link: "/goa"
+    },
     {
       id: 3,
-      title: "Kedarkantha Himalayan Trek",
-      date: "January 2026",
+      title: "Sandhan Valley Trek",
+      date: "March - April 2026",
       slots: "25 Slots Available",
-      image: kedarkantha,
-      link: "/kedarkantha"
+      image: sandhan,
+      link: "/sandhanvalley"
     }
     /*,
     {
