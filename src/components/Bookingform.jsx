@@ -37,14 +37,22 @@ const BookingButtons = ({ trekType = "auto" }) => {
     let currentTrekType = trekType;
 
     if (trekType === "auto") {
-      const text = (
-        window.location.href + 
-        window.location.pathname + 
-        document.title + 
-        document.body.textContent
-      ).toLowerCase();
+      const pathname = window.location.pathname.toLowerCase();
 
-      currentTrekType = trekKeys.find(key => text.includes(key)) || null;
+      // Prefer matching by URL path (more reliable for pages like Velas)
+      currentTrekType = trekKeys.find(key => pathname.includes(key)) || null;
+
+      // Fallback to broader text search only if path-based match fails
+      if (!currentTrekType) {
+        const text = (
+          window.location.href + 
+          window.location.pathname + 
+          document.title + 
+          document.body.textContent
+        ).toLowerCase();
+
+        currentTrekType = trekKeys.find(key => text.includes(key)) || null;
+      }
     }
 
     if (currentTrekType && links[currentTrekType]) {
