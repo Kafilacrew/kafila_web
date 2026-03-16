@@ -51,60 +51,53 @@ const Vietnam = () => {
     ],
     itineraries: [
       {
-        title: "Arrive in Hanoi",
-        subtitle: "Day 1",
+        title: "Hanoi Arrival",
+        subtitle: "Day 01 - 12 July",
         items: [
-          { time: "Arrival", desc: "Arrive in Hanoi and check into your hotel." },
-          { time: "Afternoon", desc: "Walk through the vibrant Old Quarter." },
-          { time: "Evening", desc: "Visit Hoan Kiem Lake and enjoy the Water Puppet Show." }
+          { time: "Sunday", desc: "Welcome to Hanoi, Vietnam. Upon arrival at Hanoi International Airport, you will be picked up by a driver and transferred to your hotel (driver only, no guide). Check in follows standard hotel timing around 14:00–15:00. The rest of the day is free for leisure to explore Hanoi Old Quarter, Hoan Kiem Lake, or nearby cafes. Overnight stay in Hanoi." }
         ]
       },
       {
-        title: "Hanoi Heritage",
-        subtitle: "Day 2",
+        title: "Hanoi Full Day City Tour",
+        subtitle: "Day 2 - 13 July",
         items: [
-          { time: "Morning", desc: "Visit Ho Chi Minh Mausoleum and Temple of Literature." },
-          { time: "Afternoon", desc: "Explore Train Street and enjoy the famous egg coffee experience ☕" },
-          { time: "Evening", desc: "Drive from Hanoi toward Halong Bay." }
+          { time: "Monday", desc: "Morning pickup from the hotel to explore Hanoi. Visit Ho Chi Minh Complex including the mausoleum area and the houses where Ho Chi Minh lived. Continue to the One Pillar Pagoda and Vietnam Ethnology Museum to learn about the country's ethnic cultures. After lunch at a local restaurant, visit Tran Quoc Pagoda on West Lake, the Temple of Literature (Vietnam’s first university), and Hoa Lo Prison Museum. In the evening enjoy a traditional Water Puppet Show. Overnight in Hanoi. Note:- Only Breakfast & Lunch provided." }
         ]
       },
       {
         title: "Halong Bay Cruise",
-        subtitle: "Day 3",
+        subtitle: "Day 3 - 14 July",
         items: [
-          { time: "Full Day", desc: "Overnight cruise on Halong Bay." },
-          { time: "Activities", desc: "Kayaking, explore caves & islands." },
-          { time: "Evening", desc: "Sunset + seafood dinner on cruise 🌅" }
+          { time: "Tuesday", desc: "Depart Hanoi by expressway to Halong Bay (approx. 2.5–3 hours). Board an overnight cruise and sail through the limestone islands of this UNESCO World Heritage site. Lunch is served on board while cruising. Afternoon activities may include kayaking, cave exploration, swimming, or relaxing on the sundeck. Enjoy dinner on the cruise and spend the night in your cabin on Halong Bay.Note:- Only Breakfast, Lunch & Dinner provided." }
+          ]
+      },
+      {
+        title: "Halong – Hanoi – Fly to Da Nang",
+        subtitle: "Day 4 - 15 July",
+        items: [
+          { time: "Wednesday", desc: "Start the day with a Tai Chi session on the sundeck as the sun rises over Halong Bay. After breakfast continue cruising before checking out around 09:30. Enjoy brunch while returning to the harbor. Transfer back to Hanoi and later head to the airport for your flight to Da Nang. Upon arrival, transfer to your hotel. Overnight in Da Nang. Note:- Only Breakfast & Brunch provided." }
         ]
       },
       {
-        title: "Da Nang – Beaches & City Life",
-        subtitle: "Day 4",
+        title: "Da Nang – Coconut Jungle – Hoi An",
+        subtitle: "Day 5 - 16 July",
         items: [
-          { time: "Morning", desc: "Cruise ends → Fly to Da Nang." },
-          { time: "Afternoon", desc: "Relax at My Khe Beach 🏖️" },
-          { time: "Evening", desc: "Dragon Bridge (fire & water show at night 🔥💦), Riverside cafés & seafood." }
+          { time: "Thursday", desc: "Afternoon pickup from the hotel to visit Cam Thanh Coconut Village. Experience local fishing life and ride traditional Vietnamese basket boats through coconut waterways. Continue to Hoi An Ancient Town to explore the Phuc Kien Assembly Hall, Central Market, ancient merchant houses, Folk Culture Museum, and the historic Japanese Covered Bridge. Dinner with Hoi An specialties followed by a lantern boat ride on the Hoai River and time at the night market. Return to Da Nang. Overnight in Da Nang. Note:- Only Breakfast & Dinner provided." }
         ]
       },
       {
-        title: "Golden Hand Bridge (Da Nang)",
-        subtitle: "Day 5",
+        title: "Ba Na Hills & Golden Bridge",
+        subtitle: "Day 6 - 17 July",
         items: [
-          { time: "Morning", desc: "Visit the world-famous Golden Bridge — giant stone hands holding the bridge." },
-          { time: "Experience", desc: "Scenic cable car ride (one of the longest in the world)." },
-          { time: "Day", desc: "Cool mountain weather & viewpoints at Ba Na Hills." },
-          { time: "Evening", desc: "Back in Da Nang." }
-        ]
+          { time: "Friday", desc: "Morning departure for Ba Na Hills. Ride the famous cable car to the mountain resort 1,487 meters above sea level. Visit the Golden Bridge, Linh Ung Pagoda, and Le Jardin D’Amour Gardens. Explore the European style French Village and enjoy a buffet lunch. In the afternoon visit Fantasy Park and other attractions before returning to Da Nang. Overnight in Da Nang. Note:- Only Breakfast & Lunch provided." }
+          ]
       },
       {
-        title: "Ho Chi Minh City",
-        subtitle: "Day 6",
+        title: "Da Nang Departure",
+        subtitle: "Day 7 - 18 July",
         items: [
-          { time: "Morning", desc: "Fly Da Nang → Ho Chi Minh City." },
-          { time: "Sightseeing", desc: "Cu Chi Tunnels and War Remnants Museum." },
-          { time: "Afternoon", desc: "Ben Thanh Market shopping." },
-          { time: "Evening", desc: "Rooftop café to wrap the trip 🍸" }
-        ]
+          { time: "Saturday", desc: "Enjoy breakfast at the hotel. Free time until your transfer to Da Nang International Airport for your departure flight. Note:- Only Breakfast provided. End of services. " }
+          ]
       }
     ],
     images: [Vietnam2, Vietnam3, Vietnam4],

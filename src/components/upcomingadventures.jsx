@@ -1,7 +1,7 @@
 import React from 'react';
 import vasota from '../assets/Treks/Vasota/Para.jpeg';
 import goaPara from '../assets/Treks/Goa/para.jpg';
-import sandhan from '../assets/Treks/Sandhan/Para.jpg';
+import velas from '../assets/Treks/Velas/Para.webp';
 
 
 const UpcomingAdventuresSection = () => {
@@ -24,11 +24,11 @@ const UpcomingAdventuresSection = () => {
     },
     {
       id: 3,
-      title: "Sandhan Valley Trek",
+      title: "Velas Turtle Fest",
       date: "March - April 2026",
       slots: "25 Slots Available",
-      image: sandhan,
-      link: "/sandhanvalley"
+      image: velas,
+      link: "/velasturtlefest"
     }
     /*,
     {
