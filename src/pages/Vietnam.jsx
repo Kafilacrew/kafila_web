@@ -11,12 +11,11 @@ const Vietnam = () => {
     date: "July 2026",
     description: "Explore the best of Vietnam — from the historic streets of Hanoi and the stunning limestone karsts of Halong Bay to the golden hands of Da Nang and the vibrant energy of Ho Chi Minh City. A 6-day journey through culture, nature, and adventure.",
     parallaxImage: Vietnam1,
-    price: "₹ 89,999/- onwards (Ex. Pune) • Includes flights, accommodation & activities",
+    price: "₹ 13,999/-",
     slots: "👥 20 Explorers",
     schedule: "🕒 July 2026",
     boardingPoints: [
-      "Pune Airport",
-      "Mumbai Airport"
+      "Hanoi"
     ],
     historyText:
       "Vietnam offers a mesmerizing blend of ancient traditions and modern dynamism. This curated 6-day journey takes you through four iconic destinations: Hanoi's charming Old Quarter and colonial architecture, the UNESCO World Heritage site of Halong Bay with its emerald waters and limestone islands, Da Nang's stunning Golden Hand Bridge and pristine beaches, and finally Ho Chi Minh City's historic Cu Chi Tunnels and bustling markets. Route: Hanoi (2N) → Halong Bay Cruise (1N) → Da Nang (2N) → Ho Chi Minh City (1N).",
