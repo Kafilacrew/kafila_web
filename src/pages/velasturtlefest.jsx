@@ -8,13 +8,13 @@ const VelasTurtleFest = () => {
   const velasData = {
     title: "Velas Turtle Festival",
     location: "Velas Beach, Ratnagiri",
-    date: "21st – 22nd March 2026",
+    date: "March-April 2026",
     description:
       "Join Kafila Adventures for a magical weekend at the Velas Turtle Festival. Witness the rare Olive Ridley turtle hatchlings making their first journey to the sea, explore coastal forts and temples, and enjoy authentic Konkani flavours on a relaxed beachside escape from Pune.",
     parallaxImage: Velas1,
     price: "Non-AC Bus: ₹1,899/- per person AC Bus: ₹2,399/- per person",
     slots: "⚠️ Limited Seats – Book Fast!",
-    schedule: "21st – 22nd March 2026",
+    schedule: "March-April 2026",
     boardingPoints: [
       "Swargate",
       "Vanaz Metro Station",
@@ -51,7 +51,7 @@ const VelasTurtleFest = () => {
     itineraries: [
       {
         title: "Departure from Pune",
-        subtitle: "Day 1 — 21st March",
+        subtitle: "Day 1",
         items: [
           {
             time: "08:00 PM",
@@ -65,7 +65,7 @@ const VelasTurtleFest = () => {
       },
       {
         title: "Velas Turtle Festival Experience",
-        subtitle: "Day 2 — 22nd March",
+        subtitle: "Day 2",
         items: [
           {
             time: "05:00 AM",
