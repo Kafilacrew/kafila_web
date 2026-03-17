@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import BookingForm from './Bookingform';
 import RefundPolicy from './RefundPolicy';
 import RefundPolicy1 from './RefundPolicy1';   // <-- ADDED
+import RefundPolicy2 from './RefundPolicy2';
 import DropdownSection from './DropdownSection';
 
 const titleWithLineBreak = (title) => {
@@ -499,9 +500,11 @@ const ReusableComponent = ({
   "/ladakh"
 ];
 
-        return refundPolicy1Pages.includes(currentURL)
-          ? <RefundPolicy1 />
-          : <RefundPolicy />;
+        const refundPolicy2Pages = ["/vietnam"];
+
+        if (refundPolicy2Pages.includes(currentURL)) return <RefundPolicy2 />;
+        if (refundPolicy1Pages.includes(currentURL)) return <RefundPolicy1 />;
+        return <RefundPolicy />;
       })()}
 
     </div>

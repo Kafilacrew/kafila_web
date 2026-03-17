@@ -11,42 +11,44 @@ const Vietnam = () => {
     date: "July 2026",
     description: "Explore the best of Vietnam — from the historic streets of Hanoi and the stunning limestone karsts of Halong Bay to the golden hands of Da Nang and the vibrant energy of Ho Chi Minh City. A 6-day journey through culture, nature, and adventure.",
     parallaxImage: Vietnam1,
-    price: "₹ 13,999/-",
+    price: "₹ 39,999/-",
     slots: "👥 20 Explorers",
     schedule: "🕒 July 2026",
     boardingPoints: [
       "Hanoi"
     ],
     historyText:
-      "Vietnam offers a mesmerizing blend of ancient traditions and modern dynamism. This curated 6-day journey takes you through four iconic destinations: Hanoi's charming Old Quarter and colonial architecture, the UNESCO World Heritage site of Halong Bay with its emerald waters and limestone islands, Da Nang's stunning Golden Hand Bridge and pristine beaches, and finally Ho Chi Minh City's historic Cu Chi Tunnels and bustling markets. Route: Hanoi (2N) → Halong Bay Cruise (1N) → Da Nang (2N) → Ho Chi Minh City (1N).",
+      "Experience the perfect blend of culture, adventure, and scenic beauty on this 7-day Vietnam journey. Starting in the vibrant capital Hanoi, the trip takes you through historic landmarks and rich local traditions before heading to the breathtaking Halong Bay, where you’ll cruise through limestone islands and spend a night on the water. The journey then continues to Da Nang, offering a mix of relaxation and exploration, including the charming lantern-lit streets of Hoi An and the iconic Golden Bridge at Ba Na Hills. From cultural experiences to unique activities like basket boat rides and night markets, this itinerary is designed to give you a complete taste of Vietnam. A well-balanced trip combining nature, heritage, and unforgettable experiences perfect for travelers looking for both relaxation and adventure. 🌏✈️",
     includes: [
-      "Round-trip flights (Pune/Mumbai to Vietnam)",
-      "All domestic flights within Vietnam",
-      "Accommodation (twin/triple sharing)",
-      "Halong Bay overnight cruise",
-      "All entrance fees & activities",
-      "Breakfast daily, select lunches & dinners",
-      "Professional tour guide",
-      "Transportation throughout",
-      "First Aid support"
+      "Will be updated shortly."
+      // "All domestic flights within Vietnam",
+      // "Accommodation (twin/triple sharing)",
+      // "Halong Bay overnight cruise",
+      // "All entrance fees & activities",
+      // "Breakfast daily, select lunches & dinners",
+      // "Professional tour guide",
+      // "Transportation throughout",
+      // "First Aid support"
     ],
     excludes: [
-      "Visa fees",
-      "Personal expenses",
-      "Optional excursions",
-      "Travel insurance"
+      "Will be updated shortly."
+      // "Visa fees",
+      // "Personal expenses",
+      // "Optional excursions",
+      // "Travel insurance"
     ],
     whatToCarry: [
-      "Valid passport (min. 6 months validity)",
-      "Vietnam visa (e-visa recommended)",
-      "Light cotton clothing",
-      "Comfortable walking shoes",
-      "Sunscreen & hat",
-      "Power adapter (Type A/C)",
-      "Reusable water bottle",
-      "Camera & power bank",
-      "Personal medicines",
-      "Swimwear (for Halong Bay & beaches)"
+      "Will be updated shortly."
+      // "Valid passport (min. 6 months validity)",
+      // "Vietnam visa (e-visa recommended)",
+      // "Light cotton clothing",
+      // "Comfortable walking shoes",
+      // "Sunscreen & hat",
+      // "Power adapter (Type A/C)",
+      // "Reusable water bottle",
+      // "Camera & power bank",
+      // "Personal medicines",
+      // "Swimwear (for Halong Bay & beaches)"
     ],
     itineraries: [
       {
