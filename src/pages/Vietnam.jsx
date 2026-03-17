@@ -9,7 +9,7 @@ const Vietnam = () => {
     title: "Vietnam",
     location: "Vietnam",
     date: "July 2026",
-    description: "Explore the best of Vietnam — from the historic streets of Hanoi and the stunning limestone karsts of Halong Bay to the golden hands of Da Nang and the vibrant energy of Ho Chi Minh City. A 6-day journey through culture, nature, and adventure.",
+    description: "Experience the perfect blend of culture, adventure, and scenic beauty on this 7-day Vietnam journey. Starting in the vibrant capital Hanoi, the trip takes you through historic landmarks and rich local traditions before heading to the breathtaking Halong Bay, where you’ll cruise through limestone islands and spend a night on the water.",
     parallaxImage: Vietnam1,
     price: "₹ 39,999/-",
     slots: "👥 20 Explorers",
@@ -18,24 +18,22 @@ const Vietnam = () => {
       "Hanoi"
     ],
     historyText:
-      "Experience the perfect blend of culture, adventure, and scenic beauty on this 7-day Vietnam journey. Starting in the vibrant capital Hanoi, the trip takes you through historic landmarks and rich local traditions before heading to the breathtaking Halong Bay, where you’ll cruise through limestone islands and spend a night on the water. The journey then continues to Da Nang, offering a mix of relaxation and exploration, including the charming lantern-lit streets of Hoi An and the iconic Golden Bridge at Ba Na Hills. From cultural experiences to unique activities like basket boat rides and night markets, this itinerary is designed to give you a complete taste of Vietnam. A well-balanced trip combining nature, heritage, and unforgettable experiences perfect for travelers looking for both relaxation and adventure. 🌏✈️",
+      "The journey then continues to Da Nang, offering a mix of relaxation and exploration, including the charming lantern-lit streets of Hoi An and the iconic Golden Bridge at Ba Na Hills. From cultural experiences to unique activities like basket boat rides and night markets, this itinerary is designed to give you a complete taste of Vietnam. A well-balanced trip combining nature, heritage, and unforgettable experiences perfect for travelers looking for both relaxation and adventure. 🌏✈️",
     includes: [
-      "Will be updated shortly."
-      // "All domestic flights within Vietnam",
-      // "Accommodation (twin/triple sharing)",
-      // "Halong Bay overnight cruise",
-      // "All entrance fees & activities",
-      // "Breakfast daily, select lunches & dinners",
-      // "Professional tour guide",
-      // "Transportation throughout",
-      // "First Aid support"
+      "Accommodation throughout the trip",
+      "Internal flight(s) within the destination",
+      "Cruise experience",
+      "6 meals as per itinerary",
+      "All logistics & ground transportation",
+      "Guided city tours",
+      "Professional tour guide",
+      "Kayaking activity"
     ],
     excludes: [
-      "Will be updated shortly."
-      // "Visa fees",
-      // "Personal expenses",
-      // "Optional excursions",
-      // "Travel insurance"
+      "Visa charges",
+      "International flights",
+      "Personal expenses (shopping, tips, etc.)",
+      "Anything not mentioned in the inclusions"
     ],
     whatToCarry: [
       "Will be updated shortly."
