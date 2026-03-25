@@ -33,6 +33,7 @@ import VasotaFort from './pages/vasotafort';
 import RajmachiFireflies from './pages/rajmachi-fireflies';
 import Vietnam from './pages/Vietnam'
 import VelasTurtleFest from './pages/velasturtlefest';
+import ChandrashilaTungnath from './pages/ChandrashilaTungnath';
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
         <Route path="/rajmachi-fireflies" element={<RajmachiFireflies />} />
         <Route path="/vietnam" element={<Vietnam />} />
         <Route path="/velasturtlefest" element={<VelasTurtleFest />} />
+        <Route path="/chandrashila-tungnath" element={<ChandrashilaTungnath />} />
       </Routes>
       <FloatingContactButtons />
       <Footer />

@@ -494,6 +494,7 @@ const ReusableComponent = ({
   "/hampi",
   "/pondicherry",
   "/brahmatal",
+  "/chandrashila-tungnath",
   "/kedarkantha",
   "/kedarnath",
   "/kuaripass",

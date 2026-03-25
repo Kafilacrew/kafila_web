@@ -28,6 +28,7 @@ const BookingButtons = ({ trekType = "auto" }) => {
   'rajmachi-fireflies': 'https://forms.easebuzz.in/register/KafilaMOzbn/RajmachiFireflies',
   vietnam: 'https://forms.easebuzz.in/register/KafilaMOzbn/Vietnam',
   velasturtlefest: 'https://forms.easebuzz.in/register/KafilaMOzbn/VelasTurtleFest',
+  'chandrashila-tungnath': 'https://forms.easebuzz.in/register/KafilaMOzbn/ChandrashilaTungnath',
 };
 
 

@@ -139,6 +139,7 @@ const Navbar = () => {
                     <div className="px-4 pb-2 space-y-2">
                       {[
                         { name: 'Brahmatal', path: 'brahmatal' },
+                        { name: 'Chandrashila Tungnath', path: 'chandrashila-tungnath' },
                         { name: 'Kedarnath', path: 'kedarnath' },
                         { name: 'Kedarkantha', path: 'kedarkantha' },
                         { name: 'Kuari Pass', path: 'kuaripass' },
@@ -377,6 +378,7 @@ const Navbar = () => {
                     <div className="pl-4 mt-1 space-y-1">
                       {[
                         { name: 'Brahmatal', path: 'brahmatal' },
+                        { name: 'Chandrashila Tungnath', path: 'chandrashila-tungnath' },
                         { name: 'Kedarnath', path: 'kedarnath' },
                         { name: 'Kedarkantha', path: 'kedarkantha' },
                         { name: 'Kuari Pass', path: 'kuaripass' },
