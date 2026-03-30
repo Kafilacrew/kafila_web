@@ -46,6 +46,7 @@ const Navbar = () => {
     { name: 'Rajmachi Fireflies', path: 'rajmachi-fireflies' },
     { name: 'Ratangad', path: 'ratangad' },
     { name: 'Sandhan Valley', path: 'sandhanvalley' },
+    { name: 'Turtle Fest', path: 'turtlefest' },
     { name: 'Vasota Fort', path: 'vasotafort' },
   ].sort((a, b) => a.name.localeCompare(b.name));
 

@@ -504,7 +504,7 @@ const ReusableComponent = ({
         const refundPolicy2Pages = ["/vietnam"];
 
         if (refundPolicy2Pages.includes(currentURL)) return <RefundPolicy2 />;
-        if (refundPolicy1Pages.includes(currentURL)) return <RefundPolicy1 />;
+        if (refundPolicy1Pages.includes(currentURL)) return <RefundPolicy2 />;
         return <RefundPolicy />;
       })()}
 

@@ -4,13 +4,13 @@ import Velas2 from '../assets/Treks/Velas/A1.jpg';
 import Velas3 from '../assets/Treks/Velas/A2.webp';
 import Velas4 from '../assets/Treks/Velas/A3.jpg';
 
-const VelasTurtleFest = () => {
+const TurtleFest = () => {
   const velasData = {
-    title: "Velas Turtle Festival",
-    location: "Velas Beach, Ratnagiri",
+    title: "Turtle Festival",
+    location: "Ratnagiri",
     date: "March-April 2026",
     description:
-      "Join Kafila Adventures for a magical weekend at the Velas Turtle Festival. Witness the rare Olive Ridley turtle hatchlings making their first journey to the sea, explore coastal forts and temples, and enjoy authentic Konkani flavours on a relaxed beachside escape from Pune.",
+      "Join Kafila Adventures for a magical weekend at the Turtle Festival. Witness the rare Olive Ridley turtle hatchlings making their first journey to the sea, explore coastal forts and temples, and enjoy authentic Konkani flavours on a relaxed beachside escape from Pune.",
     parallaxImage: Velas1,
     price: "Non-AC Bus: ₹1,899/- per person AC Bus: ₹2,399/- per person",
     slots: "⚠️ Limited Seats – Book Fast!",
@@ -21,13 +21,12 @@ const VelasTurtleFest = () => {
       "Chandani Chowk"
     ],
     historyText:
-      "Velas, a serene coastal village on the Konkan coastline, is famous for its annual Velas Turtle Festival – a community-driven conservation initiative that protects the endangered Olive Ridley turtles. Local villagers, in collaboration with conservation groups, safeguard turtle nests and create safe conditions for hatchlings to emerge and crawl naturally towards the sea. Beyond the heartwarming turtle sightings, visitors experience authentic Konkan hospitality, pristine beaches, and nearby heritage sites like Bankot Fort and Harihareshwar.",
+      "The Turtle Festival is a unique, community-driven conservation celebration dedicated to protecting the endangered Olive Ridley turtles along the Konkan coastline. Organized by local villagers in collaboration with conservation groups, the festival focuses on safeguarding turtle nests and ensuring that hatchlings safely emerge and make their natural journey to the sea.",
     includes: [
       "Non-AC / AC bus travel from Pune (as per booking option)",
       "Homestay accommodation on sharing basis (basic rustic village setup)",
       "Konkani breakfast and lunch",
-      "Velas Turtle Festival entry fees",
-      "Visit to Bankot Fort",
+      "Turtle Festival entry fees",
       "Ferry ride & visit to Harihareshwar Temple",
       "Local guide and basic tour lead support",
       "First aid assistance",
@@ -59,17 +58,17 @@ const VelasTurtleFest = () => {
           },
           {
             time: "08:30 PM",
-            desc: "Depart for Velas in Non-AC / AC bus with pick-ups from Swargate, Vanaz Metro and Chandani Chowk.",
+            desc: "Depart for Ratnagiri in Non-AC / AC bus with pick-ups from Swargate, Vanaz Metro and Chandani Chowk.",
           },
         ],
       },
       {
-        title: "Velas Turtle Festival Experience",
+        title: "Turtle Festival Experience",
         subtitle: "Day 2",
         items: [
           {
             time: "05:00 AM",
-            desc: "Arrive at Velas Beach and soak in the peaceful Konkan sunrise.",
+            desc: "Arrive at Ratnagiri and soak in the peaceful Konkan sunrise.",
           },
           {
             time: "06:00 AM",
@@ -85,7 +84,7 @@ const VelasTurtleFest = () => {
           },
           {
             time: "12:00 PM",
-            desc: "Head to the historic Bankot Fort and explore scenic coastal views.",
+            desc: "Head to explore scenic coastal views.",
           },
           {
             time: "12:30 PM",
@@ -97,7 +96,7 @@ const VelasTurtleFest = () => {
           },
           {
             time: "11:00 PM",
-            desc: "Reach back to Pune with beautiful memories of the Velas Turtle Festival. ✅",
+            desc: "Reach back to Pune with beautiful memories of the Turtle Festival. ✅",
           },
         ],
       },
@@ -109,5 +108,5 @@ const VelasTurtleFest = () => {
   return <ReusableComponent {...velasData} />;
 };
 
-export default VelasTurtleFest;
+export default TurtleFest;
 

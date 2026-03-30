@@ -32,7 +32,7 @@ import Bhairavgad from './pages/bhairavgad';
 import VasotaFort from './pages/vasotafort';
 import RajmachiFireflies from './pages/rajmachi-fireflies';
 import Vietnam from './pages/Vietnam'
-import VelasTurtleFest from './pages/velasturtlefest';
+import TurtleFest from './pages/turtlefest';
 import ChandrashilaTungnath from './pages/ChandrashilaTungnath';
 
 function App() {
@@ -69,7 +69,7 @@ function App() {
         <Route path="/vasotafort" element={<VasotaFort />} />
         <Route path="/rajmachi-fireflies" element={<RajmachiFireflies />} />
         <Route path="/vietnam" element={<Vietnam />} />
-        <Route path="/velasturtlefest" element={<VelasTurtleFest />} />
+        <Route path="/turtlefest" element={<TurtleFest />} />
         <Route path="/chandrashila-tungnath" element={<ChandrashilaTungnath />} />
       </Routes>
       <FloatingContactButtons />
