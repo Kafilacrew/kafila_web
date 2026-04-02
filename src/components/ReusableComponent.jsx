@@ -302,7 +302,7 @@ const ReusableComponent = ({
                 style={isVisible.day1 ? { opacity: 1, transform: 'translateY(0)' } : {}}>
                 <div className="w-full max-w-4xl mx-auto p-6 lg:p-8 bg-gray-50 rounded-xl">
                   <div className="mb-6">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900">{journeyTitle}</h3>
+                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900">{journeyTitle}</h3>
                   </div>
 
                   <div className="space-y-6">
