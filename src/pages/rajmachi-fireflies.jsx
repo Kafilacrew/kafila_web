@@ -7,7 +7,7 @@ import Rajmachi4 from '../assets/Treks/Rajmachi/Rajmachi-3.jpeg';
 const RajmachiFireflies = () => {
   const rajmacData = {
     title: "Rajmachi Fireflies Trek",
-    location: "Udhewadi, Lonavala, Maharashtra",
+    location: "Udhewadi, Lonavala",
     date: "May–June 2025",
     description: "Experience the magical spectacle of fireflies illuminating the night at Rajmachi. Trek through the lush monsoon trails to Shrivardhan and Manaranjan forts, camp under the stars, and witness thousands of fireflies create a mesmerizing natural light show.",
     parallaxImage: Rajmachi1,
