@@ -53,7 +53,7 @@ const RajmachiFireflies = () => {
     ],
     itineraries: [
       {
-        title: "Departure & Trek to Rajmachi",
+        title: "Departure & Trek Day",
         subtitle: "Day 1",
         items: [
           { time: "10:30 AM", desc: "Depart from pick up points." },
