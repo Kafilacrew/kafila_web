@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import BookingForm from './Bookingform';
-import RefundPolicy from './RefundPolicy';
-import RefundPolicy1 from './RefundPolicy1';   // <-- ADDED
 import RefundPolicy2 from './RefundPolicy2';
 import DropdownSection from './DropdownSection';
 
@@ -32,14 +30,12 @@ const ReusableComponent = ({
   itinerary,
   itineraries, // New prop for multiple itineraries
   images,
-  showBookingForm = true
+  showBookingForm = true,
+  refundPolicyComponent
 }) => {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState({});
   const [isMobile, setIsMobile] = useState(false);
-
-  const currentURL = window.location.pathname;
-
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -487,26 +483,7 @@ const ReusableComponent = ({
         }
       `}</style>
 
-      {(() => {
-        const refundPolicy1Pages = [
-  "/bir",
-  "/goa",
-  "/hampi",
-  "/pondicherry",
-  "/brahmatal",
-  "/chandrashila-tungnath",
-  "/kedarkantha",
-  "/kedarnath",
-  "/kuaripass",
-  "/ladakh"
-];
-
-        const refundPolicy2Pages = ["/vietnam"];
-
-        if (refundPolicy2Pages.includes(currentURL)) return <RefundPolicy2 />;
-        if (refundPolicy1Pages.includes(currentURL)) return <RefundPolicy2 />;
-        return <RefundPolicy />;
-      })()}
+      {refundPolicyComponent || <RefundPolicy2 />}
 
     </div>
   );
